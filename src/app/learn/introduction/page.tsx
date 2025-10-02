@@ -23,7 +23,7 @@ export default function IntroductionCoursePage() {
           <p className="text-gray-600 mb-8">The Introduction to Blockchain course could not be found.</p>
           <Link
             href="/learn"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             <ArrowLeft className="mr-2 w-5 h-5" />
             Back to Courses
@@ -40,14 +40,14 @@ export default function IntroductionCoursePage() {
           <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
             <Link
               href="/learn"
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors text-lg font-medium"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 md:mb-6 lg:mb-8 transition-colors text-base md:text-lg font-medium"
             >
               <ArrowLeft className="mr-2 w-5 h-5" />
               Back to Courses
             </Link>
 
             <div className="flex items-start gap-8">
-              <div className="text-6xl">{course.icon}</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">{course.icon}</div>
               <div className="flex-1">
                 <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
                   {course.title}
@@ -55,7 +55,7 @@ export default function IntroductionCoursePage() {
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   A comprehensive journey through blockchain's history, technology, and transformative impact on global finance.
                 </p>
-                <div className="flex flex-wrap items-center gap-6 text-lg">
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 text-lg">
                   <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
                     <Clock className="w-6 h-6 mr-2 text-blue-600" />
                     {course.duration}
@@ -95,15 +95,15 @@ export default function IntroductionCoursePage() {
 
             {/* Pre-Bitcoin Era */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   1
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">
                     The Pre-Bitcoin Era: Setting the Stage
                   </h3>
-                  <p className="text-lg text-gray-600">
+                  <p className="text-base md:text-lg text-gray-600">
                     Decades of research laid the groundwork for blockchain's revolutionary arrival
                   </p>
                 </div>
@@ -118,8 +118,8 @@ export default function IntroductionCoursePage() {
                 </p>
 
                 {/* Timeline Visualization */}
-                <div className="my-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-10 border-2 border-blue-200">
-                  <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                <div className="my-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-blue-200">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 text-center">
                     🕐 Historical Timeline: Path to Bitcoin
                   </h4>
 
@@ -190,15 +190,15 @@ export default function IntroductionCoursePage() {
                 </div>
 
                 {/* Key Concept Box */}
-                <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 my-10 border-l-4 border-amber-500">
+                <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 my-10 border-l-4 border-amber-500">
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-10 h-10 text-amber-600 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-2xl font-bold text-gray-900 mb-3">💡 Key Concept: Digital Scarcity</h4>
-                      <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                      <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-3">
                         Early attempts addressed crucial challenges:
                       </p>
-                      <ul className="space-y-2 text-lg text-gray-700">
+                      <ul className="space-y-2 text-base md:text-lg text-gray-700">
                         <li className="flex items-start">
                           <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
                           <span><strong>Preventing double-spending</strong> - Ensuring digital tokens can't be copied</span>
@@ -220,8 +220,8 @@ export default function IntroductionCoursePage() {
 
             {/* Birth of Bitcoin */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   2
                 </div>
                 <div className="flex-1">
@@ -235,22 +235,22 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* The Pivotal Moment */}
-              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white mb-10 shadow-2xl relative overflow-hidden">
+              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 xl:p-12 text-white mb-6 md:mb-8 lg:mb-10 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-32 -mt-32"></div>
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full -ml-24 -mb-24"></div>
 
                 <div className="relative z-10">
-                  <div className="flex items-start gap-8 mb-6">
-                    <div className="text-7xl">📅</div>
+                  <div className="flex items-start gap-4 md:gap-6 lg:gap-8 mb-6">
+                    <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">📅</div>
                     <div className="flex-1">
                       <div className="text-sm uppercase tracking-wider text-blue-200 mb-2">The Pivotal Moment</div>
                       <h4 className="text-4xl font-bold mb-4">October 31, 2008</h4>
-                      <p className="text-2xl leading-relaxed mb-6">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                         An individual or group using the pseudonym <strong>Satoshi Nakamoto</strong> published a whitepaper titled
                         <em> "Bitcoin: A Peer-to-Peer Electronic Cash System"</em> to a cryptography mailing list.
                       </p>
                       <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-base md:text-lg leading-relaxed">
                           This nine-page document proposed a solution to the double-spending problem. The timing was significant—
                           the world was in the midst of the <strong>2008 financial crisis</strong>, with trust in traditional financial
                           institutions at historic lows.
@@ -262,8 +262,8 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* What Made Bitcoin Revolutionary */}
-              <div className="grid md:grid-cols-2 gap-8 my-12">
-                <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 my-12">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-200 shadow-xl">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                       <Zap className="w-7 h-7 text-blue-600" />
@@ -313,7 +313,7 @@ export default function IntroductionCoursePage() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300 shadow-xl">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-amber-300 shadow-xl">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
                       <Database className="w-7 h-7 text-amber-600" />
@@ -327,7 +327,7 @@ export default function IntroductionCoursePage() {
                     </div>
                     <div className="bg-white rounded-xl p-4 border-2 border-amber-200">
                       <div className="text-sm text-gray-600 mb-2">Embedded Message</div>
-                      <div className="text-lg italic text-gray-900 leading-relaxed">
+                      <div className="text-base md:text-lg italic text-gray-900 leading-relaxed">
                         "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."
                       </div>
                     </div>
@@ -345,12 +345,12 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* First Transaction */}
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 my-8 border-l-4 border-green-600">
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl md:rounded-2xl p-6 md:p-8 my-8 border-l-4 border-green-600">
                 <div className="flex items-start gap-4">
-                  <div className="text-5xl">🎉</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🎉</div>
                   <div className="flex-1">
                     <h4 className="text-2xl font-bold text-gray-900 mb-3">The First Bitcoin Transaction</h4>
-                    <div className="text-lg text-gray-700 leading-relaxed space-y-2">
+                    <div className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
                       <p>
                         <strong>January 12, 2009</strong> - Nakamoto sent <strong>10 bitcoins</strong> to developer <strong>Hal Finney</strong>.
                       </p>
@@ -366,8 +366,8 @@ export default function IntroductionCoursePage() {
 
             {/* Why Bitcoin Needed Blockchain */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   3
                 </div>
                 <div className="flex-1">
@@ -380,9 +380,9 @@ export default function IntroductionCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-10 text-white mb-10 shadow-2xl">
+              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 text-white mb-6 md:mb-8 lg:mb-10 shadow-2xl">
                 <h4 className="text-2xl font-bold mb-4">🔑 Core Insight</h4>
-                <p className="text-2xl leading-relaxed">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed">
                   The blockchain was <strong>not the goal</strong> of Bitcoin—it was the <strong>means to achieve</strong> the goal
                   of decentralized digital currency.
                 </p>
@@ -398,9 +398,9 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Comparison Table */}
-              <div className="grid md:grid-cols-2 gap-8 my-12">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 my-12">
                 <div className="space-y-6">
-                  <div className="bg-red-50 rounded-2xl p-8 border-2 border-red-300 shadow-lg">
+                  <div className="bg-red-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-red-300 shadow-lg">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center">
                         <AlertCircle className="w-7 h-7 text-red-700" />
@@ -433,7 +433,7 @@ export default function IntroductionCoursePage() {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="bg-green-50 rounded-2xl p-8 border-2 border-green-300 shadow-lg">
+                  <div className="bg-green-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-300 shadow-lg">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 bg-green-200 rounded-xl flex items-center justify-center">
                         <CheckCircle className="w-7 h-7 text-green-700" />
@@ -467,7 +467,7 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* How Blockchain Works */}
-              <div className="bg-blue-50 rounded-3xl p-10 my-10 border-2 border-blue-200">
+              <div className="bg-blue-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 my-10 border-2 border-blue-200">
                 <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <Network className="w-10 h-10 text-blue-600" />
                   How the Blockchain Functions
@@ -479,7 +479,7 @@ export default function IntroductionCoursePage() {
                         1
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Public Ledger</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Public Ledger</div>
                         <div className="text-gray-700 leading-relaxed">
                           Records all Bitcoin transactions in sequential, immutable manner. Every participant maintains a copy of this ledger.
                         </div>
@@ -493,7 +493,7 @@ export default function IntroductionCoursePage() {
                         2
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Transaction Broadcasting</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Transaction Broadcasting</div>
                         <div className="text-gray-700 leading-relaxed">
                           New transactions are broadcast to all nodes in the network for validation.
                         </div>
@@ -507,7 +507,7 @@ export default function IntroductionCoursePage() {
                         3
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Mining Process</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Mining Process</div>
                         <div className="text-gray-700 leading-relaxed">
                           Miners compete to bundle transactions into blocks and add them to the chain through proof-of-work.
                         </div>
@@ -521,7 +521,7 @@ export default function IntroductionCoursePage() {
                         4
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Security Through Time</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Security Through Time</div>
                         <div className="text-gray-700 leading-relaxed">
                           Altering historical transactions becomes exponentially more difficult over time, requiring redoing computational work for all subsequent blocks.
                         </div>
@@ -530,12 +530,12 @@ export default function IntroductionCoursePage() {
                   </div>
                 </div>
 
-                <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
+                <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl md:rounded-2xl p-6 text-white">
                   <div className="flex items-start gap-3">
                     <TrendingUp className="w-8 h-8 flex-shrink-0" />
                     <div>
-                      <div className="font-bold text-xl mb-2">Economic Security</div>
-                      <div className="text-lg leading-relaxed">
+                      <div className="font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Economic Security</div>
+                      <div className="text-base md:text-lg leading-relaxed">
                         The economic incentives align participants' interests with network security—miners invest resources to earn rewards,
                         and their investment secures the network against attacks.
                       </div>
@@ -575,17 +575,17 @@ export default function IntroductionCoursePage() {
                 </p>
               </div>
 
-              <div className="my-12 p-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl text-white shadow-2xl">
+              <div className="my-12 p-6 md:p-8 lg:p-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl md:rounded-2xl md:rounded-3xl text-white shadow-2xl">
                 <div className="flex items-start gap-8">
-                  <div className="text-7xl">🔗</div>
+                  <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">🔗</div>
                   <div className="flex-1">
                     <div className="text-sm uppercase tracking-wider text-purple-200 mb-2">The Paradigm Shift</div>
                     <h4 className="text-4xl font-bold mb-4">2014: The Separation</h4>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       The technology industry began to separate blockchain from Bitcoin conceptually.
                     </p>
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-base md:text-lg leading-relaxed">
                         Financial institutions and corporations were intrigued by blockchain's potential but wary of Bitcoin's
                         association with illicit activities. They asked: <em>"Could blockchain's benefits—immutability, transparency,
                         distributed consensus—be applied to other use cases?"</em>
@@ -597,13 +597,13 @@ export default function IntroductionCoursePage() {
 
               {/* Core Components Diagram */}
               <div className="my-12">
-                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 text-center">
                   Core Blockchain Components
                 </h4>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                      <span className="text-4xl">🔗</span>
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <span className="text-base md:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">🔗</span>
                     </div>
                     <h5 className="text-2xl font-bold text-gray-900 mb-3">Cryptographic Linking</h5>
                     <p className="text-gray-700 leading-relaxed mb-4">
@@ -615,9 +615,9 @@ export default function IntroductionCoursePage() {
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                      <span className="text-4xl">🤝</span>
+                  <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <span className="text-base md:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">🤝</span>
                     </div>
                     <h5 className="text-2xl font-bold text-gray-900 mb-3">Consensus Mechanisms</h5>
                     <p className="text-gray-700 leading-relaxed mb-4">
@@ -629,9 +629,9 @@ export default function IntroductionCoursePage() {
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                      <span className="text-4xl">🔒</span>
+                  <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <span className="text-base md:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">🔒</span>
                     </div>
                     <h5 className="text-2xl font-bold text-gray-900 mb-3">Immutability</h5>
                     <p className="text-gray-700 leading-relaxed mb-4">
@@ -652,12 +652,12 @@ export default function IntroductionCoursePage() {
                 The Ethereum Revolution: Smart Contracts
               </h3>
 
-              <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white mb-10 shadow-2xl">
+              <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 xl:p-12 text-white mb-6 md:mb-8 lg:mb-10 shadow-2xl">
                 <div className="flex items-center justify-between mb-8">
                   <div>
                     <div className="text-sm uppercase tracking-wider text-indigo-200 mb-2">The Next Evolution</div>
                     <h4 className="text-5xl font-bold mb-3">Ethereum</h4>
-                    <p className="text-2xl">Proposed 2013 • Launched 2015</p>
+                    <p className="text-base md:text-lg sm:text-xl md:text-2xl">Proposed 2013 • Launched 2015</p>
                   </div>
                   <div className="text-8xl">⚡</div>
                 </div>
@@ -682,8 +682,8 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* What Ethereum Enabled */}
-              <div className="grid md:grid-cols-2 gap-8 my-12">
-                <div className="bg-blue-50 rounded-2xl p-8 border-l-4 border-blue-600">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 my-12">
+                <div className="bg-blue-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-l-4 border-blue-600">
                   <div className="flex items-center gap-3 mb-6">
                     <Lightbulb className="w-8 h-8 text-blue-600" />
                     <h5 className="text-2xl font-bold text-blue-900">💡 New Capabilities</h5>
@@ -728,7 +728,7 @@ export default function IntroductionCoursePage() {
                   </ul>
                 </div>
 
-                <div className="bg-purple-50 rounded-2xl p-8 border-l-4 border-purple-600">
+                <div className="bg-purple-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-l-4 border-purple-600">
                   <div className="flex items-center gap-3 mb-6">
                     <Rocket className="w-8 h-8 text-purple-600" />
                     <h5 className="text-2xl font-bold text-purple-900">🚀 Evolution Path</h5>
@@ -737,7 +737,7 @@ export default function IntroductionCoursePage() {
                     <div className="bg-white rounded-xl p-6 shadow-md">
                       <div className="flex items-center justify-between mb-2">
                         <div className="font-bold text-gray-900 text-lg">Programmable Money</div>
-                        <div className="text-3xl">💰</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl">💰</div>
                       </div>
                       <div className="text-gray-600">Bitcoin enabled peer-to-peer value transfer</div>
                     </div>
@@ -749,7 +749,7 @@ export default function IntroductionCoursePage() {
                     <div className="bg-white rounded-xl p-6 shadow-md">
                       <div className="flex items-center justify-between mb-2">
                         <div className="font-bold text-gray-900 text-lg">Programmable Assets</div>
-                        <div className="text-3xl">🎨</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl">🎨</div>
                       </div>
                       <div className="text-gray-600">Ethereum enabled any asset to be tokenized</div>
                     </div>
@@ -761,7 +761,7 @@ export default function IntroductionCoursePage() {
                     <div className="bg-white rounded-xl p-6 shadow-md">
                       <div className="flex items-center justify-between mb-2">
                         <div className="font-bold text-gray-900 text-lg">Programmable Organizations</div>
-                        <div className="text-3xl">🏛️</div>
+                        <div className="text-xl sm:text-2xl md:text-3xl">🏛️</div>
                       </div>
                       <div className="text-gray-600">DAOs enable autonomous governance structures</div>
                     </div>
@@ -770,15 +770,15 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Real-World Analogy */}
-              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 my-10 border-l-4 border-amber-500">
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 my-10 border-l-4 border-amber-500">
                 <div className="flex items-start gap-4">
-                  <div className="text-5xl">💭</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">💭</div>
                   <div>
                     <h4 className="text-2xl font-bold text-gray-900 mb-3">Real-World Analogy</h4>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
                       Think of Bitcoin as a <strong>calculator</strong> that can only do one thing well—transfer value.
                     </p>
-                    <p className="text-lg text-gray-700 leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                       Ethereum is like a <strong>smartphone</strong>—it can run any application you program for it.
                       Smart contracts are like apps that automatically execute when conditions are met, without needing
                       any human intervention or trust in a middleman.
@@ -806,8 +806,8 @@ export default function IntroductionCoursePage() {
 
             {/* Conceptual Foundations */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   1
                 </div>
                 <div className="flex-1">
@@ -830,8 +830,8 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Comparison: Traditional vs DLT */}
-              <div className="grid md:grid-cols-2 gap-8 my-12">
-                <div className="bg-red-50 rounded-2xl p-8 border-2 border-red-300 shadow-lg">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 my-12">
+                <div className="bg-red-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-red-300 shadow-lg">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center">
                       <Server className="w-7 h-7 text-red-700" />
@@ -858,7 +858,7 @@ export default function IntroductionCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-green-50 rounded-2xl p-8 border-2 border-green-300 shadow-lg">
+                <div className="bg-green-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-300 shadow-lg">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-green-200 rounded-xl flex items-center justify-center">
                       <Network className="w-7 h-7 text-green-700" />
@@ -887,12 +887,12 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Key Insight Box */}
-              <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-2xl p-8 my-10 border-l-4 border-teal-600">
+              <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl md:rounded-2xl p-6 md:p-8 my-10 border-l-4 border-teal-600">
                 <div className="flex items-start gap-4">
                   <Target className="w-10 h-10 text-teal-600 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-2xl font-bold text-gray-900 mb-3">🎯 Core Innovation</h4>
-                    <p className="text-lg text-gray-700 leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                       DLT enables <strong>"trustless" systems</strong> where trust emerges from <em>transparency</em>,
                       <em> cryptographic proof</em>, and <em>economic incentives</em> rather than institutional authority.
                       The ledger becomes a <strong>shared source of truth</strong> that all participants can verify independently.
@@ -904,8 +904,8 @@ export default function IntroductionCoursePage() {
 
             {/* How Blockchain Implements DLT */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   2
                 </div>
                 <div className="flex-1">
@@ -919,12 +919,12 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Blockchain Structure Visualization */}
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-10 my-10 border-2 border-blue-200">
-                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 my-10 border-2 border-blue-200">
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 text-center flex items-center justify-center gap-3">
                   <Layers className="w-10 h-10 text-blue-600" />
                   Blockchain's Key Properties
                 </h4>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-white rounded-xl p-6 shadow-md">
                     <div className="text-4xl mb-4 text-center">🔗</div>
                     <h5 className="text-xl font-bold text-gray-900 mb-3 text-center">Cryptographic Linking</h5>
@@ -965,7 +965,7 @@ export default function IntroductionCoursePage() {
 
               {/* Process Flow */}
               <div className="my-12">
-                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 text-center">
                   🔄 Maintaining Consistency: The Process
                 </h4>
                 <div className="space-y-6">
@@ -975,7 +975,7 @@ export default function IntroductionCoursePage() {
                         1
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Transaction Initiation</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Transaction Initiation</div>
                         <div className="text-gray-700 leading-relaxed">
                           A participant initiates a transaction and broadcasts it to all nodes in the network.
                         </div>
@@ -989,7 +989,7 @@ export default function IntroductionCoursePage() {
                         2
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Validation</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Validation</div>
                         <div className="text-gray-700 leading-relaxed">
                           Nodes validate the transaction according to predefined rules (sufficient balance, valid signatures, etc.).
                         </div>
@@ -1003,7 +1003,7 @@ export default function IntroductionCoursePage() {
                         3
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Block Creation</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Block Creation</div>
                         <div className="text-gray-700 leading-relaxed">
                           Miners or validators compete/collaborate to include the transaction in a new block using the consensus mechanism.
                         </div>
@@ -1017,7 +1017,7 @@ export default function IntroductionCoursePage() {
                         4
                       </div>
                       <div>
-                        <div className="font-bold text-lg text-gray-900 mb-2">Ledger Update</div>
+                        <div className="font-bold text-base md:text-lg text-gray-900 mb-2">Ledger Update</div>
                         <div className="text-gray-700 leading-relaxed">
                           Once added to the chain, all nodes update their local copy of the ledger. Everyone now has the same view of transaction history.
                         </div>
@@ -1030,8 +1030,8 @@ export default function IntroductionCoursePage() {
 
             {/* Comparing with Other DLT Approaches */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   3
                 </div>
                 <div className="flex-1">
@@ -1044,9 +1044,9 @@ export default function IntroductionCoursePage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 my-12">
-                <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 my-12">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-200 shadow-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                     <Layers className="w-8 h-8 text-white" />
                   </div>
                   <h5 className="text-2xl font-bold text-gray-900 mb-3">Blockchain</h5>
@@ -1062,8 +1062,8 @@ export default function IntroductionCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-200 shadow-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                     <GitBranch className="w-8 h-8 text-white" />
                   </div>
                   <h5 className="text-2xl font-bold text-gray-900 mb-3">DAG (Directed Acyclic Graph)</h5>
@@ -1079,8 +1079,8 @@ export default function IntroductionCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-200 shadow-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                     <Users className="w-8 h-8 text-white" />
                   </div>
                   <h5 className="text-2xl font-bold text-gray-900 mb-3">BFT Consensus</h5>
@@ -1098,12 +1098,12 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Real-World Analogy */}
-              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 my-10 border-l-4 border-amber-500">
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 my-10 border-l-4 border-amber-500">
                 <div className="flex items-start gap-4">
-                  <div className="text-5xl">💭</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">💭</div>
                   <div>
                     <h4 className="text-2xl font-bold text-gray-900 mb-3">Real-World Analogy: Different Record-Keeping Systems</h4>
-                    <div className="space-y-3 text-lg text-gray-700 leading-relaxed">
+                    <div className="space-y-3 text-base md:text-lg text-gray-700 leading-relaxed">
                       <p>
                         <strong>Blockchain</strong> is like a <em>notarized ledger book</em> where each page is stamped and
                         references the previous page—very secure but sequential.
@@ -1139,17 +1139,17 @@ export default function IntroductionCoursePage() {
             </div>
 
             {/* The Four Pillars */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-16">
               {/* Immutability */}
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-10 border-2 border-red-200 shadow-xl">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-red-200 shadow-xl">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
                     <Lock className="w-9 h-9 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">1. Immutability</h3>
                 </div>
-                <p className="text-xl font-semibold text-gray-800 mb-4">The Foundation of Trust</p>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">The Foundation of Trust</p>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   The extreme difficulty of altering data once recorded. Each block contains a hash of the previous block—
                   changing any historical transaction requires recalculating all subsequent blocks.
                 </p>
@@ -1184,15 +1184,15 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Transparency */}
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border-2 border-blue-200 shadow-xl">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-blue-200 shadow-xl">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
                     <Eye className="w-9 h-9 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">2. Transparency</h3>
                 </div>
-                <p className="text-xl font-semibold text-gray-800 mb-4">Radical Openness</p>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">Radical Openness</p>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   In public blockchains, the entire transaction history is visible to anyone. Every transaction from the
                   genesis block to the present can be independently verified.
                 </p>
@@ -1227,15 +1227,15 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Decentralization */}
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-10 border-2 border-purple-200 shadow-xl">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-purple-200 shadow-xl">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
                     <Network className="w-9 h-9 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">3. Decentralization</h3>
                 </div>
-                <p className="text-xl font-semibold text-gray-800 mb-4">Eliminating Single Points of Failure</p>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">Eliminating Single Points of Failure</p>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   Responsibility is distributed across potentially thousands of independent participants. Decentralization
                   occurs at multiple levels: data storage, validation, and governance.
                 </p>
@@ -1270,15 +1270,15 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Consensus Mechanisms */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-10 border-2 border-green-200 shadow-xl">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-green-200 shadow-xl">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
                     <Users className="w-9 h-9 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">4. Consensus</h3>
                 </div>
-                <p className="text-xl font-semibold text-gray-800 mb-4">Agreement Without Authority</p>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">Agreement Without Authority</p>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   How can multiple parties agree on truth without a central authority? Consensus mechanisms solve the
                   Byzantine Fault Tolerance problem through algorithmic solutions.
                 </p>
@@ -1350,10 +1350,10 @@ export default function IntroductionCoursePage() {
             </div>
 
             {/* Financial Use Cases Grid */}
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-16">
               {/* Payments & Remittances */}
-              <div className="bg-white rounded-3xl p-8 border-2 border-emerald-200 shadow-xl hover:shadow-2xl transition-all">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <div className="bg-white rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-emerald-200 shadow-xl hover:shadow-2xl transition-all">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                   <CreditCard className="w-9 h-9 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Payments & Remittances</h3>
@@ -1382,8 +1382,8 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* Securities Trading */}
-              <div className="bg-white rounded-3xl p-8 border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <div className="bg-white rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                   <BarChart3 className="w-9 h-9 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Securities & Settlement</h3>
@@ -1412,8 +1412,8 @@ export default function IntroductionCoursePage() {
               </div>
 
               {/* DeFi */}
-              <div className="bg-white rounded-3xl p-8 border-2 border-purple-200 shadow-xl hover:shadow-2xl transition-all">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <div className="bg-white rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-purple-200 shadow-xl hover:shadow-2xl transition-all">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                   <Wallet className="w-9 h-9 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Decentralized Finance</h3>
@@ -1438,15 +1438,15 @@ export default function IntroductionCoursePage() {
             </div>
 
             {/* Financial Inclusion Impact */}
-            <div className="bg-gradient-to-br from-teal-600 to-emerald-600 rounded-3xl p-12 text-white mb-12 shadow-2xl">
+            <div className="bg-gradient-to-br from-teal-600 to-emerald-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 xl:p-12 text-white mb-6 md:mb-8 lg:mb-12 shadow-2xl">
               <h3 className="text-4xl font-bold mb-6 flex items-center gap-4">
-                <Globe className="w-12 h-12" />
+                <Globe className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                 Transforming Financial Inclusion
               </h3>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <h4 className="text-2xl font-bold mb-4">The Problem</h4>
-                  <p className="text-lg leading-relaxed mb-4">
+                  <p className="text-base md:text-lg leading-relaxed mb-4">
                     Traditional banking requires extensive infrastructure, documentation, and minimum balances that
                     <strong> exclude billions of people globally</strong>.
                   </p>
@@ -1459,7 +1459,7 @@ export default function IntroductionCoursePage() {
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold mb-4">Blockchain Solution</h4>
-                  <p className="text-lg leading-relaxed mb-4">
+                  <p className="text-base md:text-lg leading-relaxed mb-4">
                     Blockchain-based payment systems require <strong>only internet access</strong>, serving anyone
                     regardless of location, wealth, or documentation status.
                   </p>
@@ -1484,16 +1484,16 @@ export default function IntroductionCoursePage() {
             </div>
 
             {/* CBDCs & Banking Infrastructure */}
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl p-10 border-2 border-indigo-200 mb-12">
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-indigo-200 mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                 <Landmark className="w-10 h-10 text-indigo-600" />
                 Central Bank Digital Currencies (CBDCs)
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                 Perhaps the most significant potential transformation of banking infrastructure. Many central banks
                 are exploring or piloting CBDCs—digital versions of national currencies built on blockchain or DLT infrastructure.
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="bg-white rounded-xl p-6 shadow-md">
                   <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                     <CheckCircle className="w-6 h-6 text-green-600" />
@@ -1565,8 +1565,8 @@ export default function IntroductionCoursePage() {
             <div className="mb-16">
               <h3 className="text-4xl font-bold text-gray-900 mb-8">Technical Architecture and Components</h3>
 
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-10 mb-10 border-2 border-blue-200">
-                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 mb-6 md:mb-8 lg:mb-10 border-2 border-blue-200">
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 text-center">
                   🏗️ The Layered Architecture
                 </h4>
                 <div className="space-y-6">
@@ -1634,10 +1634,10 @@ export default function IntroductionCoursePage() {
             <div className="mb-16">
               <h3 className="text-4xl font-bold text-gray-900 mb-8">The Mining and Validation Process</h3>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white rounded-2xl p-8 border-2 border-orange-200 shadow-xl">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-orange-200 shadow-xl">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
                       <Cpu className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-gray-900">Proof of Work</h4>
@@ -1661,9 +1661,9 @@ export default function IntroductionCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-200 shadow-xl">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
                       <Coins className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-gray-900">Proof of Stake</h4>
@@ -1693,11 +1693,11 @@ export default function IntroductionCoursePage() {
             <div className="mb-16">
               <h3 className="text-4xl font-bold text-gray-900 mb-8">Smart Contracts and Programmability</h3>
 
-              <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white mb-10 shadow-2xl">
+              <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 xl:p-12 text-white mb-6 md:mb-8 lg:mb-10 shadow-2xl">
                 <div className="flex items-center justify-between mb-8">
                   <div>
                     <h4 className="text-4xl font-bold mb-3">Evolution to Programmable Platform</h4>
-                    <p className="text-2xl">From transaction ledger to autonomous execution</p>
+                    <p className="text-base md:text-lg sm:text-xl md:text-2xl">From transaction ledger to autonomous execution</p>
                   </div>
                   <div className="text-8xl">💻</div>
                 </div>
@@ -1707,15 +1707,15 @@ export default function IntroductionCoursePage() {
                   all network participants.
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <p className="text-lg leading-relaxed">
+                  <p className="text-base md:text-lg leading-relaxed">
                     Once deployed, smart contracts operate <strong>autonomously without possibility of downtime, censorship,
                     or third-party interference</strong>—enabling trustless automation of complex multi-party agreements.
                   </p>
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white rounded-2xl p-8 border-2 border-red-200 shadow-xl">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-red-200 shadow-xl">
                   <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                     <AlertTriangle className="w-7 h-7 text-red-600" />
                     Unique Challenges
@@ -1751,7 +1751,7 @@ export default function IntroductionCoursePage() {
                   </ul>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-200 shadow-xl">
                   <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                     <Code2 className="w-7 h-7 text-green-600" />
                     Evolving Ecosystem
@@ -1806,29 +1806,29 @@ export default function IntroductionCoursePage() {
             </div>
 
             {/* The Blockchain Trilemma */}
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-10 mb-12 border-2 border-red-200">
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 mb-6 md:mb-8 lg:mb-12 border-2 border-red-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">⚖️ The Blockchain Trilemma</h3>
-              <p className="text-xl text-gray-700 leading-relaxed text-center mb-8 max-w-4xl mx-auto">
+              <p className="text-xl text-gray-700 leading-relaxed text-center mb-4 md:mb-6 lg:mb-8 max-w-4xl mx-auto">
                 The most fundamental technical challenge: simultaneously achieving <strong>decentralization</strong>,
                 <strong> security</strong>, and <strong>scalability</strong>.
               </p>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 shadow-lg">
                   <div className="text-5xl mb-4 text-center">🌐</div>
                   <h4 className="text-xl font-bold text-center text-gray-900 mb-3">Decentralization</h4>
                   <p className="text-gray-700 text-center">
                     Thousands of nodes can participate without permission
                   </p>
                 </div>
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 shadow-lg">
                   <div className="text-5xl mb-4 text-center">🔒</div>
                   <h4 className="text-xl font-bold text-center text-gray-900 mb-3">Security</h4>
                   <p className="text-gray-700 text-center">
                     Resistant to attacks and Byzantine failures
                   </p>
                 </div>
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 shadow-lg">
                   <div className="text-5xl mb-4 text-center">⚡</div>
                   <h4 className="text-xl font-bold text-center text-gray-900 mb-3">Scalability</h4>
                   <p className="text-gray-700 text-center">
@@ -1855,8 +1855,8 @@ export default function IntroductionCoursePage() {
             {/* Scalability Solutions */}
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Scalability Solutions</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-200 shadow-xl">
                   <h4 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                     <Layers className="w-7 h-7 text-blue-600" />
                     Layer-2 Solutions
@@ -1880,7 +1880,7 @@ export default function IntroductionCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-200 shadow-xl">
                   <h4 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                     <GitBranch className="w-7 h-7 text-purple-600" />
                     Alternative Architectures
@@ -1907,8 +1907,8 @@ export default function IntroductionCoursePage() {
             </div>
 
             {/* Regulatory & Interoperability */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300">
+            <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-12">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-amber-300">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                   <Scale className="w-7 h-7 text-amber-600" />
                   Regulatory Challenges
@@ -1932,7 +1932,7 @@ export default function IntroductionCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 border-2 border-teal-300">
+              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-teal-300">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                   <LinkIcon className="w-7 h-7 text-teal-600" />
                   Interoperability
@@ -1958,9 +1958,9 @@ export default function IntroductionCoursePage() {
             </div>
 
             {/* Conclusion */}
-            <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white shadow-2xl">
+            <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 xl:p-12 text-white shadow-2xl">
               <h3 className="text-4xl font-bold mb-6">🌟 The Ongoing Evolution</h3>
-              <div className="space-y-4 text-lg leading-relaxed">
+              <div className="space-y-4 text-base md:text-lg leading-relaxed">
                 <p>
                   Blockchain technology has traveled a remarkable journey from Bitcoin's underlying infrastructure to
                   becoming a foundational technology with potential applications across industries.
@@ -1970,10 +1970,10 @@ export default function IntroductionCoursePage() {
                   and valuable. The financial sector stands at the forefront of adoption, but realizing blockchain's full
                   potential requires overcoming significant technical, regulatory, and usability challenges.
                 </p>
-                <p className="text-xl font-semibold">
+                <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold">
                   Looking forward, blockchain's evolution will likely involve:
                 </p>
-                <div className="grid md:grid-cols-2 gap-4 my-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 my-6">
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <CheckCircle className="w-5 h-5" />
@@ -2012,15 +2012,15 @@ export default function IntroductionCoursePage() {
           </motion.section>
 
           {/* Course Completion */}
-          <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-12 text-center text-white shadow-2xl mb-16">
+          <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 xl:p-12 text-center text-white shadow-2xl mb-16">
             <Award className="w-24 h-24 mx-auto mb-6" />
             <h3 className="text-4xl font-bold mb-4">
               🎉 Course Complete!
             </h3>
-            <p className="text-2xl mb-6 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-6 max-w-3xl mx-auto leading-relaxed">
               You've completed all seven parts covering the complete journey of blockchain—from its genesis to future challenges!
             </p>
-            <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
+            <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 lg:mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
               Explored: <strong>History</strong>, <strong>Evolution</strong>, <strong>DLT Principles</strong>,
               <strong> Key Features</strong>, <strong>Financial Applications</strong>, <strong>Implementation</strong>, and <strong>Future Directions</strong>.
             </p>

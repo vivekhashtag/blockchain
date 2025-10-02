@@ -15,55 +15,55 @@ export function CourseCard({ course }: CourseCardProps) {
 
   return (
     <Link href={`/learn/${course.id}`}>
-      <div className="group relative overflow-hidden rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+      <div className="group relative overflow-hidden rounded-xl md:rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-2">
         <div
           className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-5 group-hover:opacity-10 transition-opacity`}
         />
 
-        <div className="relative p-12">
-          <div className="text-6xl mb-8">{course.icon}</div>
+        <div className="relative p-6 sm:p-8 md:p-10 lg:p-12">
+          <div className="text-4xl sm:text-5xl md:text-6xl mb-4 md:mb-8">{course.icon}</div>
 
-          <h3 className="text-3xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors leading-tight">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 group-hover:text-blue-600 transition-colors leading-tight">
             {course.title}
           </h3>
 
-          <p className="text-gray-600 text-xl mb-8 line-clamp-3 leading-relaxed">
+          <p className="text-gray-600 text-base sm:text-lg md:text-xl mb-6 md:mb-8 line-clamp-3 leading-relaxed">
             {course.description}
           </p>
 
-          <div className="flex items-center flex-wrap gap-4 mb-8">
+          <div className="flex items-center flex-wrap gap-3 md:gap-4 mb-6 md:mb-8">
             <span
-              className={`px-5 py-3 rounded-full text-base font-semibold border ${
+              className={`px-3 py-2 md:px-5 md:py-3 rounded-full text-sm md:text-base font-semibold border ${
                 difficultyColors[course.difficulty]
               }`}
             >
               {course.difficulty}
             </span>
-            <div className="flex items-center text-gray-600 text-lg">
-              <Clock className="w-6 h-6 mr-2" />
+            <div className="flex items-center text-gray-600 text-sm sm:text-base md:text-lg">
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
               {course.duration}
             </div>
-            <div className="flex items-center text-gray-600 text-lg">
-              <BarChart className="w-6 h-6 mr-2" />
+            <div className="flex items-center text-gray-600 text-sm sm:text-base md:text-lg">
+              <BarChart className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
               Module {course.order}
             </div>
           </div>
 
-          <div className="space-y-4">
-            <p className="text-base text-gray-700 font-semibold mb-4">
+          <div className="space-y-3 md:space-y-4">
+            <p className="text-sm md:text-base text-gray-700 font-semibold mb-3 md:mb-4">
               Topics covered:
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 md:gap-3">
               {course.topics.slice(0, 3).map((topic, index) => (
                 <span
                   key={index}
-                  className="text-base px-4 py-2 bg-gray-100 text-gray-700 rounded-lg border border-gray-200"
+                  className="text-sm md:text-base px-3 py-1.5 md:px-4 md:py-2 bg-gray-100 text-gray-700 rounded-lg border border-gray-200"
                 >
                   {topic}
                 </span>
               ))}
               {course.topics.length > 3 && (
-                <span className="text-base px-4 py-2 text-gray-600 font-medium">
+                <span className="text-sm md:text-base px-3 py-1.5 md:px-4 md:py-2 text-gray-600 font-medium">
                   +{course.topics.length - 3} more
                 </span>
               )}

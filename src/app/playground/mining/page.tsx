@@ -134,8 +134,8 @@ export default function MiningSimulatorPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Back Button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -162,10 +162,10 @@ export default function MiningSimulatorPage() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl mb-6 shadow-xl">
               <Cpu className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-6">
               Mining Simulator
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Experience proof-of-work mining in real-time. Adjust difficulty and see how miners find valid blocks.
             </p>
           </motion.div>
@@ -173,9 +173,9 @@ export default function MiningSimulatorPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-10">
+      <section className="py-8 md:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-6 md:gap-8 lg:gap-10">
             {/* Control Panel */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -183,8 +183,8 @@ export default function MiningSimulatorPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               {/* Block Data */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Block Data</h2>
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Block Data</h2>
                 <textarea
                   value={blockData}
                   onChange={(e) => {
@@ -198,8 +198,8 @@ export default function MiningSimulatorPage() {
               </div>
 
               {/* Difficulty Selector */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Mining Difficulty</h2>
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Mining Difficulty</h2>
                 <p className="text-lg text-gray-600 mb-6">
                   Difficulty determines how many leading zeros are required in the hash.
                 </p>
@@ -233,8 +233,8 @@ export default function MiningSimulatorPage() {
               </div>
 
               {/* Controls */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Controls</h2>
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Controls</h2>
                 <div className="flex gap-4">
                   {!foundHash && (
                     <>
@@ -276,8 +276,8 @@ export default function MiningSimulatorPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               {/* Current Hash */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Current Hash</h2>
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Current Hash</h2>
 
                 <div className={`p-6 rounded-xl border-2 mb-6 ${
                   foundHash
@@ -325,21 +325,21 @@ export default function MiningSimulatorPage() {
                   <div className="flex items-center justify-center mb-4">
                     <Award className="w-16 h-16 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white text-center mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
                     Block Mined Successfully! 🎉
                   </h3>
                   <div className="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
                     <div className="text-white text-center">
                       <div className="text-lg mb-2">Valid Hash Found!</div>
-                      <div className="text-2xl font-bold font-mono">Nonce: {foundNonce?.toLocaleString()}</div>
+                      <div className="text-xl md:text-2xl font-bold font-mono">Nonce: {foundNonce?.toLocaleString()}</div>
                     </div>
                   </div>
                 </motion.div>
               )}
 
               {/* Mining Statistics */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                   <TrendingUp className="w-8 h-8 mr-3 text-orange-600" />
                   Mining Statistics
                 </h2>
@@ -348,7 +348,7 @@ export default function MiningSimulatorPage() {
                   <div className="p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700 text-lg font-medium">Total Attempts</span>
-                      <span className="text-orange-600 text-2xl font-bold font-mono">
+                      <span className="text-orange-600 text-xl md:text-2xl font-bold font-mono">
                         {stats.attempts.toLocaleString()}
                       </span>
                     </div>
@@ -360,7 +360,7 @@ export default function MiningSimulatorPage() {
                         <Zap className="w-5 h-5 mr-2 text-orange-600" />
                         Hash Rate
                       </span>
-                      <span className="text-orange-600 text-2xl font-bold font-mono">
+                      <span className="text-orange-600 text-xl md:text-2xl font-bold font-mono">
                         {stats.hashRate.toLocaleString()} H/s
                       </span>
                     </div>
@@ -369,7 +369,7 @@ export default function MiningSimulatorPage() {
                   <div className="p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700 text-lg font-medium">Time Elapsed</span>
-                      <span className="text-orange-600 text-2xl font-bold font-mono">
+                      <span className="text-orange-600 text-xl md:text-2xl font-bold font-mono">
                         {stats.timeElapsed.toFixed(2)}s
                       </span>
                     </div>
@@ -378,7 +378,7 @@ export default function MiningSimulatorPage() {
                   <div className="p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700 text-lg font-medium">Blocks Mined</span>
-                      <span className="text-orange-600 text-2xl font-bold font-mono">
+                      <span className="text-orange-600 text-xl md:text-2xl font-bold font-mono">
                         {stats.blocksMined}
                       </span>
                     </div>
@@ -396,11 +396,11 @@ export default function MiningSimulatorPage() {
             className="mt-12"
           >
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-10 border-2 border-blue-200 shadow-xl">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">How Proof-of-Work Mining Works</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How Proof-of-Work Mining Works</h3>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 <div>
-                  <h4 className="text-2xl font-bold text-blue-600 mb-4">The Process</h4>
+                  <h4 className="text-xl md:text-2xl font-bold text-blue-600 mb-4">The Process</h4>
                   <ol className="space-y-3 text-lg text-gray-700">
                     <li className="flex items-start">
                       <span className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0 font-bold">1</span>
@@ -430,7 +430,7 @@ export default function MiningSimulatorPage() {
                 </div>
 
                 <div>
-                  <h4 className="text-2xl font-bold text-blue-600 mb-4">Key Concepts</h4>
+                  <h4 className="text-xl md:text-2xl font-bold text-blue-600 mb-4">Key Concepts</h4>
                   <div className="space-y-4">
                     <div className="p-4 bg-white rounded-xl border border-blue-200">
                       <h5 className="font-bold text-gray-900 text-lg mb-2">Difficulty</h5>

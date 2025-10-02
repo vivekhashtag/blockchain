@@ -9,18 +9,18 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-24">
-        <div className="max-w-5xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-12 md:py-16 lg:py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-4 md:mb-6">
               About the Author
             </h1>
-            <p className="text-2xl text-gray-600 mb-8">
+            <p className="text-lg sm:text-xl md:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 md:mb-8">
               Meet the expert behind this blockchain education platform
             </p>
           </motion.div>
@@ -28,14 +28,14 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="py-12 md:py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-2xl border-2 border-gray-200 p-12 md:p-16"
+            className="bg-white rounded-3xl shadow-2xl border-2 border-gray-200 p-6 md:p-10 lg:p-12 xl:p-16"
           >
             {/* Profile Section */}
             <div className="text-center mb-12">
@@ -49,7 +49,7 @@ export default function AboutPage() {
                   priority
                 />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 Vivek Dhandapani
               </h2>
               <p className="text-xl text-gray-600 mb-8">
@@ -62,7 +62,7 @@ export default function AboutPage() {
                   href="https://www.linkedin.com/in/vivekdhandapani/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#0A66C2] text-white font-semibold rounded-xl hover:bg-[#094d92] transition-all text-lg shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-[#0A66C2] text-white font-semibold rounded-xl hover:bg-[#094d92] transition-all text-lg shadow-lg hover:shadow-xl"
                 >
                   <Linkedin className="w-6 h-6" />
                   Connect on LinkedIn
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </div>
 
             {/* Expertise Badges */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center border-2 border-blue-200">
                 <Briefcase className="w-12 h-12 text-blue-600 mx-auto mb-3" />
                 <p className="text-3xl font-bold text-blue-900 mb-2">15+</p>
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
               <div className="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200 mt-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Areas of Expertise</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     "Generative AI & LLM Solutions",
                     "AI Agents & Automation",
@@ -136,8 +136,8 @@ export default function AboutPage() {
       </section>
 
       {/* Other Courses Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-6xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +145,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Other Courses by Vivek
             </h2>
             <p className="text-xl text-gray-600">
@@ -153,7 +153,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
             {/* Mathematics Course */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -234,7 +234,7 @@ export default function AboutPage() {
             <p className="text-blue-100 text-xl mb-10 text-center leading-relaxed">
               Stay tuned for these exciting new courses coming soon:
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {[
                 { name: "Machine Learning", gradient: "from-blue-500 to-cyan-500" },
                 { name: "Gen AI", gradient: "from-purple-500 to-pink-500" },
@@ -258,7 +258,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -266,7 +266,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Connect with Vivek
             </h2>
             <p className="text-xl text-blue-100 mb-10 leading-relaxed">

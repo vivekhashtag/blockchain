@@ -39,8 +39,8 @@ export default function WalletGeneratorPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-pink-50 to-fuchsia-50 py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-pink-50 to-fuchsia-50 py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Back Button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -67,10 +67,10 @@ export default function WalletGeneratorPage() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl mb-6 shadow-xl">
               <Key className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-6">
               Wallet Generator
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Generate secure cryptocurrency wallet addresses with public/private key pairs using industry-standard cryptography
             </p>
           </motion.div>
@@ -78,8 +78,8 @@ export default function WalletGeneratorPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="py-8 md:py-12 lg:py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Warning */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function WalletGeneratorPage() {
           >
             <button
               onClick={generateWallet}
-              className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-2xl transition-all transform hover:scale-105 text-2xl shadow-2xl"
+              className="inline-flex items-center px-8 py-4 md:px-10 md:py-5 lg:px-12 lg:py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-2xl transition-all transform hover:scale-105 text-2xl shadow-2xl"
             >
               <RefreshCw className="mr-3 w-8 h-8" />
               Generate New Wallet
@@ -124,9 +124,9 @@ export default function WalletGeneratorPage() {
               className="space-y-8"
             >
               {/* Address */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-gray-900">Wallet Address</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-900">Wallet Address</h2>
                   <button
                     onClick={() => copyToClipboard(address, "address")}
                     className="flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all shadow-lg"
@@ -155,9 +155,9 @@ export default function WalletGeneratorPage() {
               </div>
 
               {/* Public Key */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-gray-900">Public Key</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-900">Public Key</h2>
                   <button
                     onClick={() => copyToClipboard(publicKey, "public")}
                     className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold rounded-lg transition-all shadow-lg"
@@ -186,9 +186,9 @@ export default function WalletGeneratorPage() {
               </div>
 
               {/* Private Key */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-red-300 shadow-xl">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-red-300 shadow-xl">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-red-700 flex items-center">
+                  <h2 className="text-xl md:text-2xl font-bold text-red-700 flex items-center">
                     <Shield className="w-7 h-7 mr-3" />
                     Private Key
                   </h2>
@@ -254,9 +254,9 @@ export default function WalletGeneratorPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border-2 border-blue-200 shadow-xl"
+            className="mt-12 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 md:p-8 border-2 border-blue-200 shadow-xl"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">How Cryptocurrency Wallets Work</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How Cryptocurrency Wallets Work</h3>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
@@ -304,14 +304,14 @@ export default function WalletGeneratorPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl"
+            className="mt-12 bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Technical Deep Dive: Key Generation Process</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Technical Deep Dive: Key Generation Process</h3>
 
             <div className="space-y-8">
               {/* Private Key */}
               <div className="p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-2 border-red-200">
-                <h4 className="text-2xl font-bold text-red-700 mb-4 flex items-center">
+                <h4 className="text-xl md:text-2xl font-bold text-red-700 mb-4 flex items-center">
                   <Shield className="w-6 h-6 mr-3" />
                   1. Private Key Generation
                 </h4>
@@ -338,7 +338,7 @@ export default function WalletGeneratorPage() {
 
               {/* Public Key */}
               <div className="p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-2 border-blue-200">
-                <h4 className="text-2xl font-bold text-blue-700 mb-4 flex items-center">
+                <h4 className="text-xl md:text-2xl font-bold text-blue-700 mb-4 flex items-center">
                   <Key className="w-6 h-6 mr-3" />
                   2. Public Key Derivation
                 </h4>
@@ -371,7 +371,7 @@ export default function WalletGeneratorPage() {
 
               {/* Address */}
               <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-2 border-purple-200">
-                <h4 className="text-2xl font-bold text-purple-700 mb-4 flex items-center">
+                <h4 className="text-xl md:text-2xl font-bold text-purple-700 mb-4 flex items-center">
                   <Hash className="w-6 h-6 mr-3" />
                   3. Wallet Address Creation
                 </h4>
@@ -431,9 +431,9 @@ export default function WalletGeneratorPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border-2 border-indigo-200 shadow-xl"
+            className="mt-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 md:p-8 border-2 border-indigo-200 shadow-xl"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Why This System Is Secure</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Why This System Is Secure</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-5 bg-white rounded-xl border border-indigo-200">
                 <h4 className="text-xl font-bold text-indigo-700 mb-3">🔒 One-Way Functions</h4>

@@ -95,8 +95,8 @@ export default function DigitalSignaturePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Back Button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -123,10 +123,10 @@ export default function DigitalSignaturePage() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl mb-6 shadow-xl">
               <Shield className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-6">
               Digital Signatures
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Sign messages with your private key and verify authenticity using public key cryptography.
             </p>
           </motion.div>
@@ -134,17 +134,17 @@ export default function DigitalSignaturePage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-10">
+      <section className="py-8 md:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-6 md:gap-8 lg:gap-10">
             {/* Signing Section */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                   <FileSignature className="w-8 h-8 mr-3 text-indigo-600" />
                   Sign a Message
                 </h2>
@@ -259,8 +259,8 @@ export default function DigitalSignaturePage() {
               </div>
 
               {/* How It Works */}
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">How Digital Signatures Work</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 md:p-8 border-2 border-blue-200 shadow-xl">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">How Digital Signatures Work</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0 font-bold">1</div>
@@ -300,8 +300,8 @@ export default function DigitalSignaturePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                   <CheckCircle className="w-8 h-8 mr-3 text-green-600" />
                   Verify a Signature
                 </h2>
@@ -364,7 +364,7 @@ export default function DigitalSignaturePage() {
                         <>
                           <CheckCircle className="w-12 h-12 text-green-600 mr-4" />
                           <div>
-                            <h3 className="text-2xl font-bold text-green-700 mb-1">Valid Signature ✓</h3>
+                            <h3 className="text-xl md:text-2xl font-bold text-green-700 mb-1">Valid Signature ✓</h3>
                             <p className="text-green-600 text-lg">This message was signed by the owner of this public key</p>
                           </div>
                         </>
@@ -372,7 +372,7 @@ export default function DigitalSignaturePage() {
                         <>
                           <XCircle className="w-12 h-12 text-red-600 mr-4" />
                           <div>
-                            <h3 className="text-2xl font-bold text-red-700 mb-1">Invalid Signature ✗</h3>
+                            <h3 className="text-xl md:text-2xl font-bold text-red-700 mb-1">Invalid Signature ✗</h3>
                             <p className="text-red-600 text-lg">Signature does not match or message was tampered with</p>
                           </div>
                         </>
@@ -383,8 +383,8 @@ export default function DigitalSignaturePage() {
               </div>
 
               {/* Security Properties */}
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 md:p-8 border-2 border-purple-200 shadow-xl">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center">
                   <Lock className="w-7 h-7 mr-3 text-purple-600" />
                   Security Properties
                 </h3>
@@ -418,7 +418,7 @@ export default function DigitalSignaturePage() {
             className="mt-12"
           >
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-10 border-2 border-indigo-200 shadow-xl">
-              <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Real-World Applications</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Real-World Applications</h3>
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="p-6 bg-white rounded-xl border border-indigo-200">

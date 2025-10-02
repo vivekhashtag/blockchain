@@ -24,7 +24,7 @@ export default function HashingCoursePage() {
           <p className="text-gray-600 mb-8">The Hashing and Integrity course could not be found.</p>
           <Link
             href="/learn"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             <ArrowLeft className="mr-2 w-5 h-5" />
             Back to Courses
@@ -38,17 +38,17 @@ export default function HashingCoursePage() {
     <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 py-16 border-b-2 border-gray-200">
-          <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 lg:px-16">
             <Link
               href="/learn"
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors text-xl font-medium"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 md:mb-6 lg:mb-8 transition-colors text-xl font-medium"
             >
               <ArrowLeft className="mr-2 w-5 h-5" />
               Back to Courses
             </Link>
 
             <div className="flex items-start gap-8">
-              <div className="text-7xl">{course.icon}</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">{course.icon}</div>
               <div className="flex-1">
                 <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
                   {course.title}
@@ -56,7 +56,7 @@ export default function HashingCoursePage() {
                 <p className="text-3xl text-gray-700 leading-relaxed mb-8">
                   Discover how cryptographic hash functions create digital fingerprints that ensure data integrity across insurance, taxation, and identity verification systems.
                 </p>
-                <div className="flex flex-wrap items-center gap-6 text-xl">
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xl">
                   <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
                     <Clock className="w-6 h-6 mr-2 text-teal-600" />
                     {course.duration}
@@ -76,7 +76,7 @@ export default function HashingCoursePage() {
         </div>
 
         {/* Article Content */}
-        <article className="max-w-7xl mx-auto px-8 sm:px-12 py-16">
+        <article className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16">
 
           {/* PART I: UNDERSTANDING CRYPTOGRAPHIC HASH FUNCTIONS */}
           <motion.section
@@ -93,9 +93,9 @@ export default function HashingCoursePage() {
             </div>
 
             {/* Digital DNA Concept */}
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-10 mb-12 border-2 border-purple-300">
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 mb-6 md:mb-8 lg:mb-12 border-2 border-purple-300">
               <div className="flex items-start gap-6">
-                <div className="text-6xl">🧬</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">🧬</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">What Is a Hash Function? The Concept of Digital DNA</h3>
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
@@ -105,24 +105,24 @@ export default function HashingCoursePage() {
                     <strong className="text-purple-600"> 64 characters</strong> (for SHA-256).
                   </p>
                   <div className="bg-white rounded-xl p-6 mb-6">
-                    <p className="text-lg text-gray-800 mb-4"><strong>The Remarkable Properties:</strong></p>
+                    <p className="text-base md:text-lg text-gray-800 mb-4"><strong>The Remarkable Properties:</strong></p>
                     <div className="space-y-4">
                       <div className="flex items-start gap-4">
-                        <div className="text-2xl">✓</div>
+                        <div className="text-base md:text-lg sm:text-xl md:text-2xl">✓</div>
                         <div className="flex-1">
                           <p className="text-gray-700"><strong>Change Detection:</strong> Change even a single comma in a thousand-page
                           book, and you get a completely different fingerprint.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
-                        <div className="text-2xl">✓</div>
+                        <div className="text-base md:text-lg sm:text-xl md:text-2xl">✓</div>
                         <div className="flex-1">
                           <p className="text-gray-700"><strong>Consistency:</strong> Put the exact same book through the machine a million
                           times, you get the identical fingerprint every time.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
-                        <div className="text-2xl">✓</div>
+                        <div className="text-base md:text-lg sm:text-xl md:text-2xl">✓</div>
                         <div className="flex-1">
                           <p className="text-gray-700"><strong>One-Way Function:</strong> It's like a blender that turns fruits into
                           smoothies—you can easily blend apples into apple juice, but you can't take apple juice and reconstruct the original apples.</p>
@@ -131,7 +131,7 @@ export default function HashingCoursePage() {
                     </div>
                   </div>
                   <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-lg">
-                    <p className="text-lg text-gray-700 leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                       <strong className="text-teal-900">💡 Key Insight:</strong> Even if someone has the hash of your password or document,
                       they can't work backward to figure out what the original was. They would have to try <em>every possible input</em> until
                       they found one that produces the same hash—a process that could take <strong>billions of years</strong> for a strong hash function.
@@ -154,15 +154,15 @@ export default function HashingCoursePage() {
                 and through a series of specific steps—mixing, kneading, rising, baking—you end up with something completely transformed.
               </p>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">🔧 The SHA-256 Process:</h4>
 
                 <div className="space-y-6">
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Padding</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Padding</h5>
                         <p className="text-gray-700">
                           Take your input data and pad it to ensure it's a multiple of 512 bits. This padding follows a specific pattern
                           that includes the original message length, ensuring different-length messages can't produce the same padded result.
@@ -173,9 +173,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">64 Rounds of Processing</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">64 Rounds of Processing</h5>
                         <p className="text-gray-700">
                           The core algorithm runs 64 rounds of mathematical operations involving bitwise operations (AND, OR, XOR, NOT),
                           additions, and rotations. Each round uses the output of the previous round, creating a cascade effect where
@@ -187,9 +187,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Output Generation</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Output Generation</h5>
                         <p className="text-gray-700">
                           The final output is 256 bits, typically displayed as 64 hexadecimal characters. This is your digital fingerprint.
                         </p>
@@ -200,7 +200,7 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Avalanche Effect Examples */}
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border-2 border-amber-300">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-amber-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <Zap className="w-7 h-7 text-amber-600" />
                   The Avalanche Effect: Small Changes, Huge Differences
@@ -255,9 +255,9 @@ export default function HashingCoursePage() {
                 The Properties That Make Hash Functions Cryptographically Secure
               </h3>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Determinism */}
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-300">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-300">
                   <div className="text-4xl mb-4">🎯</div>
                   <h4 className="text-xl font-bold text-gray-900 mb-4">1. Determinism</h4>
                   <p className="text-gray-700 mb-4">
@@ -273,7 +273,7 @@ export default function HashingCoursePage() {
                 </div>
 
                 {/* Avalanche Effect */}
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-300">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-300">
                   <div className="text-4xl mb-4">⚡</div>
                   <h4 className="text-xl font-bold text-gray-900 mb-4">2. Avalanche Effect</h4>
                   <p className="text-gray-700 mb-4">
@@ -289,7 +289,7 @@ export default function HashingCoursePage() {
                 </div>
 
                 {/* Pre-image Resistance */}
-                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-emerald-300">
                   <div className="text-4xl mb-4">🔒</div>
                   <h4 className="text-xl font-bold text-gray-900 mb-4">3. Pre-image Resistance (One-Way)</h4>
                   <p className="text-gray-700 mb-4">
@@ -305,7 +305,7 @@ export default function HashingCoursePage() {
                 </div>
 
                 {/* Collision Resistance */}
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-amber-300">
                   <div className="text-4xl mb-4">🛡️</div>
                   <h4 className="text-xl font-bold text-gray-900 mb-4">4. Collision Resistance</h4>
                   <p className="text-gray-700 mb-4">
@@ -440,15 +440,15 @@ export default function HashingCoursePage() {
             </div>
 
             {/* The Problem of Digital Documents */}
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-10 mb-12 border-2 border-red-300">
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 mb-6 md:mb-8 lg:mb-12 border-2 border-red-300">
               <div className="flex items-start gap-6">
-                <div className="text-6xl">📄</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">📄</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">The Fundamental Problem of Digital Document Integrity</h3>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                     <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                      <h4 className="text-lg font-bold text-gray-900 mb-3">📝 Physical World</h4>
+                      <h4 className="text-base md:text-lg font-bold text-gray-900 mb-3">📝 Physical World</h4>
                       <ul className="space-y-2 text-gray-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -470,7 +470,7 @@ export default function HashingCoursePage() {
                     </div>
 
                     <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                      <h4 className="text-lg font-bold text-gray-900 mb-3">💻 Digital World</h4>
+                      <h4 className="text-base md:text-lg font-bold text-gray-900 mb-3">💻 Digital World</h4>
                       <ul className="space-y-2 text-gray-700">
                         <li className="flex items-start gap-2">
                           <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
@@ -493,7 +493,7 @@ export default function HashingCoursePage() {
                   </div>
 
                   <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border-l-4 border-teal-600 p-6 rounded-lg">
-                    <p className="text-lg text-gray-700 leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                       <strong className="text-teal-900">💡 The Hash Solution:</strong> By creating a unique fingerprint of a
                       document at a specific point in time, you can prove its integrity <strong>without relying on any third party</strong>.
                       The hash serves as mathematical proof of the document's exact content. If even one character changes, the hash changes completely.
@@ -510,16 +510,16 @@ export default function HashingCoursePage() {
                 Creating and Verifying Document Hashes: A Practical Guide
               </h3>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">📋 Real-World Scenario: Signing an Important Contract</h4>
 
                 <div className="space-y-6">
                   {/* Step 1 */}
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-3">Calculate the Hash</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-3">Calculate the Hash</h5>
                         <p className="text-gray-700 mb-4">
                           After both parties agree to the final version of your business partnership agreement, you calculate its SHA-256 hash:
                         </p>
@@ -536,9 +536,9 @@ export default function HashingCoursePage() {
                   {/* Step 2 */}
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-3">Publish the Hash</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-3">Publish the Hash</h5>
                         <p className="text-gray-700 mb-3">
                           You can safely publish this hash in multiple locations:
                         </p>
@@ -573,14 +573,14 @@ export default function HashingCoursePage() {
                   {/* Step 3 */}
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-3">Verification When Disputes Arise</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-3">Verification When Disputes Arise</h5>
                         <p className="text-gray-700 mb-4">
                           Two years later, a dispute arises. The other party claims the contract says something different.
                           They present a document with subtle changes:
                         </p>
-                        <div className="grid md:grid-cols-2 gap-4 mb-4">
+                        <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                           <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded">
                             <div className="text-sm font-bold text-red-900 mb-2">⚠️ Their Version:</div>
                             <p className="text-gray-700 text-sm">Pay <span className="font-bold">$100.00</span> (decimal point moved)</p>
@@ -605,7 +605,7 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Universal Verification Tools */}
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-300">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <Code2 className="w-7 h-7 text-purple-600" />
                   Universal Verification: Anyone, Anywhere, Anytime
@@ -616,7 +616,7 @@ export default function HashingCoursePage() {
                   without special tools or expertise.
                 </p>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-white rounded-xl p-6">
                     <div className="text-3xl mb-3">🍎</div>
                     <h5 className="font-bold text-gray-900 mb-2">Mac / Linux</h5>
@@ -661,15 +661,15 @@ export default function HashingCoursePage() {
                 document existed. This is where blockchain technology and trusted timestamping services come in.
               </p>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-8 mb-8 border-2 border-indigo-300">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-indigo-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">🔗 How Blockchain Timestamping Works</h4>
 
                 <div className="space-y-6">
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Hash Your Document Locally</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Hash Your Document Locally</h5>
                         <p className="text-gray-700">
                           The document <strong>never leaves your computer</strong>. You calculate its hash locally,
                           maintaining complete privacy and confidentiality.
@@ -680,9 +680,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Submit Only the Hash</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Submit Only the Hash</h5>
                         <p className="text-gray-700">
                           You submit <em>only the hash</em> to a timestamping service, which aggregates multiple hashes
                           and embeds them in a Bitcoin transaction.
@@ -693,9 +693,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Blockchain Confirmation</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Blockchain Confirmation</h5>
                         <p className="text-gray-700">
                           Once the transaction is confirmed in a Bitcoin block, your document's existence at that time
                           is <strong>cryptographically proven</strong>.
@@ -706,9 +706,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Anyone Can Verify</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Anyone Can Verify</h5>
                         <p className="text-gray-700">
                           Anyone can verify this proof by checking that your document's hash links to a transaction in a specific block.
                         </p>
@@ -728,10 +728,10 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Real-World Applications */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-300">
+              <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-gray-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">🌍 Real-World Applications of Blockchain Timestamping</h4>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-200">
                     <div className="text-3xl mb-3">📰</div>
                     <h5 className="font-bold text-gray-900 mb-2">Journalism</h5>
@@ -776,13 +776,13 @@ export default function HashingCoursePage() {
 
               <div className="space-y-6">
                 {/* Panama Papers */}
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-300">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-300">
                   <div className="flex items-start gap-6">
-                    <div className="text-5xl">📰</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">📰</div>
                     <div className="flex-1">
                       <div className="text-sm font-bold text-blue-900 mb-2">2016 INVESTIGATION</div>
                       <h4 className="text-2xl font-bold text-gray-900 mb-4">The Panama Papers</h4>
-                      <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                         <div className="bg-white rounded-xl p-5">
                           <h5 className="font-bold text-gray-900 mb-2">📊 The Challenge</h5>
                           <ul className="space-y-2 text-gray-700 text-sm">
@@ -812,9 +812,9 @@ export default function HashingCoursePage() {
                 </div>
 
                 {/* Pharmaceutical Trial Data */}
-                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-emerald-300">
                   <div className="flex items-start gap-6">
-                    <div className="text-5xl">💊</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">💊</div>
                     <div className="flex-1">
                       <div className="text-sm font-bold text-emerald-900 mb-2">2020 LITIGATION CASE</div>
                       <h4 className="text-2xl font-bold text-gray-900 mb-4">Pharmaceutical Company Drug Trial Data</h4>
@@ -847,9 +847,9 @@ export default function HashingCoursePage() {
                 </div>
 
                 {/* SolarWinds Hack */}
-                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 border-2 border-red-300">
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-red-300">
                   <div className="flex items-start gap-6">
-                    <div className="text-5xl">⚠️</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">⚠️</div>
                     <div className="flex-1">
                       <div className="text-sm font-bold text-red-900 mb-2">2020 SECURITY BREACH</div>
                       <h4 className="text-2xl font-bold text-gray-900 mb-4">The SolarWinds Supply Chain Attack</h4>
@@ -909,15 +909,15 @@ export default function HashingCoursePage() {
                 this landscape by creating <strong>immutable digital fingerprints</strong> of all claim documents at the moment of submission.
               </p>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">📱 Modern Insurance Claims Flow with Hash Verification</h4>
 
                 <div className="space-y-6">
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Photo Submission</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Photo Submission</h5>
                         <p className="text-gray-700">
                           When a policyholder submits a claim through a mobile app, each photo is <strong>immediately hashed</strong>,
                           and the hash is stored with a timestamp.
@@ -928,9 +928,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Metadata Verification</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Metadata Verification</h5>
                         <p className="text-gray-700">
                           EXIF data (metadata containing time, location, camera information) is preserved and <strong>separately hashed</strong>.
                           This creates a chain of evidence.
@@ -941,9 +941,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Multi-Layer Protection</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Multi-Layer Protection</h5>
                         <p className="text-gray-700">
                           Advanced systems hash photos at <strong>multiple resolutions</strong>, preventing claims that processing
                           or compression altered critical details.
@@ -954,9 +954,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                      <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Investigation & Verification</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Investigation & Verification</h5>
                         <p className="text-gray-700">
                           If questions arise during investigation, adjusters can <strong>verify photos haven't been doctored</strong> by
                           comparing current hashes with those recorded at submission.
@@ -968,13 +968,13 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Real Results */}
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-emerald-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <BarChart3 className="w-7 h-7 text-emerald-600" />
                   Real-World Implementation Results
                 </h4>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                   <div className="bg-white rounded-xl p-6">
                     <div className="text-4xl mb-3">📊</div>
                     <h5 className="font-bold text-gray-900 mb-2">30% Fraud Reduction</h5>
@@ -1029,15 +1029,15 @@ export default function HashingCoursePage() {
                 based on predefined parameters.
               </p>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 mb-8 border-2 border-purple-300">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-purple-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">✈️ Flight Delay Insurance Example</h4>
 
                 <div className="space-y-6">
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-3xl">🎫</div>
+                      <div className="text-xl sm:text-2xl md:text-3xl">🎫</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 1: Policy Purchase</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Step 1: Policy Purchase</h5>
                         <p className="text-gray-700">
                           When you purchase the policy, the smart contract records the <strong>hash of your booking confirmation</strong>,
                           proving you have a ticket for a specific flight.
@@ -1048,9 +1048,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-3xl">📡</div>
+                      <div className="text-xl sm:text-2xl md:text-3xl">📡</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 2: Oracle Connection</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Step 2: Oracle Connection</h5>
                         <p className="text-gray-700">
                           The contract connects to flight data oracles (trusted data sources) that provide
                           <strong> cryptographically signed flight status updates</strong>.
@@ -1061,9 +1061,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-3xl">⏱️</div>
+                      <div className="text-xl sm:text-2xl md:text-3xl">⏱️</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 3: Delay Detection</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Step 3: Delay Detection</h5>
                         <p className="text-gray-700">
                           When oracles report a delay exceeding the policy threshold, they provide the data along with
                           its <strong>hash and digital signature</strong>.
@@ -1074,9 +1074,9 @@ export default function HashingCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-3xl">💰</div>
+                      <div className="text-xl sm:text-2xl md:text-3xl">💰</div>
                       <div className="flex-1">
-                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 4: Automatic Payout</h5>
+                        <h5 className="text-base md:text-lg font-bold text-gray-900 mb-2">Step 4: Automatic Payout</h5>
                         <p className="text-gray-700">
                           The smart contract verifies the hash matches the signed data, confirms the signature is from a
                           trusted oracle, and <strong>automatically triggers payment</strong> to your account.
@@ -1095,10 +1095,10 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Real-World Examples */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-2xl p-6 border-2 border-gray-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 border-2 border-gray-300">
                   <div className="text-4xl mb-4">⚡</div>
-                  <h5 className="text-lg font-bold text-gray-900 mb-3">Etherisc Platform</h5>
+                  <h5 className="text-base md:text-lg font-bold text-gray-900 mb-3">Etherisc Platform</h5>
                   <p className="text-gray-700 mb-4">
                     Decentralized insurance platform using Ethereum smart contracts. Their flight delay insurance product has
                     processed <strong>thousands of automatic payouts</strong>.
@@ -1111,9 +1111,9 @@ export default function HashingCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 border-2 border-gray-300">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 border-2 border-gray-300">
                   <div className="text-4xl mb-4">🏢</div>
-                  <h5 className="text-lg font-bold text-gray-900 mb-3">AXA Fizzy (Case Study)</h5>
+                  <h5 className="text-base md:text-lg font-bold text-gray-900 mb-3">AXA Fizzy (Case Study)</h5>
                   <p className="text-gray-700 mb-4">
                     Major insurer's flight delay product (now discontinued but instructive) demonstrated hash verification
                     could process claims in <strong>seconds rather than weeks</strong>.
@@ -1140,7 +1140,7 @@ export default function HashingCoursePage() {
                 <strong> cryptographic proof of compliance</strong>.
               </p>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-8 mb-8 border-2 border-indigo-300">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-indigo-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">📋 Solvency II Reporting (Europe)</h4>
 
                 <p className="text-gray-700 mb-6">
@@ -1180,14 +1180,14 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Internal Compliance */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-300">
+              <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-gray-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">🏥 Internal Compliance: Health Insurer Example</h4>
 
                 <p className="text-gray-700 mb-6">
                   A major health insurer implemented a hash-based audit system where <strong>every database change</strong> generates a hash of:
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200">
                     <h5 className="font-bold text-gray-900 mb-3">🔍 What Gets Hashed:</h5>
                     <ul className="space-y-2 text-gray-700 text-sm">
@@ -1232,7 +1232,7 @@ export default function HashingCoursePage() {
                 A single catastrophic event might trigger claims across hundreds of primary insurers, who then claim from dozens of reinsurers.
               </p>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-300">
                 <h4 className="text-xl font-bold text-gray-900 mb-6">🏛️ London Market Implementation</h4>
 
                 <p className="text-gray-700 mb-6">
@@ -1259,9 +1259,9 @@ export default function HashingCoursePage() {
               </div>
 
               {/* B3i Consortium */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-300">
+              <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-gray-300">
                 <div className="flex items-start gap-6">
-                  <div className="text-5xl">⛓️</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">⛓️</div>
                   <div className="flex-1">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">B3i (Blockchain Insurance Industry Initiative)</h4>
                     <p className="text-gray-700 mb-6">
@@ -1287,7 +1287,7 @@ export default function HashingCoursePage() {
                       </ul>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="bg-green-50 rounded-xl p-5 border-2 border-green-200">
                         <div className="text-3xl mb-2">⚡</div>
                         <h6 className="font-bold text-gray-900 mb-2">Settlement Speed</h6>
@@ -1323,21 +1323,21 @@ export default function HashingCoursePage() {
 
             {/* Digital Transformation of Tax Systems */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   1
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Digital Transformation of Tax Systems</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                     Tax authorities worldwide are moving from paper-based to electronic filing, creating new challenges for ensuring document integrity and proof of filing. Hash functions have become fundamental to modern tax systems, creating cryptographic proof that protects both taxpayers and authorities.
                   </p>
                 </div>
               </div>
 
               {/* Real-World Tax Systems */}
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border-2 border-green-200">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-green-200">
                   <Landmark className="w-12 h-12 text-green-600 mb-4" />
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">India GST System</h4>
                   <p className="text-xl text-gray-700 mb-4">Processing over 100 million returns monthly using SHA-256 hashes</p>
@@ -1357,7 +1357,7 @@ export default function HashingCoursePage() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-blue-200">
                   <FileCheck className="w-12 h-12 text-blue-600 mb-4" />
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">US IRS E-Filing</h4>
                   <p className="text-xl text-gray-700 mb-4">Multiple layers of hash verification in electronic submissions</p>
@@ -1381,20 +1381,20 @@ export default function HashingCoursePage() {
 
             {/* Preventing Tax Fraud */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   2
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Preventing Tax Fraud Through Hash Verification</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     Tax fraud costs governments hundreds of billions annually. Hash functions create immutable fingerprints that detect tampering and trace fraud to its source.
                   </p>
                 </div>
               </div>
 
               {/* Fraud Prevention Example */}
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-10 rounded-2xl border-2 border-red-200 mb-8">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-red-200 mb-8">
                 <div className="flex items-center gap-4 mb-6">
                   <AlertTriangle className="w-10 h-10 text-red-600" />
                   <h4 className="text-3xl font-bold text-gray-900">Fraudulent Tax Preparer Detection</h4>
@@ -1428,12 +1428,12 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Cross-Border Compliance */}
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-10 rounded-2xl border-2 border-purple-200">
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-purple-200">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Cross-Border Tax Compliance</h4>
                 <p className="text-xl text-gray-700 mb-6">
                   The OECD's Common Reporting Standard uses Merkle trees for efficient verification of millions of account records exchanged between countries.
                 </p>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-white p-6 rounded-xl">
                     <Hash className="w-10 h-10 text-purple-600 mb-3" />
                     <h5 className="font-bold text-gray-900 mb-2">Individual Hashing</h5>
@@ -1455,13 +1455,13 @@ export default function HashingCoursePage() {
 
             {/* Real-Time Reporting */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   3
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Real-Time Reporting and Continuous Compliance</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     The future of tax compliance is continuous, real-time reporting with hash functions ensuring integrity throughout billions of transactions.
                   </p>
                 </div>
@@ -1469,13 +1469,13 @@ export default function HashingCoursePage() {
 
               {/* Country Examples */}
               <div className="space-y-8">
-                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-10 rounded-2xl border-l-8 border-yellow-500">
+                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-l-8 border-yellow-500">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="text-4xl">🇪🇸</span>
+                    <span className="text-base md:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">🇪🇸</span>
                     <h4 className="text-3xl font-bold text-gray-900">Spain's SII System</h4>
                   </div>
                   <p className="text-xl text-gray-700 mb-6">Immediate Supply of Information requires invoice reporting within 4 days</p>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="bg-white p-6 rounded-xl">
                       <p className="font-bold text-gray-900 mb-2">How it works:</p>
                       <ul className="space-y-2 text-gray-700">
@@ -1492,15 +1492,15 @@ export default function HashingCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-50 to-teal-50 p-10 rounded-2xl border-l-8 border-green-500">
+                <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-l-8 border-green-500">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="text-4xl">🇧🇷</span>
+                    <span className="text-base md:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">🇧🇷</span>
                     <h4 className="text-3xl font-bold text-gray-900">Brazil's NF-e System</h4>
                   </div>
                   <p className="text-xl text-gray-700 mb-6">Electronic invoice system processing over 2 billion invoices annually</p>
                   <div className="bg-white p-6 rounded-xl">
                     <p className="font-bold text-gray-900 mb-3">Hash-Based Features:</p>
-                    <div className="grid md:grid-cols-3 gap-4 text-gray-700">
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-gray-700">
                       <div className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                         <span>Unique hash per transaction</span>
@@ -1521,26 +1521,26 @@ export default function HashingCoursePage() {
 
             {/* Blockchain in Tax */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   4
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Blockchain in Tax Administration</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     Experimental blockchain systems demonstrate how distributed ledgers and hash functions could revolutionize government revenue collection.
                   </p>
                 </div>
               </div>
 
               {/* Implementation Examples */}
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-red-200">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-red-200">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">🇨🇳</span>
+                    <span className="text-base md:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">🇨🇳</span>
                     <h4 className="text-2xl font-bold text-gray-900">Shenzhen, China</h4>
                   </div>
-                  <p className="text-gray-700 text-lg mb-4">Millions of blockchain-based tax invoices issued</p>
+                  <p className="text-gray-700 text-base md:text-lg mb-4">Millions of blockchain-based tax invoices issued</p>
                   <div className="bg-white p-6 rounded-xl space-y-3 text-gray-700">
                     <p>✓ Transaction hash recorded on blockchain</p>
                     <p>✓ Immutable audit trail</p>
@@ -1549,12 +1549,12 @@ export default function HashingCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border-2 border-blue-200">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-blue-200">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">🇹🇭</span>
+                    <span className="text-base md:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">🇹🇭</span>
                     <h4 className="text-2xl font-bold text-gray-900">Thailand VAT Refunds</h4>
                   </div>
-                  <p className="text-gray-700 text-lg mb-4">Blockchain system for tourist VAT refunds</p>
+                  <p className="text-gray-700 text-base md:text-lg mb-4">Blockchain system for tourist VAT refunds</p>
                   <div className="bg-white p-6 rounded-xl space-y-3 text-gray-700">
                     <p>✓ Receipts hashed and recorded on blockchain</p>
                     <p>✓ Smart contracts process refunds</p>
@@ -1583,22 +1583,22 @@ export default function HashingCoursePage() {
 
             {/* Digital Identity Challenge */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   1
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">The Challenge of Digital Identity Verification</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                     Know Your Customer (KYC) regulations require financial institutions to verify identities, but traditional manual processes are slow, expensive, and error-prone. Electronic KYC using hash functions streamlines this while improving security.
                   </p>
                 </div>
               </div>
 
               {/* KYC Scale & Cost */}
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-10 rounded-2xl border-2 border-red-200 mb-8">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-red-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">The Scale of the KYC Challenge</h4>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-white p-6 rounded-xl text-center">
                     <p className="text-4xl font-bold text-red-600 mb-2">$60-500</p>
                     <p className="text-gray-700">Cost per customer for traditional KYC</p>
@@ -1615,8 +1615,8 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Experience Comparison */}
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-8 rounded-2xl border-2 border-gray-400">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-gray-400">
                   <div className="flex items-center gap-3 mb-4">
                     <Ban className="w-10 h-10 text-red-600" />
                     <h4 className="text-2xl font-bold text-gray-900">Traditional KYC</h4>
@@ -1629,7 +1629,7 @@ export default function HashingCoursePage() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border-2 border-green-300">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-green-300">
                   <div className="flex items-center gap-3 mb-4">
                     <CheckCircle className="w-10 h-10 text-green-600" />
                     <h4 className="text-2xl font-bold text-gray-900">Hash-Based eKYC</h4>
@@ -1646,40 +1646,40 @@ export default function HashingCoursePage() {
 
             {/* Document Verification */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   2
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Document Verification and Anti-Tampering</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     Multi-layer hashing makes document tampering nearly impossible by creating separate hashes for every element of an identity document.
                   </p>
                 </div>
               </div>
 
               {/* Multi-Layer Hashing Process */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-10 rounded-2xl border-2 border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-blue-200">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Multi-Layer Hash Verification</h4>
                 <p className="text-xl text-gray-700 mb-8">When a customer photographs their passport, the system creates multiple verification layers:</p>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-2 md:grid-cols-4 gap-6">
                   <div className="bg-white p-6 rounded-xl">
-                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl mb-3">1</div>
+                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">1</div>
                     <h5 className="font-bold text-gray-900 mb-2">Image Hash</h5>
                     <p className="text-gray-700 text-sm">Full document photo hashed</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl">
-                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl mb-3">2</div>
+                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">2</div>
                     <h5 className="font-bold text-gray-900 mb-2">OCR Text Hash</h5>
                     <p className="text-gray-700 text-sm">Extracted text data hashed separately</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl">
-                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl mb-3">3</div>
+                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">3</div>
                     <h5 className="font-bold text-gray-900 mb-2">Photo Hash</h5>
                     <p className="text-gray-700 text-sm">Portrait photo extracted and hashed</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl">
-                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl mb-3">4</div>
+                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">4</div>
                     <h5 className="font-bold text-gray-900 mb-2">Composite Hash</h5>
                     <p className="text-gray-700 text-sm">All elements combined into one hash</p>
                   </div>
@@ -1687,7 +1687,7 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Real-World Fraud Detection */}
-              <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-10 rounded-2xl border-l-8 border-yellow-500 mt-8">
+              <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-l-8 border-yellow-500 mt-8">
                 <div className="flex items-center gap-4 mb-4">
                   <AlertTriangle className="w-12 h-12 text-orange-600" />
                   <h4 className="text-3xl font-bold text-gray-900">Forgery Detection Success Story</h4>
@@ -1703,28 +1703,28 @@ export default function HashingCoursePage() {
 
             {/* Privacy-Preserving Verification */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   3
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Privacy-Preserving Identity Verification</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     Hash functions enable zero-knowledge identity proofs—proving attributes without revealing underlying data.
                   </p>
                 </div>
               </div>
 
               {/* India's Aadhaar System */}
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-10 rounded-2xl border-2 border-orange-200 mb-8">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-orange-200 mb-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-5xl">🇮🇳</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇮🇳</span>
                   <div>
                     <h4 className="text-3xl font-bold text-gray-900">India's Aadhaar System</h4>
                     <p className="text-xl text-gray-600">Serving 1.3 billion people with hash-based privacy</p>
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-white p-6 rounded-xl">
                     <h5 className="font-bold text-gray-900 mb-3">How it works:</h5>
                     <ul className="space-y-2 text-gray-700">
@@ -1743,9 +1743,9 @@ export default function HashingCoursePage() {
               </div>
 
               {/* EU eIDAS */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-10 rounded-2xl border-2 border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-blue-200">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-5xl">🇪🇺</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇪🇺</span>
                   <div>
                     <h4 className="text-3xl font-bold text-gray-900">EU eIDAS Cross-Border Identity</h4>
                     <p className="text-xl text-gray-600">Hash-based trust framework for EU citizens</p>
@@ -1767,23 +1767,23 @@ export default function HashingCoursePage() {
 
             {/* Blockchain Identity */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   4
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Blockchain-Based Identity Systems</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     Self-sovereign identity gives individuals control over their identity data through cryptographic proofs anchored to blockchains.
                   </p>
                 </div>
               </div>
 
               {/* Implementation Examples */}
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border-2 border-blue-200">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-blue-200">
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">Microsoft ION</h4>
-                  <p className="text-gray-700 text-lg mb-4">Identity Overlay Network built on Bitcoin</p>
+                  <p className="text-gray-700 text-base md:text-lg mb-4">Identity Overlay Network built on Bitcoin</p>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -1800,9 +1800,9 @@ export default function HashingCoursePage() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-200">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 md:p-8 rounded-xl md:rounded-2xl border-2 border-purple-200">
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">MIT Blockchain Diplomas</h4>
-                  <p className="text-gray-700 text-lg mb-4">Educational credentials on blockchain</p>
+                  <p className="text-gray-700 text-base md:text-lg mb-4">Educational credentials on blockchain</p>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
@@ -1821,9 +1821,9 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Estonia e-Residency */}
-              <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-10 rounded-2xl border-l-8 border-blue-500">
+              <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-l-8 border-blue-500">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-5xl">🇪🇪</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇪🇪</span>
                   <div>
                     <h4 className="text-3xl font-bold text-gray-900">Estonia's e-Residency Program</h4>
                     <p className="text-xl text-gray-600">Government-backed blockchain identity</p>
@@ -1834,7 +1834,7 @@ export default function HashingCoursePage() {
                 </p>
                 <div className="bg-white p-6 rounded-xl">
                   <p className="font-bold text-gray-900 mb-3">Enabled Capabilities:</p>
-                  <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
                     <p>✓ Establish EU businesses entirely online</p>
                     <p>✓ Hash verification ensures identity integrity</p>
                     <p>✓ Prove authorized actions via blockchain</p>
@@ -1846,28 +1846,28 @@ export default function HashingCoursePage() {
 
             {/* Financial Inclusion */}
             <div className="mb-16">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+              <div className="flex items-start gap-4 md:gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl md:rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
                   5
                 </div>
                 <div className="flex-1">
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">Financial Inclusion Through Hash-Based eKYC</h3>
-                  <p className="text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     Progressive KYC using hash functions extends financial services to populations lacking traditional identity documents.
                   </p>
                 </div>
               </div>
 
               {/* Kenya M-Pesa */}
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 p-10 rounded-2xl border-2 border-green-200 mb-8">
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-green-200 mb-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-5xl">🇰🇪</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇰🇪</span>
                   <h4 className="text-3xl font-bold text-gray-900">Kenya's M-Pesa System</h4>
                 </div>
                 <p className="text-xl text-gray-700 mb-6">
                   Mobile money system demonstrating progressive identity verification
                 </p>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-white p-6 rounded-xl">
                     <h5 className="font-bold text-gray-900 mb-3">Step 1: Basic</h5>
                     <p className="text-gray-700">SIM registration hash = basic identity</p>
@@ -1887,15 +1887,15 @@ export default function HashingCoursePage() {
               </div>
 
               {/* Philippines Digital Banks */}
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-10 rounded-2xl border-2 border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl border-2 border-blue-200">
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-5xl">🇵🇭</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇵🇭</span>
                   <h4 className="text-3xl font-bold text-gray-900">Philippines Digital Banking</h4>
                 </div>
                 <p className="text-xl text-gray-700 mb-6">
                   BSP regulations explicitly recognize hash-based eKYC, enabling purely smartphone-based onboarding
                 </p>
-                <div className="bg-white p-8 rounded-xl">
+                <div className="bg-white p-6 md:p-8 rounded-xl">
                   <p className="font-bold text-gray-900 mb-4">Multi-Layer Hash Security:</p>
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
@@ -1946,7 +1946,7 @@ export default function HashingCoursePage() {
             {/* Section 1: Merkle Trees */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-600 to-teal-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-600 to-teal-600 text-white text-3xl font-bold shadow-xl">
                   1
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -1954,10 +1954,10 @@ export default function HashingCoursePage() {
                 </h3>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200">
                   <h4 className="text-3xl font-bold text-gray-900 mb-6">What is a Merkle Tree?</h4>
-                  <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                     A Merkle tree (or hash tree) is a data structure where every leaf node is a hash of a data block,
                     and every non-leaf node is a hash of its children. This creates a tree of hashes that allows
                     efficient and secure verification of large data structures.
@@ -1973,7 +1973,7 @@ export default function HashingCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                   <h4 className="text-3xl font-bold text-green-900 mb-6">Why Merkle Trees Matter</h4>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -2001,9 +2001,9 @@ export default function HashingCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Real-World Applications</h4>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="border-2 border-blue-300 rounded-xl p-6 bg-blue-50">
                     <div className="text-4xl mb-4">₿</div>
                     <h5 className="text-2xl font-bold text-blue-900 mb-4">Bitcoin</h5>
@@ -2031,12 +2031,12 @@ export default function HashingCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl shadow-xl p-10">
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-xl md:rounded-2xl shadow-xl p-10">
                 <div className="flex items-start gap-6">
                   <Hash className="w-12 h-12 flex-shrink-0" />
                   <div>
                     <p className="text-3xl font-bold mb-4">Merkle Proof Example</p>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       To verify Transaction #7 in a block with 1,000 transactions, you only need ~10 hashes
                       (log₂(1000) ≈ 10) instead of all 1,000 transactions. This is how light wallets work!
                     </p>
@@ -2053,7 +2053,7 @@ export default function HashingCoursePage() {
             {/* Section 2: Hash Chains and Proof of Sequence */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-3xl font-bold shadow-xl">
                   2
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -2061,38 +2061,38 @@ export default function HashingCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">What is a Hash Chain?</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   A hash chain links data blocks together where each block contains the hash of the previous block.
                   This creates an immutable sequence where tampering with any block breaks the entire chain.
                 </p>
-                <div className="bg-gray-50 p-8 rounded-xl border-2 border-gray-300">
+                <div className="bg-gray-50 p-6 md:p-8 rounded-xl border-2 border-gray-300">
                   <p className="text-xl font-mono text-center mb-6">
                     Block 1 → Hash(Block 1) → Block 2 → Hash(Block 2) → Block 3 → ...
                   </p>
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div className="bg-blue-100 p-6 rounded-xl border-2 border-blue-300">
                       <p className="font-bold text-xl text-blue-900 mb-2">Block N</p>
-                      <p className="text-lg text-blue-800">Data: "Transaction A"</p>
-                      <p className="text-lg text-blue-800">Previous Hash: abc123...</p>
+                      <p className="text-base md:text-lg text-blue-800">Data: "Transaction A"</p>
+                      <p className="text-base md:text-lg text-blue-800">Previous Hash: abc123...</p>
                     </div>
                     <div className="bg-purple-100 p-6 rounded-xl border-2 border-purple-300">
                       <p className="font-bold text-xl text-purple-900 mb-2">Block N+1</p>
-                      <p className="text-lg text-purple-800">Data: "Transaction B"</p>
-                      <p className="text-lg text-purple-800">Previous Hash: def456...</p>
+                      <p className="text-base md:text-lg text-purple-800">Data: "Transaction B"</p>
+                      <p className="text-base md:text-lg text-purple-800">Previous Hash: def456...</p>
                     </div>
                     <div className="bg-green-100 p-6 rounded-xl border-2 border-green-300">
                       <p className="font-bold text-xl text-green-900 mb-2">Block N+2</p>
-                      <p className="text-lg text-green-800">Data: "Transaction C"</p>
-                      <p className="text-lg text-green-800">Previous Hash: ghi789...</p>
+                      <p className="text-base md:text-lg text-green-800">Data: "Transaction C"</p>
+                      <p className="text-base md:text-lg text-green-800">Previous Hash: ghi789...</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl p-8 border-2 border-blue-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
                   <h4 className="text-3xl font-bold text-blue-900 mb-6">Applications</h4>
                   <div className="space-y-6">
                     <div className="border-l-4 border-blue-600 pl-6">
@@ -2116,7 +2116,7 @@ export default function HashingCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-xl p-8 border-2 border-orange-300">
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-orange-300">
                   <h4 className="text-3xl font-bold text-orange-900 mb-6">Why It Matters</h4>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -2148,7 +2148,7 @@ export default function HashingCoursePage() {
             {/* Section 3: Homomorphic Hashing and Advanced Techniques */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 text-white text-3xl font-bold shadow-xl">
                   3
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -2156,19 +2156,19 @@ export default function HashingCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Homomorphic Hashing</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   Homomorphic hash functions allow certain operations to be performed on hashed data without
                   revealing the original data. This enables privacy-preserving computations.
                 </p>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-300">
                     <p className="font-bold text-2xl text-purple-900 mb-4">Mathematical Property</p>
                     <p className="text-xl text-purple-800 mb-4">
                       For operation ⊕: H(A ⊕ B) = H(A) ⊕ H(B)
                     </p>
-                    <p className="text-lg text-purple-700">
+                    <p className="text-base md:text-lg text-purple-700">
                       This allows combining hashes without knowing underlying data
                     </p>
                   </div>
@@ -2181,13 +2181,13 @@ export default function HashingCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-8 border-2 border-indigo-300 mb-8">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-indigo-300 mb-8">
                 <h4 className="text-3xl font-bold text-indigo-900 mb-6">Fuzzy Hashing (ssdeep)</h4>
                 <p className="text-2xl text-indigo-800 leading-relaxed mb-6">
                   Unlike cryptographic hashes where one bit change creates completely different hash,
                   fuzzy hashing creates similar hashes for similar files.
                 </p>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-white p-6 rounded-xl border-2 border-indigo-300">
                     <p className="font-bold text-xl text-indigo-900 mb-4">Traditional Hash (SHA-256)</p>
                     <div className="space-y-3 text-lg">
@@ -2215,9 +2215,9 @@ export default function HashingCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Committed Bloom Filters</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   Combine Bloom filters (probabilistic data structures) with cryptographic commitments to
                   enable private set membership proofs.
                 </p>
@@ -2227,7 +2227,7 @@ export default function HashingCoursePage() {
                     Check if your password appears in leaked databases without revealing your password to the
                     checking service.
                   </p>
-                  <div className="grid md:grid-cols-3 gap-4 mt-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
                     <div className="bg-white p-4 rounded-lg border border-blue-300">
                       <p className="font-semibold text-blue-900">Step 1</p>
                       <p className="text-sm text-blue-800">Hash your password locally</p>
@@ -2248,7 +2248,7 @@ export default function HashingCoursePage() {
             {/* Section 4: The Future - Post-Quantum Hashing */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-600 text-white text-3xl font-bold shadow-xl">
                   4
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -2256,7 +2256,7 @@ export default function HashingCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-xl p-8 border-2 border-orange-300 mb-8">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-orange-300 mb-8">
                 <div className="flex items-start gap-6">
                   <AlertTriangle className="w-16 h-16 text-orange-600 flex-shrink-0" />
                   <div>
@@ -2265,26 +2265,26 @@ export default function HashingCoursePage() {
                       Quantum computers threaten asymmetric cryptography (RSA, ECDSA) but have limited impact
                       on hash functions. However, they reduce security margins.
                     </p>
-                    <div className="grid md:grid-cols-2 gap-6 mt-6">
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-6">
                       <div className="bg-white p-6 rounded-xl border-2 border-red-300">
                         <p className="font-bold text-xl text-red-900 mb-3">Classical Security</p>
-                        <p className="text-lg text-red-800">SHA-256 provides 256-bit security against brute force</p>
+                        <p className="text-base md:text-lg text-red-800">SHA-256 provides 256-bit security against brute force</p>
                       </div>
                       <div className="bg-white p-6 rounded-xl border-2 border-orange-300">
                         <p className="font-bold text-xl text-orange-900 mb-3">Quantum Security</p>
-                        <p className="text-lg text-orange-800">Grover's algorithm reduces to ~128-bit effective security</p>
+                        <p className="text-base md:text-lg text-orange-800">Grover's algorithm reduces to ~128-bit effective security</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Post-Quantum Hash Functions</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   NIST is standardizing quantum-resistant algorithms. Hash-based signatures are leading candidates.
                 </p>
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300">
                     <h5 className="text-2xl font-bold text-blue-900 mb-4">SPHINCS+ (Hash-Based Signatures)</h5>
                     <p className="text-xl text-blue-800 mb-4">
@@ -2292,7 +2292,7 @@ export default function HashingCoursePage() {
                     </p>
                     <div className="bg-white p-4 rounded-lg border border-blue-300 mt-4">
                       <p className="font-semibold text-blue-900 mb-2">Trade-offs:</p>
-                      <ul className="space-y-2 text-lg text-blue-800">
+                      <ul className="space-y-2 text-base md:text-lg text-blue-800">
                         <li>✅ Quantum-safe</li>
                         <li>✅ Well-understood security</li>
                         <li>⚠️ Larger signature sizes (16-49 KB vs 64 bytes for ECDSA)</li>
@@ -2307,7 +2307,7 @@ export default function HashingCoursePage() {
                     </p>
                     <div className="bg-white p-4 rounded-lg border border-purple-300 mt-4">
                       <p className="font-semibold text-purple-900 mb-2">Advantages:</p>
-                      <ul className="space-y-2 text-lg text-purple-800">
+                      <ul className="space-y-2 text-base md:text-lg text-purple-800">
                         <li>✅ More resistant to length-extension attacks</li>
                         <li>✅ Flexible output sizes</li>
                         <li>✅ Better hardware performance</li>
@@ -2318,26 +2318,26 @@ export default function HashingCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-600 to-blue-600 text-white rounded-2xl shadow-xl p-10">
+              <div className="bg-gradient-to-br from-cyan-600 to-blue-600 text-white rounded-xl md:rounded-2xl shadow-xl p-10">
                 <div className="flex items-start gap-6">
                   <Network className="w-12 h-12 flex-shrink-0" />
                   <div>
                     <p className="text-3xl font-bold mb-4">Looking Ahead: Hybrid Approaches</p>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       The future likely involves hybrid systems combining multiple hash algorithms and
                       post-quantum techniques for defense in depth.
                     </p>
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                       <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
-                        <p className="font-bold text-xl mb-2">Multi-Algorithm</p>
+                        <p className="font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Multi-Algorithm</p>
                         <p className="text-lg">Use SHA-256 + SHA-3 for redundancy</p>
                       </div>
                       <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
-                        <p className="font-bold text-xl mb-2">Gradual Migration</p>
+                        <p className="font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Gradual Migration</p>
                         <p className="text-lg">Transition period supporting both classical and quantum-safe</p>
                       </div>
                       <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
-                        <p className="font-bold text-xl mb-2">Agile Cryptography</p>
+                        <p className="font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Agile Cryptography</p>
                         <p className="text-lg">Design systems to swap algorithms as needed</p>
                       </div>
                     </div>
@@ -2349,7 +2349,7 @@ export default function HashingCoursePage() {
             {/* Section 5: Conclusion */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-600 to-teal-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-600 to-teal-600 text-white text-3xl font-bold shadow-xl">
                   5
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -2357,15 +2357,15 @@ export default function HashingCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white rounded-3xl shadow-2xl p-12 mb-8">
+              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 xl:p-12 mb-8">
                 <h4 className="text-4xl font-bold mb-6">From Simple Checksums to Global Infrastructure</h4>
-                <p className="text-2xl leading-relaxed mb-8">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-8">
                   Cryptographic hash functions have evolved from simple data verification tools into the
                   invisible foundation of digital trust. They secure everything from your morning coffee
                   purchase to international tax systems.
                 </p>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-white/20 p-8 rounded-2xl backdrop-blur-sm">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="bg-white/20 p-6 md:p-8 rounded-xl md:rounded-2xl backdrop-blur-sm">
                     <p className="text-3xl font-bold mb-4">What We've Learned</p>
                     <ul className="space-y-3 text-xl">
                       <li>✓ Hash functions create digital fingerprints</li>
@@ -2376,7 +2376,7 @@ export default function HashingCoursePage() {
                       <li>✓ Post-quantum security is on the horizon</li>
                     </ul>
                   </div>
-                  <div className="bg-white/20 p-8 rounded-2xl backdrop-blur-sm">
+                  <div className="bg-white/20 p-6 md:p-8 rounded-xl md:rounded-2xl backdrop-blur-sm">
                     <p className="text-3xl font-bold mb-4">Why It Matters</p>
                     <ul className="space-y-3 text-xl">
                       <li>💰 Prevents tax fraud saving billions</li>
@@ -2390,22 +2390,22 @@ export default function HashingCoursePage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8 mb-8">
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
                   <div className="text-5xl mb-6 text-center">🔐</div>
                   <h5 className="text-2xl font-bold text-blue-900 text-center mb-4">Security</h5>
                   <p className="text-xl text-blue-800 text-center">
                     Hash functions provide cryptographic guarantees that underpin digital security worldwide
                   </p>
                 </div>
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
                   <div className="text-5xl mb-6 text-center">⚡</div>
                   <h5 className="text-2xl font-bold text-purple-900 text-center mb-4">Efficiency</h5>
                   <p className="text-xl text-purple-800 text-center">
                     Constant-size outputs and fast computation make hashes practical at global scale
                   </p>
                 </div>
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-green-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                   <div className="text-5xl mb-6 text-center">🌐</div>
                   <h5 className="text-2xl font-bold text-green-900 text-center mb-4">Trust</h5>
                   <p className="text-xl text-green-800 text-center">
@@ -2414,7 +2414,7 @@ export default function HashingCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-10 border-2 border-green-300">
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 border-2 border-green-300">
                 <div className="flex items-start gap-6">
                   <CheckCircle className="w-16 h-16 text-green-600 flex-shrink-0" />
                   <div>
@@ -2442,14 +2442,14 @@ export default function HashingCoursePage() {
             animate={{ opacity: 1, scale: 1 }}
             className="mb-16"
           >
-            <div className="bg-gradient-to-br from-green-600 via-teal-600 to-blue-600 text-white rounded-3xl shadow-2xl p-16 text-center">
+            <div className="bg-gradient-to-br from-green-600 via-teal-600 to-blue-600 text-white rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-16 text-center">
               <div className="text-8xl mb-8">🎓</div>
               <h2 className="text-6xl font-bold mb-6">Congratulations!</h2>
-              <p className="text-3xl mb-8 leading-relaxed">
+              <p className="text-3xl mb-4 md:mb-6 lg:mb-8 leading-relaxed">
                 You've completed the Hashing and Integrity course
               </p>
-              <div className="grid md:grid-cols-3 gap-8 mb-12 text-left">
-                <div className="bg-white/20 p-8 rounded-2xl backdrop-blur-sm">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-8 lg:mb-12 text-left">
+                <div className="bg-white/20 p-6 md:p-8 rounded-xl md:rounded-2xl backdrop-blur-sm">
                   <div className="text-5xl mb-4">📚</div>
                   <p className="text-2xl font-bold mb-3">What You Learned</p>
                   <ul className="space-y-2 text-xl">
@@ -2460,7 +2460,7 @@ export default function HashingCoursePage() {
                     <li>• Post-quantum security</li>
                   </ul>
                 </div>
-                <div className="bg-white/20 p-8 rounded-2xl backdrop-blur-sm">
+                <div className="bg-white/20 p-6 md:p-8 rounded-xl md:rounded-2xl backdrop-blur-sm">
                   <div className="text-5xl mb-4">🛠️</div>
                   <p className="text-2xl font-bold mb-3">Practical Skills</p>
                   <ul className="space-y-2 text-xl">
@@ -2471,7 +2471,7 @@ export default function HashingCoursePage() {
                     <li>• Design tamper-proof systems</li>
                   </ul>
                 </div>
-                <div className="bg-white/20 p-8 rounded-2xl backdrop-blur-sm">
+                <div className="bg-white/20 p-6 md:p-8 rounded-xl md:rounded-2xl backdrop-blur-sm">
                   <div className="text-5xl mb-4">🚀</div>
                   <p className="text-2xl font-bold mb-3">Next Steps</p>
                   <ul className="space-y-2 text-xl">
@@ -2485,7 +2485,7 @@ export default function HashingCoursePage() {
               </div>
               <Link
                 href="/learn"
-                className="inline-block bg-white text-blue-600 px-12 py-6 rounded-2xl text-2xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+                className="inline-block bg-white text-blue-600 px-12 py-6 rounded-xl md:rounded-2xl text-2xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
               >
                 Continue to Next Module →
               </Link>

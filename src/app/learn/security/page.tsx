@@ -23,7 +23,7 @@ export default function SecurityCoursePage() {
           <p className="text-gray-600 mb-8">The Security Foundations course could not be found.</p>
           <Link
             href="/learn"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             <ArrowLeft className="mr-2 w-5 h-5" />
             Back to Courses
@@ -37,17 +37,17 @@ export default function SecurityCoursePage() {
     <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 py-16 border-b-2 border-gray-200">
-          <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 lg:px-16">
             <Link
               href="/learn"
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors text-xl font-medium"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 md:mb-6 lg:mb-8 transition-colors text-xl font-medium"
             >
               <ArrowLeft className="mr-2 w-5 h-5" />
               Back to Courses
             </Link>
 
             <div className="flex items-start gap-8">
-              <div className="text-7xl">{course.icon}</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">{course.icon}</div>
               <div className="flex-1">
                 <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
                   {course.title}
@@ -55,7 +55,7 @@ export default function SecurityCoursePage() {
                 <p className="text-3xl text-gray-700 leading-relaxed mb-8">
                   Master the cryptographic foundations that secure the blockchain world—from ancient ciphers to quantum-resistant encryption.
                 </p>
-                <div className="flex flex-wrap items-center gap-6 text-xl">
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xl">
                   <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
                     <Clock className="w-6 h-6 mr-2 text-purple-600" />
                     {course.duration}
@@ -77,7 +77,7 @@ export default function SecurityCoursePage() {
         {/* Main Content Container */}
         <div>
           {/* Article Content */}
-          <article className="max-w-7xl mx-auto px-8 sm:px-12 py-16">
+          <article className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16">
 
           {/* PART I: THE BASICS OF ENCRYPTION */}
           <motion.section
@@ -94,9 +94,9 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* Elementary School Note-Passing Analogy */}
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 mb-12 border-2 border-blue-300">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 mb-6 md:mb-8 lg:mb-12 border-2 border-blue-300">
               <div className="flex items-start gap-6">
-                <div className="text-6xl">✉️</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">✉️</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">The Elementary School Note</h3>
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
@@ -105,8 +105,8 @@ export default function SecurityCoursePage() {
                     <strong className="text-blue-600"> every letter will be shifted by 3 positions in the alphabet</strong>.
                   </p>
                   <div className="bg-white rounded-xl p-6 mb-6">
-                    <p className="text-lg text-gray-800 mb-4"><strong>Example:</strong></p>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <p className="text-base md:text-lg text-gray-800 mb-4"><strong>Example:</strong></p>
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="bg-red-50 rounded-lg p-5 border-2 border-red-300">
                         <div className="text-sm font-bold text-red-900 mb-2">📝 Original Message:</div>
                         <div className="text-2xl font-mono text-gray-900">"HELLO"</div>
@@ -120,7 +120,7 @@ export default function SecurityCoursePage() {
                       H → K (shift by 3), E → H, L → O, L → O, O → R
                     </div>
                   </div>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                     This is <strong className="text-purple-600">encryption</strong> in its simplest form. You've taken readable
                     information (plaintext) and transformed it into something unreadable (ciphertext) using a secret rule (the key).
                     Only someone who knows the rule can reverse the process—this is called <strong className="text-purple-600">decryption</strong>.
@@ -191,7 +191,7 @@ export default function SecurityCoursePage() {
                       scramble data electronically.
                     </p>
                     <div className="bg-white rounded-lg p-4">
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <div className="text-sm font-bold text-gray-900 mb-2">✅ Advantages:</div>
                           <p className="text-gray-700 text-sm">Fast, electronic, standardized across industries</p>
@@ -242,15 +242,15 @@ export default function SecurityCoursePage() {
                 Two Fundamentally Different Approaches
               </h3>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-amber-300">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center">
                       <Key className="w-7 h-7 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-gray-900">Symmetric Encryption</h4>
                   </div>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                     <strong>The Same Key for Lock and Unlock</strong>
                   </p>
                   <div className="bg-white rounded-xl p-5 mb-4">
@@ -285,14 +285,14 @@ export default function SecurityCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border-2 border-indigo-300">
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-indigo-300">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center">
                       <KeyRound className="w-7 h-7 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-gray-900">Asymmetric Encryption</h4>
                   </div>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                     <strong>Two Different Keys: Public and Private</strong>
                   </p>
                   <div className="bg-white rounded-xl p-5 mb-4">
@@ -334,12 +334,12 @@ export default function SecurityCoursePage() {
               </div>
 
               {/* Hybrid Approach */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-300">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-300">
                 <div className="flex items-start gap-6">
-                  <div className="text-5xl">🔄</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🔄</div>
                   <div className="flex-1">
                     <h4 className="text-2xl font-bold text-gray-900 mb-4">The Best of Both Worlds: Hybrid Encryption</h4>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                       Modern systems (like HTTPS, which secures your web browsing) use <strong>both</strong> types together:
                     </p>
                     <div className="space-y-4">
@@ -381,8 +381,8 @@ export default function SecurityCoursePage() {
                 How HTTPS Protects Your Web Browsing
               </h3>
 
-              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border-2 border-cyan-300 mb-6">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-cyan-300 mb-6">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   Every time you see the 🔒 padlock icon in your browser's address bar, a sophisticated encryption
                   process called the <strong>TLS Handshake</strong> has occurred. Let's walk through it step-by-step:
                 </p>
@@ -391,7 +391,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-cyan-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Client Hello</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Client Hello</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         Your browser (client) sends a message to the website's server saying: "Hello! I want to establish
                         a secure connection. Here are the encryption methods I support."
@@ -405,7 +405,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-blue-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Server Hello + Certificate</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Server Hello + Certificate</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         The server responds: "Hello! Let's use <strong>this</strong> encryption method. Here's my
                         <strong className="text-blue-600"> digital certificate</strong> to prove I'm the real website
@@ -425,7 +425,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-indigo-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Key Exchange</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Key Exchange</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         Your browser generates a random <strong className="text-indigo-600">symmetric session key</strong>
                         and encrypts it using the server's <strong>public key</strong> (from the certificate). Then it
@@ -441,7 +441,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-purple-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Secure Communication Begins</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Secure Communication Begins</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         Both your browser and the server now use the <strong>symmetric session key</strong> to encrypt
                         all further communication. This is fast enough to handle images, videos, and real-time interactions.
@@ -458,7 +458,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-10 h-10 text-blue-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">Why This Matters</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Why This Matters</h5>
                       <p className="text-gray-700 leading-relaxed">
                         This process happens in <strong>milliseconds</strong> every time you visit a website. It protects
                         your passwords, credit card numbers, private messages, and browsing history from eavesdroppers—whether
@@ -472,7 +472,7 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* Key Takeaways */}
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-8 border-2 border-purple-400">
+            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-400">
               <div className="flex items-start gap-6">
                 <Target className="w-10 h-10 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
@@ -480,31 +480,31 @@ export default function SecurityCoursePage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Encryption</strong> transforms readable information into unreadable code, protecting it from unauthorized access
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Symmetric encryption</strong> uses one key for both locking and unlocking (fast but has key distribution problems)
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Asymmetric encryption</strong> uses two keys (public and private) that solve the key distribution problem
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Modern systems</strong> combine both approaches: asymmetric for key exchange, symmetric for data encryption
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>HTTPS/TLS</strong> protects billions of web connections daily using this hybrid approach
                       </p>
                     </div>
@@ -531,7 +531,7 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* CIA Triad Introduction */}
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-10 mb-12 border-2 border-rose-300">
+            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 mb-6 md:mb-8 lg:mb-12 border-2 border-rose-300">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">The Three Pillars of Information Security</h3>
                 <p className="text-xl text-gray-700 leading-relaxed">
@@ -539,8 +539,8 @@ export default function SecurityCoursePage() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white rounded-2xl p-6 border-2 border-blue-300 hover:shadow-xl transition-all">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 border-2 border-blue-300 hover:shadow-xl transition-all">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Lock className="w-9 h-9 text-white" />
                   </div>
@@ -560,7 +560,7 @@ export default function SecurityCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 border-2 border-green-300 hover:shadow-xl transition-all">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 border-2 border-green-300 hover:shadow-xl transition-all">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <ShieldCheck className="w-9 h-9 text-white" />
                   </div>
@@ -580,7 +580,7 @@ export default function SecurityCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 border-2 border-purple-300 hover:shadow-xl transition-all">
+                <div className="bg-white rounded-xl md:rounded-2xl p-6 border-2 border-purple-300 hover:shadow-xl transition-all">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Activity className="w-9 h-9 text-white" />
                   </div>
@@ -605,7 +605,7 @@ export default function SecurityCoursePage() {
                 <div className="flex items-start gap-4">
                   <Info className="w-8 h-8 text-rose-600 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-700 text-lg leading-relaxed">
+                    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                       <strong className="text-rose-600">Important Note:</strong> These three goals often conflict! For example,
                       maximum security (confidentiality) might reduce availability (harder to access). Good security design
                       balances all three based on the specific needs of the system.
@@ -622,9 +622,9 @@ export default function SecurityCoursePage() {
                 Security Layers: The Medieval Castle Defense
               </h3>
 
-              <div className="bg-gradient-to-br from-gray-50 to-slate-100 rounded-2xl p-8 border-2 border-gray-300 mb-6">
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="text-6xl">🏰</div>
+              <div className="bg-gradient-to-br from-gray-50 to-slate-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-gray-300 mb-6">
+                <div className="flex items-start gap-4 md:gap-6 mb-8">
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">🏰</div>
                   <div className="flex-1">
                     <p className="text-xl text-gray-700 leading-relaxed">
                       Think of digital security like a medieval castle. A well-defended castle doesn't rely on just one
@@ -637,7 +637,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-amber-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">The Moat (Perimeter Security)</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">The Moat (Perimeter Security)</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         The outer barrier that keeps casual intruders away. In digital systems, this is your
                         <strong> firewall</strong>—filtering incoming traffic and blocking obvious threats.
@@ -651,7 +651,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-blue-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">The Gate Guards (Authentication)</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">The Gate Guards (Authentication)</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         Guards who verify identity before letting anyone through the gate. In digital systems, this is
                         <strong> authentication</strong>—passwords, biometrics, two-factor authentication.
@@ -665,7 +665,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-green-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">Interior Doors (Authorization)</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Interior Doors (Authorization)</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         Even once inside, not everyone can access every room. The king's chambers, treasury, and armory
                         require additional permissions. This is <strong>authorization</strong>—controlling what authenticated
@@ -680,7 +680,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-purple-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">The Treasure Vault (Encryption)</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">The Treasure Vault (Encryption)</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         Even if an intruder breaches all defenses and reaches the treasure vault, the valuables are
                         locked in iron chests. In digital systems, <strong>encryption</strong> ensures that even stolen
@@ -695,7 +695,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-rose-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">5</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-rose-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">The Watchtower (Monitoring & Auditing)</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">The Watchtower (Monitoring & Auditing)</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         Guards in the watchtower observe all activity, looking for suspicious behavior. In digital systems,
                         this is <strong>logging and monitoring</strong>—tracking who accesses what and when.
@@ -711,7 +711,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-10 h-10 text-rose-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">Defense in Depth</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Defense in Depth</h5>
                       <p className="text-gray-700 leading-relaxed">
                         This strategy is called <strong>"Defense in Depth"</strong> or <strong>"Layered Security"</strong>.
                         If one layer fails (password stolen, firewall bypassed), other layers still protect the system.
@@ -732,7 +732,7 @@ export default function SecurityCoursePage() {
 
               <div className="space-y-8">
                 {/* Authentication */}
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-300">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-300">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
                       <UserCheck className="w-8 h-8 text-white" />
@@ -740,11 +740,11 @@ export default function SecurityCoursePage() {
                     <h4 className="text-2xl font-bold text-gray-900">Authentication: Proving You Are Who You Claim</h4>
                   </div>
 
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                     Authentication is the process of verifying identity. There are three main factors:
                   </p>
 
-                  <div className="grid md:grid-cols-3 gap-5 mb-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-6">
                     <div className="bg-white rounded-xl p-5 border-l-4 border-amber-500">
                       <h5 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
                         <Brain className="w-5 h-5 text-amber-600" />
@@ -780,7 +780,7 @@ export default function SecurityCoursePage() {
                   </div>
 
                   <div className="bg-gradient-to-r from-blue-100 to-cyan-100 rounded-xl p-6">
-                    <h5 className="font-bold text-gray-900 text-xl mb-3">🔐 Multi-Factor Authentication (MFA)</h5>
+                    <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">🔐 Multi-Factor Authentication (MFA)</h5>
                     <p className="text-gray-700 leading-relaxed mb-3">
                       Using <strong>two or more factors</strong> from different categories dramatically increases security.
                       For example, a password (something you know) + phone verification code (something you have).
@@ -798,7 +798,7 @@ export default function SecurityCoursePage() {
                 </div>
 
                 {/* Digital Signatures */}
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border-2 border-indigo-300">
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-indigo-300">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center">
                       <FileCheck className="w-8 h-8 text-white" />
@@ -807,11 +807,11 @@ export default function SecurityCoursePage() {
                   </div>
 
                   <div className="bg-white rounded-xl p-6 mb-6">
-                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
                       A <strong className="text-indigo-600">digital signature</strong> is the electronic equivalent of a
                       handwritten signature, but <strong>far more secure</strong>. It proves two things simultaneously:
                     </p>
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="bg-green-50 rounded-lg p-4 border-l-4 border-green-600">
                         <h5 className="font-bold text-green-900 mb-2">1. Authentication</h5>
                         <p className="text-sm text-gray-700">
@@ -828,7 +828,7 @@ export default function SecurityCoursePage() {
                   </div>
 
                   <div className="mb-6">
-                    <h5 className="font-bold text-gray-900 text-xl mb-4">How Digital Signatures Work (Step-by-Step)</h5>
+                    <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-4">How Digital Signatures Work (Step-by-Step)</h5>
                     <div className="space-y-4">
                       <div className="flex items-start gap-4">
                         <div className="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
@@ -907,7 +907,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <Lightbulb className="w-10 h-10 text-indigo-600 flex-shrink-0" />
                       <div>
-                        <h5 className="font-bold text-gray-900 text-xl mb-2">Real-World Uses of Digital Signatures</h5>
+                        <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Real-World Uses of Digital Signatures</h5>
                         <div className="space-y-2 text-gray-700">
                           <p className="text-sm leading-relaxed">
                             • <strong>Software updates:</strong> Verify that updates come from the legitimate developer (not malware)
@@ -928,7 +928,7 @@ export default function SecurityCoursePage() {
                 </div>
 
                 {/* Hashing */}
-                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-emerald-300">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 bg-emerald-600 rounded-xl flex items-center justify-center">
                       <Hash className="w-8 h-8 text-white" />
@@ -936,7 +936,7 @@ export default function SecurityCoursePage() {
                     <h4 className="text-2xl font-bold text-gray-900">Cryptographic Hashing: Digital Fingerprints</h4>
                   </div>
 
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                     A <strong className="text-emerald-600">cryptographic hash function</strong> is like a one-way blender
                     for data. You put information in, and it produces a unique fixed-length "fingerprint" (the hash).
                     Critically, you <strong>cannot reverse the process</strong>—you can't get the original data back from
@@ -944,8 +944,8 @@ export default function SecurityCoursePage() {
                   </p>
 
                   <div className="bg-white rounded-xl p-6 mb-6">
-                    <h5 className="font-bold text-gray-900 text-xl mb-4">Properties of Cryptographic Hash Functions</h5>
-                    <div className="grid md:grid-cols-2 gap-5">
+                    <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-4">Properties of Cryptographic Hash Functions</h5>
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="bg-emerald-50 rounded-lg p-4 border-l-4 border-emerald-600">
                         <h6 className="font-bold text-emerald-900 mb-2">1. Deterministic</h6>
                         <p className="text-sm text-gray-700">
@@ -986,7 +986,7 @@ export default function SecurityCoursePage() {
                   </div>
 
                   <div className="bg-white rounded-xl p-6 mb-6">
-                    <h5 className="font-bold text-gray-900 text-xl mb-4">Example: SHA-256 in Action</h5>
+                    <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-4">Example: SHA-256 in Action</h5>
                     <p className="text-gray-700 mb-4">
                       SHA-256 (Secure Hash Algorithm 256-bit) is the most common hash function used in blockchain. Let's
                       see how tiny changes dramatically affect the output:
@@ -1021,7 +1021,7 @@ export default function SecurityCoursePage() {
                   </div>
 
                   <div className="bg-gradient-to-r from-emerald-100 to-teal-100 rounded-xl p-6">
-                    <h5 className="font-bold text-gray-900 text-xl mb-3">Common Uses of Hashing</h5>
+                    <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Common Uses of Hashing</h5>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
@@ -1068,7 +1068,7 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* Key Takeaways */}
-            <div className="bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl p-8 border-2 border-rose-400">
+            <div className="bg-gradient-to-br from-rose-100 to-pink-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-rose-400">
               <div className="flex items-start gap-6">
                 <Target className="w-10 h-10 text-rose-600 flex-shrink-0 mt-1" />
                 <div>
@@ -1076,31 +1076,31 @@ export default function SecurityCoursePage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>CIA Triad:</strong> Confidentiality, Integrity, and Availability are the three pillars of information security
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Defense in Depth:</strong> Multiple layers of security protect systems when one layer fails
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Authentication:</strong> Proving identity using what you know, are, or have (or multiple factors)
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Digital Signatures:</strong> Prove both authorship and integrity using private/public key pairs
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Cryptographic Hashing:</strong> Creates irreversible digital fingerprints used for integrity verification and blockchain
                       </p>
                     </div>
@@ -1127,9 +1127,9 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* The Magical Mailbox Analogy */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-10 mb-12 border-2 border-indigo-300">
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 mb-6 md:mb-8 lg:mb-12 border-2 border-indigo-300">
               <div className="flex items-start gap-6">
-                <div className="text-6xl">📬</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">📬</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">The Magical Mailbox</h3>
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
@@ -1194,8 +1194,8 @@ export default function SecurityCoursePage() {
                 How Key Pairs Are Generated
               </h3>
 
-              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border-2 border-cyan-300 mb-8">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-cyan-300 mb-8">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   In cryptocurrency systems like Bitcoin, your wallet software goes through a specific process to create
                   your key pair. Let's break it down step-by-step:
                 </p>
@@ -1204,7 +1204,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-cyan-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Generate Random Number (Private Key)</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Generate Random Number (Private Key)</h5>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Your wallet generates a <strong>very large random number</strong>. In Bitcoin, this is a 256-bit number,
                         meaning there are 2<sup>256</sup> possible private keys.
@@ -1229,7 +1229,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-blue-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Apply Elliptic Curve Mathematics (Public Key)</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Apply Elliptic Curve Mathematics (Public Key)</h5>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         The private key is run through a special mathematical function called <strong>Elliptic Curve Cryptography (ECC)</strong>.
                         This creates your <strong>public key</strong>.
@@ -1258,7 +1258,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                     <div className="bg-white rounded-xl p-6 flex-1 border-l-4 border-indigo-600">
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Hash to Create Address</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Hash to Create Address</h5>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Finally, the public key is hashed (using SHA-256 and RIPEMD-160) and encoded to create your
                         <strong className="text-indigo-600"> cryptocurrency address</strong>—the string you share with others
@@ -1283,7 +1283,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <Target className="w-10 h-10 text-blue-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">The Journey: Private Key → Public Key → Address</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">The Journey: Private Key → Public Key → Address</h5>
                       <div className="flex flex-col md:flex-row items-center gap-4 justify-center mb-4">
                         <div className="bg-purple-100 rounded-xl p-4 text-center flex-1">
                           <div className="text-sm font-bold text-purple-900 mb-1">Private Key</div>
@@ -1319,8 +1319,8 @@ export default function SecurityCoursePage() {
                 Hierarchical Deterministic (HD) Wallets: One Seed, Infinite Keys
               </h3>
 
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-emerald-300">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   Modern cryptocurrency wallets use a clever system called <strong>HD (Hierarchical Deterministic) Wallets</strong>.
                   Instead of generating random keys individually, they create an entire <strong>tree of key pairs</strong> from
                   a single starting point called a <strong>seed phrase</strong>.
@@ -1336,7 +1336,7 @@ export default function SecurityCoursePage() {
                     <p className="text-sm text-gray-700 mb-3">
                       <strong>Example 12-Word Seed Phrase:</strong>
                     </p>
-                    <div className="bg-white rounded-lg p-4 font-mono text-sm text-gray-800 grid grid-cols-2 md:grid-cols-3 gap-2">
+                    <div className="bg-white rounded-lg p-4 font-mono text-sm text-gray-800 grid grid-cols-2 md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
                       <span>1. witch</span>
                       <span>2. collapse</span>
                       <span>3. practice</span>
@@ -1406,7 +1406,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-10 h-10 text-emerald-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-3">Why HD Wallets Are Better</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-3">Why HD Wallets Are Better</h5>
                       <div className="space-y-2 text-gray-700">
                         <div className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
@@ -1432,7 +1432,7 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* Key Takeaways */}
-            <div className="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl p-8 border-2 border-indigo-400">
+            <div className="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-indigo-400">
               <div className="flex items-start gap-6">
                 <Target className="w-10 h-10 text-indigo-600 flex-shrink-0 mt-1" />
                 <div>
@@ -1440,31 +1440,31 @@ export default function SecurityCoursePage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Public Key:</strong> Like a mailbox slot—anyone can use it to send you encrypted messages
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Private Key:</strong> Like the mailbox key—only you can use it to decrypt messages and prove ownership
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Key Generation:</strong> Private key → Public key → Address (each step is one-way and irreversible)
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>HD Wallets:</strong> Generate infinite key pairs from a single 12/24-word seed phrase
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Security:</strong> Protect your private key/seed phrase at all costs—they control your funds
                       </p>
                     </div>
@@ -1497,7 +1497,7 @@ export default function SecurityCoursePage() {
                 Bitcoin's Digital Signature Algorithm (ECDSA)
               </h3>
 
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 border-2 border-orange-300 mb-6">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-orange-300 mb-6">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   Bitcoin uses <strong>ECDSA (Elliptic Curve Digital Signature Algorithm)</strong> with the secp256k1 curve.
                   Let's see how it works in a real Bitcoin transaction:
@@ -1510,7 +1510,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
                       <div className="bg-orange-50 rounded-xl p-5 flex-1 border-l-4 border-orange-600">
-                        <h5 className="font-bold text-gray-900 text-lg mb-2">Alice Creates Transaction</h5>
+                        <h5 className="font-bold text-gray-900 text-base md:text-lg mb-2">Alice Creates Transaction</h5>
                         <p className="text-gray-700 text-sm leading-relaxed mb-3">
                           Alice's wallet creates a transaction that says: "Send 1 BTC from address <code className="bg-white px-2 py-1 rounded text-xs">1Alice...</code>
                           to address <code className="bg-white px-2 py-1 rounded text-xs">1Bob...</code>"
@@ -1524,7 +1524,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
                       <div className="bg-amber-50 rounded-xl p-5 flex-1 border-l-4 border-amber-600">
-                        <h5 className="font-bold text-gray-900 text-lg mb-2">Hash the Transaction</h5>
+                        <h5 className="font-bold text-gray-900 text-base md:text-lg mb-2">Hash the Transaction</h5>
                         <p className="text-gray-700 text-sm leading-relaxed mb-3">
                           The transaction data is hashed using SHA-256, creating a unique fingerprint of the transaction.
                         </p>
@@ -1537,7 +1537,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
                       <div className="bg-yellow-50 rounded-xl p-5 flex-1 border-l-4 border-yellow-600">
-                        <h5 className="font-bold text-gray-900 text-lg mb-2">Sign with Private Key</h5>
+                        <h5 className="font-bold text-gray-900 text-base md:text-lg mb-2">Sign with Private Key</h5>
                         <p className="text-gray-700 text-sm leading-relaxed mb-3">
                           Alice's wallet uses her <strong>private key</strong> to create a digital signature of the transaction hash.
                           This proves that Alice (the owner of the private key) authorized this transaction.
@@ -1555,7 +1555,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
                       <div className="bg-green-50 rounded-xl p-5 flex-1 border-l-4 border-green-600">
-                        <h5 className="font-bold text-gray-900 text-lg mb-2">Broadcast to Network</h5>
+                        <h5 className="font-bold text-gray-900 text-base md:text-lg mb-2">Broadcast to Network</h5>
                         <p className="text-gray-700 text-sm leading-relaxed mb-3">
                           The transaction (with signature) is broadcast to the Bitcoin network. Thousands of nodes receive it.
                         </p>
@@ -1565,7 +1565,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">5</div>
                       <div className="bg-blue-50 rounded-xl p-5 flex-1 border-l-4 border-blue-600">
-                        <h5 className="font-bold text-gray-900 text-lg mb-2">Verification by Nodes</h5>
+                        <h5 className="font-bold text-gray-900 text-base md:text-lg mb-2">Verification by Nodes</h5>
                         <p className="text-gray-700 text-sm leading-relaxed mb-3">
                           Each node verifies the signature using Alice's <strong>public key</strong> (derived from her address).
                           They check:
@@ -1590,7 +1590,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">6</div>
                       <div className="bg-purple-50 rounded-xl p-5 flex-1 border-l-4 border-purple-600">
-                        <h5 className="font-bold text-gray-900 text-lg mb-2">Miners Include in Block</h5>
+                        <h5 className="font-bold text-gray-900 text-base md:text-lg mb-2">Miners Include in Block</h5>
                         <p className="text-gray-700 text-sm leading-relaxed">
                           If verification passes, miners include the transaction in a block. Once the block is mined and added
                           to the blockchain, the transaction is confirmed. Bob now has 1 BTC!
@@ -1604,7 +1604,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <ShieldCheck className="w-10 h-10 text-orange-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">Why This Is Secure</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Why This Is Secure</h5>
                       <p className="text-gray-700 leading-relaxed">
                         Without Alice's private key, no one can create a valid signature for her address. Even if someone
                         intercepts the transaction, they can't modify it (any change would invalidate the signature) or create
@@ -1624,9 +1624,9 @@ export default function SecurityCoursePage() {
                 Hardware Wallets: Maximum Security
               </h3>
 
-              <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-8 border-2 border-gray-300">
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="text-6xl">🔐</div>
+              <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-gray-300">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">🔐</div>
                   <div className="flex-1">
                     <p className="text-xl text-gray-700 leading-relaxed mb-6">
                       A <strong>hardware wallet</strong> is a physical device (like a USB stick) that stores your private keys
@@ -1636,7 +1636,7 @@ export default function SecurityCoursePage() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                   <div className="bg-white rounded-xl p-6 border-l-4 border-green-600">
                     <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                       <ShieldCheck className="w-6 h-6 text-green-600" />
@@ -1714,7 +1714,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-10 h-10 text-gray-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">When to Use Hardware Wallets</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">When to Use Hardware Wallets</h5>
                       <p className="text-gray-700 text-sm mb-3">
                         Hardware wallets are essential for anyone holding significant cryptocurrency value ($1,000+). They cost
                         $50-150 but provide the highest security available for personal custody. Think of them as a safe for
@@ -1732,9 +1732,9 @@ export default function SecurityCoursePage() {
 
             {/* Multisig and Cold Storage */}
             <div className="mb-12">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
                 {/* Multisig */}
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border-2 border-indigo-300">
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-indigo-300">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
                       <Users className="w-7 h-7 text-white" />
@@ -1771,7 +1771,7 @@ export default function SecurityCoursePage() {
                 </div>
 
                 {/* Cold Storage */}
-                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border-2 border-cyan-300">
+                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-cyan-300">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center">
                       <CloudOff className="w-7 h-7 text-white" />
@@ -1823,7 +1823,7 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* Key Takeaways */}
-            <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl p-8 border-2 border-amber-400">
+            <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-amber-400">
               <div className="flex items-start gap-6">
                 <Target className="w-10 h-10 text-amber-600 flex-shrink-0 mt-1" />
                 <div>
@@ -1831,25 +1831,25 @@ export default function SecurityCoursePage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Bitcoin ECDSA:</strong> Every transaction is signed with your private key and verified by the network using your public key
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Hardware Wallets:</strong> Provide maximum security by keeping private keys isolated on a dedicated device
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Multisig:</strong> Requires multiple signatures for transactions, eliminating single points of failure
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Cold Storage:</strong> Keeping private keys completely offline provides the highest level of protection
                       </p>
                     </div>
@@ -1882,7 +1882,7 @@ export default function SecurityCoursePage() {
                 Key Management: The Foundation of Crypto Security
               </h3>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-300 mb-6">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-300 mb-6">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   Your private keys are the <strong>only thing</strong> standing between you and losing all your cryptocurrency.
                   Unlike traditional banking, there's no "Forgot Password" button or customer service to call. Here's how to
@@ -1903,7 +1903,7 @@ export default function SecurityCoursePage() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="bg-green-50 rounded-lg p-4">
                         <h5 className="font-bold text-green-900 mb-3 flex items-center gap-2">
                           <CheckCircle className="w-5 h-5" />
@@ -2021,19 +2021,19 @@ export default function SecurityCoursePage() {
                 Defending Against Social Engineering & Scams
               </h3>
 
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 border-2 border-red-300">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-red-300">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   Hackers don't need to break cryptography—they just trick you into giving them access. Be aware of these
                   common attack vectors:
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                   <div className="bg-white rounded-xl p-6 border-l-4 border-red-600">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
                         <Mail className="w-6 h-6 text-white" />
                       </div>
-                      <h4 className="text-lg font-bold text-gray-900">Phishing Attacks</h4>
+                      <h4 className="text-base md:text-lg font-bold text-gray-900">Phishing Attacks</h4>
                     </div>
                     <p className="text-sm text-gray-700 mb-3">
                       Fake emails/websites pretending to be legitimate services (exchanges, wallet providers).
@@ -2057,7 +2057,7 @@ export default function SecurityCoursePage() {
                       <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">
                         <Smartphone className="w-6 h-6 text-white" />
                       </div>
-                      <h4 className="text-lg font-bold text-gray-900">SIM Swapping</h4>
+                      <h4 className="text-base md:text-lg font-bold text-gray-900">SIM Swapping</h4>
                     </div>
                     <p className="text-sm text-gray-700 mb-3">
                       Attacker convinces your phone carrier to transfer your number to their SIM card, intercepting SMS codes.
@@ -2081,7 +2081,7 @@ export default function SecurityCoursePage() {
                       <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center">
                         <Users className="w-6 h-6 text-white" />
                       </div>
-                      <h4 className="text-lg font-bold text-gray-900">Impersonation Scams</h4>
+                      <h4 className="text-base md:text-lg font-bold text-gray-900">Impersonation Scams</h4>
                     </div>
                     <p className="text-sm text-gray-700 mb-3">
                       Scammers pose as customer support, influencers, or project founders on social media.
@@ -2105,7 +2105,7 @@ export default function SecurityCoursePage() {
                       <div className="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center">
                         <Code2 className="w-6 h-6 text-white" />
                       </div>
-                      <h4 className="text-lg font-bold text-gray-900">Fake Wallet Apps</h4>
+                      <h4 className="text-base md:text-lg font-bold text-gray-900">Fake Wallet Apps</h4>
                     </div>
                     <p className="text-sm text-gray-700 mb-3">
                       Malicious wallet apps in app stores that steal your seed phrase when you enter it.
@@ -2129,7 +2129,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <AlertTriangle className="w-10 h-10 text-red-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">Golden Rule of Crypto Security</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Golden Rule of Crypto Security</h5>
                       <p className="text-gray-700 leading-relaxed text-lg">
                         <strong>If it sounds too good to be true, it is.</strong> No one is giving away free crypto. No one
                         can "double your investment overnight." Legitimate projects don't DM you first. When in doubt, assume
@@ -2148,7 +2148,7 @@ export default function SecurityCoursePage() {
                 Recovery & Inheritance Planning
               </h3>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-300">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-blue-300">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   Cryptocurrency introduces unique challenges for estate planning. If you pass away without proper planning,
                   your crypto may be lost forever. Here's how to ensure your assets can be recovered:
@@ -2225,7 +2225,7 @@ export default function SecurityCoursePage() {
                     <div className="flex items-start gap-4">
                       <Lightbulb className="w-10 h-10 text-blue-600 flex-shrink-0" />
                       <div>
-                        <h5 className="font-bold text-gray-900 text-xl mb-2">Important Considerations</h5>
+                        <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Important Considerations</h5>
                         <ul className="space-y-2 text-gray-700">
                           <li className="flex items-start gap-2">
                             <span className="text-blue-600 font-bold mt-1">•</span>
@@ -2252,7 +2252,7 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* Key Takeaways */}
-            <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-8 border-2 border-green-400">
+            <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-400">
               <div className="flex items-start gap-6">
                 <Target className="w-10 h-10 text-green-600 flex-shrink-0 mt-1" />
                 <div>
@@ -2260,25 +2260,25 @@ export default function SecurityCoursePage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Seed Phrase Protection:</strong> Write on paper, store in safe, never digital, never share
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Device Security:</strong> Strong passwords, 2FA with authenticator apps, updated software, antivirus
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Scam Awareness:</strong> Phishing, SIM swapping, impersonation, fake apps—always verify legitimacy
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Recovery Planning:</strong> Letter of instructions, secret sharing, estate services, or time-lock contracts
                       </p>
                     </div>
@@ -2311,9 +2311,9 @@ export default function SecurityCoursePage() {
                 The Quantum Computing Challenge
               </h3>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-300">
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="text-6xl">⚛️</div>
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-300">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">⚛️</div>
                   <div className="flex-1">
                     <p className="text-xl text-gray-700 leading-relaxed mb-4">
                       Quantum computers leverage quantum mechanics to perform certain calculations exponentially faster than
@@ -2327,7 +2327,7 @@ export default function SecurityCoursePage() {
 
                   <div className="space-y-5">
                     <div className="bg-purple-50 rounded-xl p-5 border-l-4 border-purple-600">
-                      <h5 className="font-bold text-purple-900 text-lg mb-3">Shor's Algorithm (1994)</h5>
+                      <h5 className="font-bold text-purple-900 text-base md:text-lg mb-3">Shor's Algorithm (1994)</h5>
                       <p className="text-gray-700 text-sm mb-3">
                         Mathematician Peter Shor proved that quantum computers can factor large numbers exponentially faster
                         than classical computers. This breaks:
@@ -2351,8 +2351,8 @@ export default function SecurityCoursePage() {
                     </div>
 
                     <div className="bg-pink-50 rounded-xl p-5 border-l-4 border-pink-600">
-                      <h5 className="font-bold text-pink-900 text-lg mb-3">Current State (2025)</h5>
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <h5 className="font-bold text-pink-900 text-base md:text-lg mb-3">Current State (2025)</h5>
+                      <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="bg-white rounded-lg p-4">
                           <h6 className="font-bold text-gray-900 mb-2 text-sm">🔬 Where We Are</h6>
                           <ul className="text-xs text-gray-700 space-y-1">
@@ -2382,7 +2382,7 @@ export default function SecurityCoursePage() {
                   <div className="flex items-start gap-4">
                     <AlertTriangle className="w-10 h-10 text-purple-600 flex-shrink-0" />
                     <div>
-                      <h5 className="font-bold text-gray-900 text-xl mb-2">What This Means for Cryptocurrency</h5>
+                      <h5 className="font-bold text-gray-900 text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">What This Means for Cryptocurrency</h5>
                       <p className="text-gray-700 leading-relaxed mb-3">
                         If a powerful quantum computer is built, an attacker could:
                       </p>
@@ -2413,13 +2413,13 @@ export default function SecurityCoursePage() {
                 Post-Quantum Cryptography: The Solution
               </h3>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-300">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-green-300">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   Cryptographers are developing new algorithms that are secure even against quantum computers. In 2024, NIST
                   (National Institute of Standards and Technology) standardized the first quantum-resistant algorithms.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                   <div className="bg-white rounded-xl p-6 border-l-4 border-green-600">
                     <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                       <SparklesIcon className="w-6 h-6 text-green-600" />
@@ -2528,7 +2528,7 @@ export default function SecurityCoursePage() {
                 Zero-Knowledge Proofs: Privacy Meets Security
               </h3>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border-2 border-indigo-300">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-indigo-300">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   <strong>Zero-Knowledge Proofs (ZKPs)</strong> allow you to prove you know something without revealing the
                   information itself. This is revolutionary for privacy and scaling.
@@ -2555,7 +2555,7 @@ export default function SecurityCoursePage() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-white rounded-xl p-6 border-l-4 border-indigo-600">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Privacy Applications</h4>
                     <div className="space-y-3 text-sm text-gray-700">
@@ -2599,7 +2599,7 @@ export default function SecurityCoursePage() {
                 The Future of Wallet Technology
               </h3>
 
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-amber-300">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   Wallets are evolving from simple key storage to sophisticated, user-friendly security systems:
                 </p>
@@ -2666,7 +2666,7 @@ export default function SecurityCoursePage() {
             </div>
 
             {/* Key Takeaways */}
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-8 border-2 border-purple-400">
+            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl md:rounded-2xl p-6 md:p-8 border-2 border-purple-400">
               <div className="flex items-start gap-6">
                 <Target className="w-10 h-10 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
@@ -2674,25 +2674,25 @@ export default function SecurityCoursePage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Quantum Threat:</strong> Quantum computers could break current encryption in 10-30 years—preparation starts now
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Post-Quantum Crypto:</strong> Lattice-based and hash-based algorithms provide quantum resistance (NIST standardized 2024)
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Zero-Knowledge Proofs:</strong> Enable privacy and scaling—prove knowledge without revealing information
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                         <strong>Wallet Evolution:</strong> Social recovery, biometrics, account abstraction, AI security make crypto more user-friendly
                       </p>
                     </div>
@@ -2704,16 +2704,16 @@ export default function SecurityCoursePage() {
           </motion.section>
 
           {/* Course Completion */}
-          <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl p-12 text-center text-white shadow-2xl mb-16">
+          <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl md:rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 xl:p-12 text-center text-white shadow-2xl mb-16">
             <Award className="w-24 h-24 mx-auto mb-6" />
             <h3 className="text-4xl font-bold mb-4">
               🎉 Security Foundations Course Complete!
             </h3>
-            <p className="text-2xl mb-6 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-6 max-w-3xl mx-auto leading-relaxed">
               You've mastered all six parts covering encryption, digital security, public/private keys, real-world implementations,
               practical security, and the future of cryptographic systems!
             </p>
-            <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
+            <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 lg:mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
               Explored: <strong>Encryption Evolution</strong>, <strong>CIA Triad</strong>, <strong>Key Management</strong>,
               <strong> Hardware Wallets</strong>, <strong>Scam Protection</strong>, <strong>Quantum Resistance</strong>, and <strong>ZK Proofs</strong>.
             </p>

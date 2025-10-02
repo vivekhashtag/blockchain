@@ -206,8 +206,8 @@ export default function SmartContractLabPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-pink-50 via-rose-50 to-red-50 py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-pink-50 via-rose-50 to-red-50 py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Back Button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -234,10 +234,10 @@ export default function SmartContractLabPage() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl mb-6 shadow-xl">
               <Code className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-6">
               Smart Contract Lab
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Write, compile, and test Solidity smart contracts in a safe sandbox environment.
             </p>
           </motion.div>
@@ -245,8 +245,8 @@ export default function SmartContractLabPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-16">
+      <section className="py-8 md:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Example Contracts */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -254,7 +254,7 @@ export default function SmartContractLabPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mb-8"
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Example Contracts</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Example Contracts</h2>
             <div className="flex flex-wrap gap-3">
               {exampleContracts.map((example, index) => (
                 <button
@@ -269,15 +269,15 @@ export default function SmartContractLabPage() {
             </div>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-6 md:gap-8 lg:gap-10">
             {/* Code Editor */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                   <Code className="w-8 h-8 mr-3 text-pink-600" />
                   Solidity Code Editor
                 </h2>
@@ -324,8 +324,8 @@ export default function SmartContractLabPage() {
               </div>
 
               {/* Smart Contract Basics */}
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Smart Contract Basics</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 md:p-8 border-2 border-blue-200 shadow-xl">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Smart Contract Basics</h3>
                 <div className="space-y-3 text-base text-gray-700">
                   <div className="flex items-start">
                     <div className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0 text-sm font-bold mt-0.5">1</div>
@@ -359,10 +359,10 @@ export default function SmartContractLabPage() {
             >
               {/* Compilation Result */}
               {compilationResult && (
-                <div className={`bg-white rounded-2xl p-8 border-2 shadow-xl mb-8 ${
+                <div className={`bg-white rounded-2xl p-6 md:p-8 border-2 shadow-xl mb-8 ${
                   compilationResult.success ? "border-green-300" : "border-red-300"
                 }`}>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                     {compilationResult.success ? (
                       <CheckCircle className="w-8 h-8 mr-3 text-green-600" />
                     ) : (
@@ -410,9 +410,9 @@ export default function SmartContractLabPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-white rounded-2xl p-8 border-2 border-green-300 shadow-xl mb-8"
+                  className="bg-white rounded-2xl p-6 md:p-8 border-2 border-green-300 shadow-xl mb-8"
                 >
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
                     <CheckCircle className="w-8 h-8 mr-3 text-green-600" />
                     Execution Result
                   </h2>
@@ -444,8 +444,8 @@ export default function SmartContractLabPage() {
 
               {/* Function Testing */}
               {compilationResult?.success && (
-                <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Test Contract Functions</h2>
+                <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 shadow-xl mb-8">
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Test Contract Functions</h2>
 
                   <div className="mb-4">
                     <label className="text-base font-semibold text-gray-900 block mb-3">
@@ -467,8 +467,8 @@ export default function SmartContractLabPage() {
               )}
 
               {/* Security Warning */}
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border-2 border-orange-300 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 md:p-8 border-2 border-orange-300 shadow-xl">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 flex items-center">
                   <AlertTriangle className="w-7 h-7 mr-3 text-orange-600" />
                   Security Best Practices
                 </h3>

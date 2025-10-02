@@ -19,7 +19,7 @@ export default function FinancialCoursePage() {
   if (!course) {
     return (
       <div className="min-h-screen bg-white py-16">
-        <div className="container mx-auto max-w-7xl px-6">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-gray-900">Course Not Found</h1>
             <p className="mt-4 text-xl text-gray-600">
@@ -27,7 +27,7 @@ export default function FinancialCoursePage() {
             </p>
             <Link
               href="/learn"
-              className="mt-8 inline-block rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-10 py-5 text-xl font-semibold text-white hover:from-blue-700 hover:to-purple-700"
+              className="mt-8 inline-block rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-white hover:from-blue-700 hover:to-purple-700"
             >
               Back to Courses
             </Link>
@@ -39,7 +39,7 @@ export default function FinancialCoursePage() {
 
   return (
     <div className="min-h-screen bg-white py-16">
-      <div className="container mx-auto max-w-7xl px-6">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Navigation */}
         <Link
           href="/learn"
@@ -56,28 +56,28 @@ export default function FinancialCoursePage() {
           className="mb-16"
         >
           <div className="flex items-center flex-wrap gap-4 mb-6">
-            <span className="px-6 py-2 rounded-full bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 text-xl font-semibold border-2 border-amber-300">
+            <span className="px-6 py-2 rounded-full bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 text-base md:text-lg sm:text-xl md:text-2xl font-semibold border-2 border-amber-300">
               {course.difficulty}
             </span>
-            <span className="px-6 py-2 rounded-full bg-gray-100 text-gray-900 text-xl font-semibold flex items-center gap-2">
+            <span className="px-6 py-2 rounded-full bg-gray-100 text-gray-900 text-base md:text-lg sm:text-xl md:text-2xl font-semibold flex items-center gap-2">
               <Clock className="h-5 w-5" />
               {course.duration}
             </span>
-            <span className="px-6 py-2 rounded-full bg-blue-100 text-blue-900 text-xl font-semibold flex items-center gap-2">
+            <span className="px-6 py-2 rounded-full bg-blue-100 text-blue-900 text-base md:text-lg sm:text-xl md:text-2xl font-semibold flex items-center gap-2">
               <BookOpen className="h-5 w-5" />
               Module {course.order}
             </span>
           </div>
 
-          <h1 className="text-7xl md:text-8xl font-bold text-gray-900 mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 mb-4 md:mb-6 lg:mb-8 leading-tight">
             {course.title}
           </h1>
 
-          <p className="text-3xl text-gray-700 leading-relaxed max-w-5xl mb-8">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed max-w-5xl mb-8">
             {course.description}
           </p>
 
-          <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl text-xl font-semibold">
+          <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-xl md:rounded-2xl text-base md:text-lg sm:text-xl md:text-2xl font-semibold">
             🚀 Real-World Blockchain Financial Systems
           </div>
         </motion.div>
@@ -101,7 +101,7 @@ export default function FinancialCoursePage() {
             {/* Section 1: Understanding Blockchain Transactions */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-600 text-white text-3xl font-bold shadow-xl">
                   1
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -109,7 +109,7 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-xl p-10 mb-8 border-2 border-blue-300">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-300">
                 <h4 className="text-3xl font-bold text-blue-900 mb-6">Beyond Simple Money Transfer</h4>
                 <p className="text-2xl text-blue-800 leading-relaxed mb-6">
                   A blockchain transaction is fundamentally different from a traditional bank transfer.
@@ -126,8 +126,8 @@ export default function FinancialCoursePage() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl shadow-xl p-8 border-2 border-red-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-red-300">
                   <h4 className="text-3xl font-bold text-red-900 mb-6 flex items-center gap-3">
                     <X className="w-10 h-10" />
                     Traditional Bank Transfer
@@ -152,7 +152,7 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                   <h4 className="text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
                     <Check className="w-10 h-10" />
                     Blockchain Transaction
@@ -178,13 +178,13 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">How a Bitcoin Transaction Works</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   When you send Bitcoin, your transaction doesn't just say "send 1 BTC from Alice to Bob."
                   It's more complex and more powerful:
                 </p>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="border-l-4 border-blue-600 pl-6 bg-blue-50 p-6 rounded-xl">
                     <p className="font-bold text-2xl text-blue-900 mb-3">1. Inputs</p>
                     <p className="text-xl text-blue-800">
@@ -206,12 +206,12 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-2xl shadow-xl p-10">
+              <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-xl md:rounded-2xl shadow-xl p-10">
                 <div className="flex items-start gap-6">
                   <Eye className="w-12 h-12 flex-shrink-0" />
                   <div>
                     <p className="text-3xl font-bold mb-4">Transparency & Auditability</p>
-                    <p className="text-2xl leading-relaxed mb-4">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-4">
                       Every transaction since the genesis block is visible and verifiable. This creates
                       unprecedented auditability for financial operations:
                     </p>
@@ -229,7 +229,7 @@ export default function FinancialCoursePage() {
             {/* Section 2: The Transaction Lifecycle */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 text-white text-3xl font-bold shadow-xl">
                   2
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -237,10 +237,10 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Step-by-Step Transaction Flow</h4>
                 <div className="space-y-6">
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0 w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg">
                       1
                     </div>
@@ -253,7 +253,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0 w-16 h-16 rounded-full bg-purple-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg">
                       2
                     </div>
@@ -267,7 +267,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0 w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg">
                       3
                     </div>
@@ -280,7 +280,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0 w-16 h-16 rounded-full bg-orange-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg">
                       4
                     </div>
@@ -293,7 +293,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0 w-16 h-16 rounded-full bg-teal-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg">
                       5
                     </div>
@@ -306,7 +306,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-4 md:gap-6 items-start">
                     <div className="flex-shrink-0 w-16 h-16 rounded-full bg-pink-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg">
                       6
                     </div>
@@ -321,8 +321,8 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-xl p-8 border-2 border-orange-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-orange-300">
                   <h4 className="text-3xl font-bold text-orange-900 mb-6">Transaction Finality</h4>
                   <p className="text-xl text-orange-800 leading-relaxed mb-6">
                     Blockchain transactions achieve <strong>probabilistic finality</strong>—the more
@@ -330,13 +330,13 @@ export default function FinancialCoursePage() {
                   </p>
                   <div className="bg-white p-6 rounded-xl border-2 border-orange-300">
                     <p className="font-bold text-xl text-orange-900 mb-3">Bitcoin Standard:</p>
-                    <p className="text-lg text-orange-800">
+                    <p className="text-base md:text-lg text-orange-800">
                       6 confirmations (≈1 hour) considered irreversible for normal transactions
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl p-8 border-2 border-blue-300">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
                   <h4 className="text-3xl font-bold text-blue-900 mb-6">Traditional vs Blockchain</h4>
                   <p className="text-xl text-blue-800 leading-relaxed mb-6">
                     Banking transactions can be reversed through chargebacks, court orders, or bank
@@ -344,7 +344,7 @@ export default function FinancialCoursePage() {
                   </p>
                   <div className="bg-white p-6 rounded-xl border-2 border-blue-300">
                     <p className="font-bold text-xl text-blue-900 mb-3">Blockchain Reality:</p>
-                    <p className="text-lg text-blue-800">
+                    <p className="text-base md:text-lg text-blue-800">
                       Irreversibility is both a feature (prevents unauthorized reversals) and challenge
                       (errors and fraud can't be easily undone)
                     </p>
@@ -356,7 +356,7 @@ export default function FinancialCoursePage() {
             {/* Section 3: Smart Contracts - Programmable Money */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-600 to-teal-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-600 to-teal-600 text-white text-3xl font-bold shadow-xl">
                   3
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -364,12 +364,12 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-green-600 to-teal-600 text-white rounded-2xl shadow-xl p-10 mb-8">
+              <div className="bg-gradient-to-br from-green-600 to-teal-600 text-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 mb-8">
                 <div className="flex items-start gap-6">
                   <Code2 className="w-16 h-16 flex-shrink-0" />
                   <div>
                     <p className="text-4xl font-bold mb-4">From Simple Ledger to Programmable Platform</p>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       Smart contracts elevate blockchain from a simple ledger to a programmable financial
                       platform. They are programs that automatically execute when predetermined conditions
                       are met, without requiring intermediaries.
@@ -384,22 +384,22 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
                   <div className="text-5xl mb-4 text-center">🔍</div>
                   <h4 className="text-2xl font-bold text-blue-900 text-center mb-4">Deterministic</h4>
                   <p className="text-xl text-blue-800 text-center">
                     Executes exactly as programmed, same inputs always produce same outputs
                   </p>
                 </div>
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
                   <div className="text-5xl mb-4 text-center">👁️</div>
                   <h4 className="text-2xl font-bold text-purple-900 text-center mb-4">Transparent</h4>
                   <p className="text-xl text-purple-800 text-center">
                     Code is visible to everyone, cannot be changed once deployed (immutable)
                   </p>
                 </div>
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-green-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                   <div className="text-5xl mb-4 text-center">⚡</div>
                   <h4 className="text-2xl font-bold text-green-900 text-center mb-4">Unstoppable</h4>
                   <p className="text-xl text-green-800 text-center">
@@ -408,9 +408,9 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Simple Escrow Example</h4>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300">
                     <p className="font-bold text-2xl text-blue-900 mb-3">Step 1</p>
                     <p className="text-xl text-blue-800">Buyer sends payment to smart contract</p>
@@ -431,7 +431,7 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl p-8 border-2 border-blue-300">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
                 <h4 className="text-3xl font-bold text-blue-900 mb-6">Real-World Smart Contract Applications</h4>
                 <div className="space-y-6">
                   <div className="bg-white p-6 rounded-xl border-2 border-purple-300">
@@ -444,7 +444,7 @@ export default function FinancialCoursePage() {
                           supply assets to lending pools, smart contracts automatically set interest rates
                           based on supply and demand, manage collateral, and liquidate under-collateralized positions.
                         </p>
-                        <p className="text-lg text-gray-600">✓ No employees • ✓ 24/7 operation • ✓ Fully automated</p>
+                        <p className="text-base md:text-lg text-gray-600">✓ No employees • ✓ 24/7 operation • ✓ Fully automated</p>
                       </div>
                     </div>
                   </div>
@@ -458,7 +458,7 @@ export default function FinancialCoursePage() {
                           Issues <strong>DAI</strong>, a stablecoin backed by cryptocurrency collateral,
                           entirely through smart contracts that manage collateral ratios, liquidations, and governance.
                         </p>
-                        <p className="text-lg text-gray-600">✓ Algorithmic stability • ✓ Decentralized governance • ✓ Over-collateralized</p>
+                        <p className="text-base md:text-lg text-gray-600">✓ Algorithmic stability • ✓ Decentralized governance • ✓ Over-collateralized</p>
                       </div>
                     </div>
                   </div>
@@ -472,7 +472,7 @@ export default function FinancialCoursePage() {
                           Uses automated market maker smart contracts enabling trading without order books or
                           centralized matching engines. Processed <strong>hundreds of billions in volume</strong>.
                         </p>
-                        <p className="text-lg text-gray-600">✓ No order books • ✓ Constant liquidity • ✓ Permissionless</p>
+                        <p className="text-base md:text-lg text-gray-600">✓ No order books • ✓ Constant liquidity • ✓ Permissionless</p>
                       </div>
                     </div>
                   </div>
@@ -483,7 +483,7 @@ export default function FinancialCoursePage() {
             {/* Section 4: Smart Contract Security */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-red-600 to-orange-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-red-600 to-orange-600 text-white text-3xl font-bold shadow-xl">
                   4
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -491,7 +491,7 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl shadow-xl p-8 border-2 border-red-300 mb-8">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-red-300 mb-8">
                 <div className="flex items-start gap-6">
                   <AlertTriangle className="w-16 h-16 text-red-600 flex-shrink-0" />
                   <div>
@@ -508,18 +508,18 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">⚠️ The DAO Hack of 2016</h4>
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                       The DAO raised <strong>$150 million</strong> to create a decentralized venture capital
                       fund. However, a recursive calling vulnerability allowed an attacker to drain
                       <strong className="text-red-600"> $50 million</strong>.
                     </p>
                     <div className="bg-red-50 p-6 rounded-xl border-2 border-red-300">
                       <p className="font-bold text-xl text-red-900 mb-3">The Vulnerability:</p>
-                      <p className="text-lg text-red-800">
+                      <p className="text-base md:text-lg text-red-800">
                         Attacker repeatedly called the withdrawal function before balances updated,
                         draining funds. The code functioned exactly as written—the problem was that
                         what was written didn't match what was intended.
@@ -529,17 +529,17 @@ export default function FinancialCoursePage() {
                   <div>
                     <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300 mb-4">
                       <p className="font-bold text-xl text-blue-900 mb-3">The Aftermath:</p>
-                      <p className="text-lg text-blue-800 mb-3">
+                      <p className="text-base md:text-lg text-blue-800 mb-3">
                         Led to Ethereum's controversial hard fork, splitting the network into:
                       </p>
-                      <ul className="space-y-2 text-lg text-blue-800">
+                      <ul className="space-y-2 text-base md:text-lg text-blue-800">
                         <li>• <strong>Ethereum</strong> - Reversed the hack</li>
                         <li>• <strong>Ethereum Classic</strong> - Maintained immutability</li>
                       </ul>
                     </div>
                     <div className="bg-yellow-100 p-6 rounded-xl border-2 border-yellow-400">
                       <p className="font-bold text-xl text-yellow-900 mb-2">Key Lesson:</p>
-                      <p className="text-lg text-yellow-800">
+                      <p className="text-base md:text-lg text-yellow-800">
                         Smart contracts require different development approaches than traditional
                         software, emphasizing formal verification and extensive auditing.
                       </p>
@@ -548,74 +548,74 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-xl p-8 border-2 border-purple-300 mb-8">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300 mb-8">
                 <h4 className="text-3xl font-bold text-purple-900 mb-6">Modern Smart Contract Security Practices</h4>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-white p-6 rounded-xl border-2 border-purple-300">
                     <ShieldCheck className="w-10 h-10 text-purple-600 mb-4" />
                     <p className="font-bold text-xl text-purple-900 mb-3">Formal Verification</p>
-                    <p className="text-lg text-purple-800">
+                    <p className="text-base md:text-lg text-purple-800">
                       Mathematical proofs to verify contract behavior matches specifications
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl border-2 border-blue-300">
                     <Activity className="w-10 h-10 text-blue-600 mb-4" />
                     <p className="font-bold text-xl text-blue-900 mb-3">Automated Analysis</p>
-                    <p className="text-lg text-blue-800">
+                    <p className="text-base md:text-lg text-blue-800">
                       Tools like MythX and Slither automatically detect common vulnerabilities
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl border-2 border-green-300">
                     <DollarSign className="w-10 h-10 text-green-600 mb-4" />
                     <p className="font-bold text-xl text-green-900 mb-3">Bug Bounties</p>
-                    <p className="text-lg text-green-800">
+                    <p className="text-base md:text-lg text-green-800">
                       Millions in rewards for finding flaws before deployment
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl border-2 border-orange-300">
                     <Users className="w-10 h-10 text-orange-600 mb-4" />
                     <p className="font-bold text-xl text-orange-900 mb-3">Professional Audits</p>
-                    <p className="text-lg text-orange-800">
+                    <p className="text-base md:text-lg text-orange-800">
                       Specialized firms conduct thorough code reviews before launch
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl border-2 border-teal-300">
                     <Clock className="w-10 h-10 text-teal-600 mb-4" />
                     <p className="font-bold text-xl text-teal-900 mb-3">Time Locks</p>
-                    <p className="text-lg text-teal-800">
+                    <p className="text-base md:text-lg text-teal-800">
                       Delay contract changes, giving users time to review and exit
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl border-2 border-pink-300">
                     <Lock className="w-10 h-10 text-pink-600 mb-4" />
                     <p className="font-bold text-xl text-pink-900 mb-3">Multi-Signature Controls</p>
-                    <p className="text-lg text-pink-800">
+                    <p className="text-base md:text-lg text-pink-800">
                       Require multiple parties to approve critical operations
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-red-600 to-orange-600 text-white rounded-2xl shadow-xl p-10">
+              <div className="bg-gradient-to-br from-red-600 to-orange-600 text-white rounded-xl md:rounded-2xl shadow-xl p-10">
                 <div className="flex items-start gap-6">
                   <AlertOctagon className="w-12 h-12 flex-shrink-0" />
                   <div>
                     <p className="text-3xl font-bold mb-4">Recent Major Hacks Still Occur</p>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       Despite improved practices, smart contract hacks still happen regularly, with
                       billions lost annually:
                     </p>
-                    <div className="grid md:grid-cols-3 gap-4">
+                    <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                       <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
-                        <p className="font-bold text-xl mb-2">Poly Network (2021)</p>
+                        <p className="font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Poly Network (2021)</p>
                         <p className="text-lg">$610 million stolen (later returned)</p>
                       </div>
                       <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
-                        <p className="font-bold text-xl mb-2">Wormhole Bridge (2022)</p>
+                        <p className="font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Wormhole Bridge (2022)</p>
                         <p className="text-lg">$326 million exploited</p>
                       </div>
                       <div className="bg-white/20 p-6 rounded-xl backdrop-blur-sm">
-                        <p className="font-bold text-xl mb-2">Ongoing Challenge</p>
+                        <p className="font-bold text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-2">Ongoing Challenge</p>
                         <p className="text-lg">Security remains critical concern</p>
                       </div>
                     </div>
@@ -627,7 +627,7 @@ export default function FinancialCoursePage() {
             {/* Section 5: Composability - Money LEGOs */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-600 text-white text-3xl font-bold shadow-xl">
                   5
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -635,12 +635,12 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-600 to-blue-600 text-white rounded-2xl shadow-xl p-10 mb-8">
+              <div className="bg-gradient-to-br from-cyan-600 to-blue-600 text-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 mb-8">
                 <div className="flex items-start gap-6">
                   <Layers className="w-12 h-12 flex-shrink-0" />
                   <div>
                     <p className="text-4xl font-bold mb-4">Building Blocks of Finance</p>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       Smart contracts' composability—the ability to combine and build upon existing
                       contracts—has created an explosion of financial innovation. Developers can combine
                       existing protocols like LEGO blocks, creating complex financial products without
@@ -656,22 +656,22 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 mb-8">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-gray-200 mb-8">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">Flash Loans: The Impossible Made Possible</h4>
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                       Flash loans are <strong>uncollateralized loans</strong> that must be borrowed and
                       repaid within the same transaction. If repayment fails, the entire transaction reverts
                       as if it never happened.
                     </p>
                     <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-300">
                       <p className="font-bold text-xl text-purple-900 mb-3">How is this possible?</p>
-                      <p className="text-lg text-purple-800 mb-3">
+                      <p className="text-base md:text-lg text-purple-800 mb-3">
                         Smart contract composability makes it work. The loan exists only for the duration
                         of one transaction—seconds or less. No credit check, no collateral, zero risk to lender.
                       </p>
-                      <p className="text-lg text-purple-800 font-semibold">
+                      <p className="text-base md:text-lg text-purple-800 font-semibold">
                         Anyone can borrow millions of dollars for one transaction!
                       </p>
                     </div>
@@ -681,19 +681,19 @@ export default function FinancialCoursePage() {
                     <div className="space-y-4">
                       <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300">
                         <p className="font-bold text-xl text-blue-900 mb-2">Arbitrage Trading</p>
-                        <p className="text-lg text-blue-800">
+                        <p className="text-base md:text-lg text-blue-800">
                           Borrow millions, exploit price differences across exchanges, repay loan + keep profit
                         </p>
                       </div>
                       <div className="bg-green-50 p-6 rounded-xl border-2 border-green-300">
                         <p className="font-bold text-xl text-green-900 mb-2">Collateral Swapping</p>
-                        <p className="text-lg text-green-800">
+                        <p className="text-base md:text-lg text-green-800">
                           Swap collateral in lending positions without closing and reopening
                         </p>
                       </div>
                       <div className="bg-orange-50 p-6 rounded-xl border-2 border-orange-300">
                         <p className="font-bold text-xl text-orange-900 mb-2">Debt Refinancing</p>
-                        <p className="text-lg text-orange-800">
+                        <p className="text-base md:text-lg text-orange-800">
                           Move debt between protocols to get better rates instantly
                         </p>
                       </div>
@@ -702,9 +702,9 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                 <h4 className="text-3xl font-bold text-green-900 mb-6">Yield Aggregators: Automated Optimization</h4>
-                <div className="flex items-start gap-6 mb-6">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
                   <TrendingUp className="w-12 h-12 text-green-600 flex-shrink-0" />
                   <div>
                     <p className="text-2xl text-green-800 leading-relaxed mb-4">
@@ -720,7 +720,7 @@ export default function FinancialCoursePage() {
                 </div>
                 <div className="bg-white p-6 rounded-xl border-2 border-green-300">
                   <p className="font-bold text-xl text-green-900 mb-3">Traditional Finance Comparison:</p>
-                  <p className="text-lg text-green-800">
+                  <p className="text-base md:text-lg text-green-800">
                     Imagine a savings account that automatically moves your money between different banks
                     to get the best interest rate, or a mutual fund that instantly rebalances across
                     hundreds of strategies based on real-time performance. This is composability in action!
@@ -748,7 +748,7 @@ export default function FinancialCoursePage() {
             {/* Section 1: The Settlement Revolution */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 text-white text-3xl font-bold shadow-xl">
                   1
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -756,7 +756,7 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-xl p-10 mb-8 border-2 border-purple-300">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-purple-300">
                 <h4 className="text-3xl font-bold text-purple-900 mb-6">The Problem with Traditional Settlement</h4>
                 <p className="text-2xl text-purple-800 leading-relaxed mb-6">
                   When you buy stocks, the trade executes immediately, but <strong>settlement</strong>—the
@@ -775,53 +775,53 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl shadow-xl p-8 border-2 border-red-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-red-300">
                   <h4 className="text-3xl font-bold text-red-900 mb-6 flex items-center gap-3">
                     <AlertCircle className="w-10 h-10" />
                     Traditional Settlement (T+2)
                   </h4>
                   <div className="space-y-4">
                     <div className="bg-white p-4 rounded-xl border border-red-300">
-                      <p className="font-bold text-lg text-red-900">Day 0: Trade Execution</p>
+                      <p className="font-bold text-base md:text-lg text-red-900">Day 0: Trade Execution</p>
                       <p className="text-base text-red-800">You buy 100 shares at $50 each</p>
                     </div>
                     <div className="bg-white p-4 rounded-xl border border-orange-300">
-                      <p className="font-bold text-lg text-orange-900">Day 1: Clearing</p>
+                      <p className="font-bold text-base md:text-lg text-orange-900">Day 1: Clearing</p>
                       <p className="text-base text-orange-800">Clearing houses net obligations, verify details</p>
                     </div>
                     <div className="bg-white p-4 rounded-xl border border-yellow-300">
-                      <p className="font-bold text-lg text-yellow-900">Day 2: Settlement</p>
+                      <p className="font-bold text-base md:text-lg text-yellow-900">Day 2: Settlement</p>
                       <p className="text-base text-yellow-800">Finally receive shares, money transferred</p>
                     </div>
                     <div className="bg-red-100 p-4 rounded-xl border-2 border-red-400">
-                      <p className="text-lg text-red-900 font-semibold">
+                      <p className="text-base md:text-lg text-red-900 font-semibold">
                         ⚠️ 2 days of counterparty risk, locked capital, systemic exposure
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                   <h4 className="text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
                     <CheckCircle className="w-10 h-10" />
                     Blockchain Settlement (Real-Time)
                   </h4>
                   <div className="space-y-4">
                     <div className="bg-white p-4 rounded-xl border border-green-300">
-                      <p className="font-bold text-lg text-green-900">Instant: Atomic Swap</p>
+                      <p className="font-bold text-base md:text-lg text-green-900">Instant: Atomic Swap</p>
                       <p className="text-base text-green-800">Securities and payment transfer simultaneously</p>
                     </div>
                     <div className="bg-white p-4 rounded-xl border border-teal-300">
-                      <p className="font-bold text-lg text-teal-900">Smart Contracts</p>
+                      <p className="font-bold text-base md:text-lg text-teal-900">Smart Contracts</p>
                       <p className="text-base text-teal-800">Automatically handle corporate actions, compliance</p>
                     </div>
                     <div className="bg-white p-4 rounded-xl border border-blue-300">
-                      <p className="font-bold text-lg text-blue-900">24/7 Operation</p>
+                      <p className="font-bold text-base md:text-lg text-blue-900">24/7 Operation</p>
                       <p className="text-base text-blue-800">No business hours, weekends, or holidays</p>
                     </div>
                     <div className="bg-green-100 p-4 rounded-xl border-2 border-green-400">
-                      <p className="text-lg text-green-900 font-semibold">
+                      <p className="text-base md:text-lg text-green-900 font-semibold">
                         ✅ Zero counterparty risk, freed capital, reduced systemic exposure
                       </p>
                     </div>
@@ -829,12 +829,12 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl shadow-xl p-10">
+              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-xl md:rounded-2xl shadow-xl p-10">
                 <div className="flex items-start gap-6">
                   <Zap className="w-12 h-12 flex-shrink-0" />
                   <div>
                     <p className="text-4xl font-bold mb-4">Atomic Swaps: The Key Innovation</p>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       In a blockchain settlement, the transfer of securities and payment happen in the
                       <strong> same transaction</strong>. Either both legs complete, or neither does,
                       eliminating counterparty risk entirely.
@@ -853,7 +853,7 @@ export default function FinancialCoursePage() {
             {/* Section 2: Real-World Settlement Implementations */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-600 text-white text-3xl font-bold shadow-xl">
                   2
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -863,12 +863,12 @@ export default function FinancialCoursePage() {
 
               <div className="space-y-8">
                 {/* JPMorgan JPM Coin */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Building className="w-16 h-16 text-blue-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-blue-900 mb-4">JPMorgan's JPM Coin</h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Launched in 2019, JPM Coin is a stablecoin used for <strong>instant settlement</strong>
                         between JPMorgan's institutional clients. When Client A wants to pay Client B (both
                         JPMorgan customers), they use JPM Coin for instant settlement rather than waiting for
@@ -876,22 +876,22 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300">
                       <p className="font-bold text-xl text-blue-900 mb-3">📊 Scale</p>
-                      <p className="text-lg text-blue-800">
+                      <p className="text-base md:text-lg text-blue-800">
                         Processed <strong>hundreds of billions</strong> in transactions
                       </p>
                     </div>
                     <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-300">
                       <p className="font-bold text-xl text-purple-900 mb-3">🏢 Major Clients</p>
-                      <p className="text-lg text-purple-800">
+                      <p className="text-base md:text-lg text-purple-800">
                         Siemens uses it for global treasury operations
                       </p>
                     </div>
                     <div className="bg-green-50 p-6 rounded-xl border-2 border-green-300">
                       <p className="font-bold text-xl text-green-900 mb-3">⏰ 24/7</p>
-                      <p className="text-lg text-green-800">
+                      <p className="text-base md:text-lg text-green-800">
                         Eliminates internal settlement delays
                       </p>
                     </div>
@@ -905,12 +905,12 @@ export default function FinancialCoursePage() {
                 </div>
 
                 {/* DTCC Project Whitney */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <FileText className="w-16 h-16 text-purple-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-purple-900 mb-4">DTCC's Project Whitney</h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Explores blockchain for <strong>private market securities</strong> settlement.
                         Private securities traditionally involve manual processes, paper certificates, and
                         weeks-long settlement. DTCC's blockchain platform digitizes these securities and
@@ -918,16 +918,16 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-300">
                       <p className="font-bold text-xl text-purple-900 mb-3">⏱️ Speed</p>
-                      <p className="text-lg text-purple-800">
+                      <p className="text-base md:text-lg text-purple-800">
                         Reduced settlement time from <strong>weeks to minutes</strong>
                       </p>
                     </div>
                     <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300">
                       <p className="font-bold text-xl text-blue-900 mb-3">📋 Standardization</p>
-                      <p className="text-lg text-blue-800">
+                      <p className="text-base md:text-lg text-blue-800">
                         Smart contracts enforce consistent processes across markets
                       </p>
                     </div>
@@ -941,8 +941,8 @@ export default function FinancialCoursePage() {
                 </div>
 
                 {/* Central Bank Projects */}
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Landmark className="w-16 h-16 text-green-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-green-900 mb-4">Central Bank Digital Currencies (CBDCs)</h4>
@@ -953,20 +953,20 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div className="bg-white p-6 rounded-xl border-2 border-blue-300">
                       <p className="text-xl font-bold text-blue-900 mb-3">🇨🇦 Project Jasper</p>
-                      <p className="text-lg text-blue-800">Bank of Canada</p>
+                      <p className="text-base md:text-lg text-blue-800">Bank of Canada</p>
                       <p className="text-base text-blue-700 mt-2">Real-time gross settlement system</p>
                     </div>
                     <div className="bg-white p-6 rounded-xl border-2 border-purple-300">
                       <p className="text-xl font-bold text-purple-900 mb-3">🇸🇬 Project Ubin</p>
-                      <p className="text-lg text-purple-800">Monetary Authority of Singapore</p>
+                      <p className="text-base md:text-lg text-purple-800">Monetary Authority of Singapore</p>
                       <p className="text-base text-purple-700 mt-2">Evolved into production system (Partior)</p>
                     </div>
                     <div className="bg-white p-6 rounded-xl border-2 border-green-300">
                       <p className="text-xl font-bold text-green-900 mb-3">🇪🇺🇯🇵 Project Stella</p>
-                      <p className="text-lg text-green-800">ECB and Bank of Japan</p>
+                      <p className="text-base md:text-lg text-green-800">ECB and Bank of Japan</p>
                       <p className="text-base text-green-700 mt-2">Cross-border payment research</p>
                     </div>
                   </div>
@@ -986,7 +986,7 @@ export default function FinancialCoursePage() {
             {/* Section 3: Cross-Border Settlement */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-600 to-red-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-orange-600 to-red-600 text-white text-3xl font-bold shadow-xl">
                   3
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -994,7 +994,7 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-xl p-8 border-2 border-orange-300 mb-8">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-orange-300 mb-8">
                 <div className="flex items-start gap-6">
                   <Globe className="w-16 h-16 text-orange-600 flex-shrink-0" />
                   <div>
@@ -1007,7 +1007,7 @@ export default function FinancialCoursePage() {
                     </p>
                     <div className="bg-white p-6 rounded-xl border-2 border-orange-300">
                       <p className="text-xl text-orange-900 font-semibold mb-3">💸 Impact on Remittances:</p>
-                      <p className="text-lg text-orange-800">
+                      <p className="text-base md:text-lg text-orange-800">
                         Migrant workers sending money home lose <strong>billions annually</strong> to fees.
                         Blockchain promises direct, instant, transparent transfers regardless of borders or
                         banking relationships.
@@ -1017,9 +1017,9 @@ export default function FinancialCoursePage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
                 {/* Ripple */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
                   <div className="flex items-center gap-4 mb-6">
                     <Network className="w-12 h-12 text-blue-600" />
                     <h4 className="text-3xl font-bold text-blue-900">Ripple & XRP Ledger</h4>
@@ -1029,8 +1029,8 @@ export default function FinancialCoursePage() {
                     <strong> direct transfer of value</strong> using XRP as a bridge currency.
                   </p>
                   <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-300 mb-6">
-                    <p className="font-bold text-lg text-blue-900 mb-3">How it Works:</p>
-                    <ol className="space-y-2 text-lg text-blue-800">
+                    <p className="font-bold text-base md:text-lg text-blue-900 mb-3">How it Works:</p>
+                    <ol className="space-y-2 text-base md:text-lg text-blue-800">
                       <li>1️⃣ Bank in Mexico converts pesos → XRP</li>
                       <li>2️⃣ Transfer XRP across network (seconds)</li>
                       <li>3️⃣ Convert XRP → Thai baht</li>
@@ -1039,26 +1039,26 @@ export default function FinancialCoursePage() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-6 h-6 text-green-600" />
-                      <p className="text-lg text-gray-700">Minutes instead of days</p>
+                      <p className="text-base md:text-lg text-gray-700">Minutes instead of days</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-6 h-6 text-green-600" />
-                      <p className="text-lg text-gray-700">Pennies instead of dollars in fees</p>
+                      <p className="text-base md:text-lg text-gray-700">Pennies instead of dollars in fees</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-6 h-6 text-green-600" />
-                      <p className="text-lg text-gray-700">Complete transparency</p>
+                      <p className="text-base md:text-lg text-gray-700">Complete transparency</p>
                     </div>
                   </div>
                   <div className="bg-blue-100 p-4 rounded-xl border-2 border-blue-300 mt-6">
-                    <p className="text-lg text-blue-900 font-semibold">
+                    <p className="text-base md:text-lg text-blue-900 font-semibold">
                       Processed <strong>billions</strong> in cross-border payments for financial institutions
                     </p>
                   </div>
                 </div>
 
                 {/* Stellar */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
                   <div className="flex items-center gap-4 mb-6">
                     <TrendingUp className="w-12 h-12 text-purple-600" />
                     <h4 className="text-3xl font-bold text-purple-900">Stellar Network</h4>
@@ -1069,15 +1069,15 @@ export default function FinancialCoursePage() {
                     for converting between them.
                   </p>
                   <div className="bg-purple-50 p-6 rounded-xl border-2 border-purple-300 mb-6">
-                    <p className="font-bold text-lg text-purple-900 mb-3">Real Implementations:</p>
-                    <ul className="space-y-3 text-lg text-purple-800">
+                    <p className="font-bold text-base md:text-lg text-purple-900 mb-3">Real Implementations:</p>
+                    <ul className="space-y-3 text-base md:text-lg text-purple-800">
                       <li>• <strong>MoneyGram:</strong> Instant remittances with stablecoins</li>
                       <li>• <strong>World Bank:</strong> Issued bonds on Stellar</li>
                       <li>• <strong>IBM World Wire:</strong> Banks clear and settle cross-border payments</li>
                     </ul>
                   </div>
                   <div className="bg-purple-100 p-4 rounded-xl border-2 border-purple-300">
-                    <p className="text-lg text-purple-900 font-semibold">
+                    <p className="text-base md:text-lg text-purple-900 font-semibold">
                       Blockchain-based cross-border settlement isn't theoretical—it's happening at scale,
                       saving time and money for millions
                     </p>
@@ -1089,7 +1089,7 @@ export default function FinancialCoursePage() {
             {/* Section 4: Securities Settlement & Tokenization */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white text-3xl font-bold shadow-xl">
+                <div className="flex items-center justify-center w-16 h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white text-3xl font-bold shadow-xl">
                   4
                 </div>
                 <h3 className="text-5xl font-bold text-gray-900">
@@ -1097,12 +1097,12 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-2xl shadow-xl p-10 mb-8">
+              <div className="bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 lg:p-10 mb-8">
                 <div className="flex items-start gap-6">
                   <FileCheck className="w-12 h-12 flex-shrink-0" />
                   <div>
                     <p className="text-4xl font-bold mb-4">The Tokenization Revolution</p>
-                    <p className="text-2xl leading-relaxed mb-6">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6">
                       Tokenization represents stocks, bonds, and other financial instruments as blockchain
                       tokens. Traditional securities exist as entries in custodian databases. Tokenized
                       securities exist as blockchain tokens, with ownership tracked on a distributed ledger
@@ -1123,34 +1123,34 @@ export default function FinancialCoursePage() {
 
               <div className="space-y-8">
                 {/* Swiss SIX Digital Exchange */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-red-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-red-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Award className="w-16 h-16 text-red-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-red-900 mb-4">🇨🇭 Swiss SIX Digital Exchange (SDX)</h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Launched in 2021 as the <strong>world's first fully regulated digital asset exchange</strong>
                         operated by a major stock exchange. SDX enables trading and settlement of tokenized
                         securities, with the Swiss National Bank providing wholesale CBDC for payment.
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div className="bg-red-50 p-6 rounded-xl border-2 border-red-300">
                       <p className="font-bold text-xl text-red-900 mb-3">⚡ Instant Settlement</p>
-                      <p className="text-lg text-red-800">
+                      <p className="text-base md:text-lg text-red-800">
                         Trades settle immediately, not T+2
                       </p>
                     </div>
                     <div className="bg-orange-50 p-6 rounded-xl border-2 border-orange-300">
                       <p className="font-bold text-xl text-orange-900 mb-3">🤖 Automated Actions</p>
-                      <p className="text-lg text-orange-800">
+                      <p className="text-base md:text-lg text-orange-800">
                         Corporate actions execute via smart contracts
                       </p>
                     </div>
                     <div className="bg-yellow-50 p-6 rounded-xl border-2 border-yellow-300">
                       <p className="font-bold text-xl text-yellow-900 mb-3">24/7 Operations</p>
-                      <p className="text-lg text-yellow-800">
+                      <p className="text-base md:text-lg text-yellow-800">
                         No market hours or holidays
                       </p>
                     </div>
@@ -1164,8 +1164,8 @@ export default function FinancialCoursePage() {
                 </div>
 
                 {/* European Investment Bank */}
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl p-8 border-2 border-blue-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Building className="w-16 h-16 text-blue-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-blue-900 mb-4">🇪🇺 European Investment Bank (EIB) Digital Bonds</h4>
@@ -1182,7 +1182,7 @@ export default function FinancialCoursePage() {
                         </div>
                         <p className="font-bold text-2xl text-blue-900">2021: €100M on Ethereum</p>
                       </div>
-                      <p className="text-lg text-blue-800 ml-16">
+                      <p className="text-base md:text-lg text-blue-800 ml-16">
                         Settlement in traditional currency, proved blockchain could handle bond issuance
                       </p>
                     </div>
@@ -1193,7 +1193,7 @@ export default function FinancialCoursePage() {
                         </div>
                         <p className="font-bold text-2xl text-purple-900">2022: On-chain CBDC Settlement</p>
                       </div>
-                      <p className="text-lg text-purple-800 ml-16">
+                      <p className="text-base md:text-lg text-purple-800 ml-16">
                         Used experimental CBDC for payment, full blockchain settlement
                       </p>
                     </div>
@@ -1204,7 +1204,7 @@ export default function FinancialCoursePage() {
                         </div>
                         <p className="font-bold text-2xl text-green-900">2023: Multi-currency Bonds</p>
                       </div>
-                      <p className="text-lg text-green-800 ml-16">
+                      <p className="text-base md:text-lg text-green-800 ml-16">
                         Settled with multiple CBDCs, handled complex compliance and corporate actions
                       </p>
                     </div>
@@ -1240,7 +1240,7 @@ export default function FinancialCoursePage() {
             {/* Section 1: Continuous Auditing */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   1
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -1248,9 +1248,9 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-200">
                 <h4 className="text-3xl font-bold text-blue-900 mb-6">From Periodic Reviews to Real-Time Transparency</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   Traditional auditing is like checking your bank balance once a month—by the time you discover
                   an issue, weeks of transactions have passed. Blockchain enables <strong>continuous auditing</strong>,
                   where every transaction is instantly verifiable by all authorized parties.
@@ -1258,8 +1258,8 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Traditional vs Blockchain Auditing */}
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl shadow-xl p-8 border-2 border-red-300">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-red-300">
                   <h4 className="text-3xl font-bold text-red-900 mb-6 flex items-center gap-3">
                     <X className="w-10 h-10" />
                     Traditional Auditing
@@ -1268,35 +1268,35 @@ export default function FinancialCoursePage() {
                     <div className="flex items-start gap-3">
                       <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-red-800">Annual or Quarterly Reviews</p>
-                        <p className="text-lg text-gray-700">Fraud can go undetected for months</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-red-800">Annual or Quarterly Reviews</p>
+                        <p className="text-base md:text-lg text-gray-700">Fraud can go undetected for months</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-red-800">Manual Sampling</p>
-                        <p className="text-lg text-gray-700">Auditors review only 10-20% of transactions</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-red-800">Manual Sampling</p>
+                        <p className="text-base md:text-lg text-gray-700">Auditors review only 10-20% of transactions</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-red-800">Data Silos</p>
-                        <p className="text-lg text-gray-700">Information scattered across systems</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-red-800">Data Silos</p>
+                        <p className="text-base md:text-lg text-gray-700">Information scattered across systems</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-red-800">High Costs</p>
-                        <p className="text-lg text-gray-700">Global audit fees exceed $35 billion annually</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-red-800">High Costs</p>
+                        <p className="text-base md:text-lg text-gray-700">Global audit fees exceed $35 billion annually</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                   <h4 className="text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
                     <Check className="w-10 h-10" />
                     Blockchain Continuous Auditing
@@ -1305,29 +1305,29 @@ export default function FinancialCoursePage() {
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-8 h-8 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-green-800">Real-Time Monitoring</p>
-                        <p className="text-lg text-gray-700">Anomalies detected instantly</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-green-800">Real-Time Monitoring</p>
+                        <p className="text-base md:text-lg text-gray-700">Anomalies detected instantly</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-8 h-8 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-green-800">100% Transaction Coverage</p>
-                        <p className="text-lg text-gray-700">Every transaction is auditable and traceable</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-green-800">100% Transaction Coverage</p>
+                        <p className="text-base md:text-lg text-gray-700">Every transaction is auditable and traceable</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-8 h-8 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-green-800">Single Source of Truth</p>
-                        <p className="text-lg text-gray-700">All parties access the same immutable ledger</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-green-800">Single Source of Truth</p>
+                        <p className="text-base md:text-lg text-gray-700">All parties access the same immutable ledger</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-8 h-8 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-xl font-semibold text-green-800">Reduced Costs</p>
-                        <p className="text-lg text-gray-700">Automation cuts audit time by 60-80%</p>
+                        <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-green-800">Reduced Costs</p>
+                        <p className="text-base md:text-lg text-gray-700">Automation cuts audit time by 60-80%</p>
                       </div>
                     </div>
                   </div>
@@ -1335,30 +1335,30 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Key Benefits */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-teal-300">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-teal-300">
                 <h4 className="text-3xl font-bold text-teal-900 mb-6 flex items-center gap-3">
                   <Zap className="w-10 h-10 text-teal-600" />
                   Key Benefits of Blockchain Auditing
                 </h4>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-teal-50 rounded-xl p-6 border-l-4 border-teal-600">
                     <Eye className="w-12 h-12 text-teal-600 mb-4" />
-                    <p className="text-xl font-semibold text-gray-900 mb-2">Complete Transparency</p>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2">Complete Transparency</p>
+                    <p className="text-base md:text-lg text-gray-700">
                       Regulators can access real-time financial data without waiting for annual reports
                     </p>
                   </div>
                   <div className="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-600">
                     <Shield className="w-12 h-12 text-purple-600 mb-4" />
-                    <p className="text-xl font-semibold text-gray-900 mb-2">Fraud Prevention</p>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2">Fraud Prevention</p>
+                    <p className="text-base md:text-lg text-gray-700">
                       Immutable records prevent tampering and retroactive modifications
                     </p>
                   </div>
                   <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
                     <TrendingDown className="w-12 h-12 text-blue-600 mb-4" />
-                    <p className="text-xl font-semibold text-gray-900 mb-2">Cost Efficiency</p>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2">Cost Efficiency</p>
+                    <p className="text-base md:text-lg text-gray-700">
                       Deloitte estimates 30-50% reduction in audit costs with blockchain
                     </p>
                   </div>
@@ -1369,7 +1369,7 @@ export default function FinancialCoursePage() {
             {/* Section 2: Smart Contract Auditing */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   2
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -1377,9 +1377,9 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-purple-200">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-purple-200">
                 <h4 className="text-3xl font-bold text-purple-900 mb-6">Why Smart Contract Audits Matter</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   When a smart contract holds millions (or billions) of dollars, a single bug can be catastrophic.
                   The <strong>2016 DAO hack</strong> (which we covered in Part I) demonstrated this—$60 million was stolen
                   due to a reentrancy vulnerability that a proper audit would have caught.
@@ -1396,11 +1396,11 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Audit Process */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-2 border-purple-300">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-purple-300">
                 <h4 className="text-3xl font-bold text-purple-900 mb-6">The Smart Contract Audit Process</h4>
                 <div className="space-y-6">
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
                       1
                     </div>
                     <div className="flex-1">
@@ -1412,7 +1412,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
                       2
                     </div>
                     <div className="flex-1">
@@ -1424,7 +1424,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
                       3
                     </div>
                     <div className="flex-1">
@@ -1435,7 +1435,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
                       4
                     </div>
                     <div className="flex-1">
@@ -1449,12 +1449,12 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Leading Audit Firms */}
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-8 border-2 border-indigo-300">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-indigo-300">
                 <h4 className="text-3xl font-bold text-indigo-900 mb-6">Leading Smart Contract Audit Firms</h4>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-white rounded-xl p-6">
                     <h5 className="text-2xl font-bold text-indigo-900 mb-3">CertiK</h5>
-                    <p className="text-lg text-gray-700 mb-3">
+                    <p className="text-base md:text-lg text-gray-700 mb-3">
                       Audited over $310 billion in assets. Used formal verification for protocols like Aave,
                       Polygon, and Binance Smart Chain.
                     </p>
@@ -1462,21 +1462,21 @@ export default function FinancialCoursePage() {
                   </div>
                   <div className="bg-white rounded-xl p-6">
                     <h5 className="text-2xl font-bold text-indigo-900 mb-3">Trail of Bits</h5>
-                    <p className="text-lg text-gray-700 mb-3">
+                    <p className="text-base md:text-lg text-gray-700 mb-3">
                       Developed Slither and Echidna tools. Audited MakerDAO, Compound, and Uniswap V3.
                     </p>
                     <p className="text-base text-indigo-600 font-semibold">Focus: Deep security research</p>
                   </div>
                   <div className="bg-white rounded-xl p-6">
                     <h5 className="text-2xl font-bold text-indigo-900 mb-3">OpenZeppelin</h5>
-                    <p className="text-lg text-gray-700 mb-3">
+                    <p className="text-base md:text-lg text-gray-700 mb-3">
                       Creators of industry-standard smart contract libraries. Audited Coinbase, Ethereum Foundation projects.
                     </p>
                     <p className="text-base text-indigo-600 font-semibold">Focus: Best practices & standards</p>
                   </div>
                   <div className="bg-white rounded-xl p-6">
                     <h5 className="text-2xl font-bold text-indigo-900 mb-3">ConsenSys Diligence</h5>
-                    <p className="text-lg text-gray-700 mb-3">
+                    <p className="text-base md:text-lg text-gray-700 mb-3">
                       Part of the ConsenSys ecosystem. Audited Uniswap, Filecoin, Gnosis Safe.
                     </p>
                     <p className="text-base text-indigo-600 font-semibold">Focus: Ethereum ecosystem expertise</p>
@@ -1488,7 +1488,7 @@ export default function FinancialCoursePage() {
             {/* Section 3: Insurance Claims on Blockchain */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-teal-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-teal-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   3
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -1496,25 +1496,25 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-200">
                 <h4 className="text-3xl font-bold text-blue-900 mb-6">The Claims Processing Problem</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   Traditional insurance claims are a nightmare: paperwork, adjuster visits, weeks of waiting,
                   disputes over coverage. The average claim takes <strong>30-60 days</strong> to settle,
                   and fraud costs the industry <strong>$80 billion annually</strong>.
                 </p>
-                <p className="text-2xl text-gray-700 leading-relaxed">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                   Blockchain changes this with <strong>parametric insurance</strong>—smart contracts that
                   automatically trigger payouts when predefined conditions are met, verified by trusted data sources (oracles).
                 </p>
               </div>
 
               {/* How Parametric Insurance Works */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-2 border-teal-300">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-teal-300">
                 <h4 className="text-3xl font-bold text-teal-900 mb-6">How Parametric Insurance Works</h4>
                 <div className="space-y-6">
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
                       1
                     </div>
                     <div className="flex-1 bg-teal-50 rounded-xl p-6">
@@ -1525,7 +1525,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
                       2
                     </div>
                     <div className="flex-1 bg-teal-50 rounded-xl p-6">
@@ -1536,7 +1536,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
                       3
                     </div>
                     <div className="flex-1 bg-teal-50 rounded-xl p-6">
@@ -1547,7 +1547,7 @@ export default function FinancialCoursePage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-full text-xl font-bold flex-shrink-0">
                       4
                     </div>
                     <div className="flex-1 bg-teal-50 rounded-xl p-6">
@@ -1562,12 +1562,12 @@ export default function FinancialCoursePage() {
 
               {/* Real-World Insurance Examples */}
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-xl p-8 border-2 border-orange-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-orange-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Zap className="w-16 h-16 text-orange-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-orange-900 mb-4">Etherisc: Decentralized Insurance</h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         <strong>Flight Delay Insurance:</strong> Buy a policy for $10. If your flight is delayed
                         &gt; 45 minutes (verified by FlightStats API), receive automatic payout within 15 seconds.
                       </p>
@@ -1577,28 +1577,28 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-xl p-4 text-center">
                       <p className="text-3xl font-bold text-orange-600">$2M+</p>
-                      <p className="text-lg text-gray-700">Policies Issued</p>
+                      <p className="text-base md:text-lg text-gray-700">Policies Issued</p>
                     </div>
                     <div className="bg-white rounded-xl p-4 text-center">
                       <p className="text-3xl font-bold text-orange-600">98%</p>
-                      <p className="text-lg text-gray-700">Cost Reduction</p>
+                      <p className="text-base md:text-lg text-gray-700">Cost Reduction</p>
                     </div>
                     <div className="bg-white rounded-xl p-4 text-center">
                       <p className="text-3xl font-bold text-orange-600">15 sec</p>
-                      <p className="text-lg text-gray-700">Payout Time</p>
+                      <p className="text-base md:text-lg text-gray-700">Payout Time</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Shield className="w-16 h-16 text-green-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-green-900 mb-4">Lemonade: AI + Blockchain Insurance</h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Lemonade uses blockchain to record all claims immutably. Their <strong>"Instant Everything"</strong>
                         model paid a theft claim in <strong>3 seconds</strong>—a world record.
                       </p>
@@ -1620,7 +1620,7 @@ export default function FinancialCoursePage() {
             {/* Section 4: Multi-Party Complex Scenarios */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   4
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -1628,28 +1628,28 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-indigo-200">
+              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-indigo-200">
                 <h4 className="text-3xl font-bold text-indigo-900 mb-6">The Challenge: Coordinating Multiple Stakeholders</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   Some insurance scenarios involve dozens of parties: shippers, insurers, reinsurers, brokers,
                   customs, banks. A single shipment might have <strong>20+ documents</strong> exchanged via
                   fax and email—creating delays, errors, and fraud opportunities.
                 </p>
-                <p className="text-2xl text-gray-700 leading-relaxed">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                   Blockchain enables <strong>shared ledger visibility</strong> where all parties see the same
                   information in real-time, eliminating reconciliation headaches.
                 </p>
               </div>
 
               {/* Insurwave Case Study */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-2 border-blue-300">
-                <div className="flex items-start gap-6 mb-6">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-300">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
                   <Network className="w-16 h-16 text-blue-600 flex-shrink-0" />
                   <div>
                     <h4 className="text-3xl font-bold text-blue-900 mb-4">
                       Insurwave: Marine Insurance Revolution (EY + Maersk + Microsoft)
                     </h4>
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                       Launched in 2018, Insurwave is a blockchain platform for marine cargo insurance.
                       It connects ship owners (Maersk), insurers (AIG, Liberty Mutual, MS Amlin),
                       and brokers on a single ledger.
@@ -1661,7 +1661,7 @@ export default function FinancialCoursePage() {
                   <h5 className="text-2xl font-bold text-blue-900 mb-4">How It Works</h5>
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
-                      <div className="flex items-center justify-center w-10 h-10 bg-blue-200 text-blue-900 rounded-full text-lg font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-200 text-blue-900 rounded-full text-base md:text-lg font-bold flex-shrink-0">
                         1
                       </div>
                       <p className="text-xl text-gray-700">
@@ -1670,7 +1670,7 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                     <div className="flex items-start gap-4">
-                      <div className="flex items-center justify-center w-10 h-10 bg-blue-200 text-blue-900 rounded-full text-lg font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-200 text-blue-900 rounded-full text-base md:text-lg font-bold flex-shrink-0">
                         2
                       </div>
                       <p className="text-xl text-gray-700">
@@ -1679,7 +1679,7 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                     <div className="flex items-start gap-4">
-                      <div className="flex items-center justify-center w-10 h-10 bg-blue-200 text-blue-900 rounded-full text-lg font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-200 text-blue-900 rounded-full text-base md:text-lg font-bold flex-shrink-0">
                         3
                       </div>
                       <p className="text-xl text-gray-700">
@@ -1688,7 +1688,7 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                     <div className="flex items-start gap-4">
-                      <div className="flex items-center justify-center w-10 h-10 bg-blue-200 text-blue-900 rounded-full text-lg font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-blue-200 text-blue-900 rounded-full text-base md:text-lg font-bold flex-shrink-0">
                         4
                       </div>
                       <p className="text-xl text-gray-700">
@@ -1699,7 +1699,7 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-4 gap-4">
+                <div className="grid md:grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-xl p-4 text-center">
                     <p className="text-3xl font-bold">1000+</p>
                     <p className="text-lg">Vessels Insured</p>
@@ -1720,14 +1720,14 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* B3i Consortium */}
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl shadow-xl p-8 border-2 border-purple-300">
-                <div className="flex items-start gap-6 mb-6">
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
                   <Building className="w-16 h-16 text-purple-600 flex-shrink-0" />
                   <div>
                     <h4 className="text-3xl font-bold text-purple-900 mb-4">
                       B3i: Blockchain Insurance Industry Initiative
                     </h4>
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                       A consortium of <strong>40+ global insurers</strong> (Allianz, AXA, Swiss Re, Munich Re, Zurich)
                       building shared blockchain infrastructure for reinsurance.
                     </p>
@@ -1767,7 +1767,7 @@ export default function FinancialCoursePage() {
             {/* Section 1: UIDAI and Digital Identity */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   1
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -1775,12 +1775,12 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-orange-200">
-                <div className="flex items-start gap-6 mb-6">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-orange-200">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
                   <Users className="w-20 h-20 text-orange-600 flex-shrink-0" />
                   <div>
                     <h4 className="text-3xl font-bold text-orange-900 mb-6">Aadhaar: Transforming 1.4 Billion Lives</h4>
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                       India's <strong>Unique Identification Authority of India (UIDAI)</strong> manages Aadhaar,
                       the world's largest biometric database with <strong>1.39 billion enrolled citizens</strong>.
                       While not blockchain-based initially, UIDAI is exploring blockchain for enhanced security
@@ -1795,13 +1795,13 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Current Challenges */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-2 border-red-300">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-red-300">
                 <h4 className="text-3xl font-bold text-red-900 mb-6">Challenges with Centralized Aadhaar System</h4>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-600">
                     <AlertCircle className="w-10 h-10 text-red-600 mb-4" />
                     <h5 className="text-2xl font-bold text-red-800 mb-3">Privacy Concerns</h5>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg text-gray-700">
                       Central database creates a "honeypot" for hackers. Data breaches in 2018 exposed
                       millions of records.
                     </p>
@@ -1809,21 +1809,21 @@ export default function FinancialCoursePage() {
                   <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-600">
                     <AlertCircle className="w-10 h-10 text-red-600 mb-4" />
                     <h5 className="text-2xl font-bold text-red-800 mb-3">Single Point of Failure</h5>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg text-gray-700">
                       If UIDAI servers go down (as in March 2023), millions cannot access banking or government services.
                     </p>
                   </div>
                   <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-600">
                     <AlertCircle className="w-10 h-10 text-red-600 mb-4" />
                     <h5 className="text-2xl font-bold text-red-800 mb-3">Unauthorized Surveillance</h5>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg text-gray-700">
                       Government can track every citizen's activities across all services—raising civil liberty concerns.
                     </p>
                   </div>
                   <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-600">
                     <AlertCircle className="w-10 h-10 text-red-600 mb-4" />
                     <h5 className="text-2xl font-bold text-red-800 mb-3">Data Sharing Without Consent</h5>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg text-gray-700">
                       Third-party apps access Aadhaar data without explicit user control over what's shared.
                     </p>
                   </div>
@@ -1831,7 +1831,7 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Blockchain Solution */}
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                 <h4 className="text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
                   <Rocket className="w-10 h-10 text-green-600" />
                   How Blockchain Can Transform Aadhaar
@@ -1844,7 +1844,7 @@ export default function FinancialCoursePage() {
                       Blockchain anchors cryptographic proofs (hashes) for verification.
                     </p>
                     <div className="bg-green-100 border-l-4 border-green-600 p-4 rounded-lg">
-                      <p className="text-lg text-green-900">
+                      <p className="text-base md:text-lg text-green-900">
                         <strong>Example:</strong> Bank verifies "Is this person over 18?" without seeing birthdate.
                         Zero-knowledge proof on blockchain confirms eligibility.
                       </p>
@@ -1857,7 +1857,7 @@ export default function FinancialCoursePage() {
                       Biometric data distributed across multiple nodes (state governments, banks, telecom)
                       using sharding—no single entity holds complete database.
                     </p>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg text-gray-700">
                       Even if one node is compromised, attackers can't reconstruct full identity.
                     </p>
                   </div>
@@ -1868,7 +1868,7 @@ export default function FinancialCoursePage() {
                       Every access to Aadhaar data recorded immutably on blockchain. Citizens see who accessed
                       what data and when—like a "credit report" for privacy.
                     </p>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-base md:text-lg text-gray-700">
                       Smart contracts enforce consent: "Bank can verify KYC, but NOT access my address history."
                     </p>
                   </div>
@@ -1896,7 +1896,7 @@ export default function FinancialCoursePage() {
             {/* Section 2: GSTN - Goods and Services Tax Network */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   2
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -1904,12 +1904,12 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-blue-200">
-                <div className="flex items-start gap-6 mb-6">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-200">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
                   <FileText className="w-20 h-20 text-blue-600 flex-shrink-0" />
                   <div>
                     <h4 className="text-3xl font-bold text-blue-900 mb-6">GSTN: The World's Largest Tax Network</h4>
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                       India's <strong>Goods and Services Tax Network (GSTN)</strong> processes tax filings for
                       <strong> 14+ million businesses</strong>, generating <strong>₹1.87 trillion</strong> ($225 billion)
                       in monthly revenue (as of 2024).
@@ -1923,13 +1923,13 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* GST Fraud Challenge */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-2 border-red-300">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-red-300">
                 <h4 className="text-3xl font-bold text-red-900 mb-6">The ₹45,000 Crore Fraud Problem</h4>
                 <div className="bg-red-50 rounded-xl p-6 mb-6">
                   <div className="flex items-start gap-4">
                     <Ban className="w-12 h-12 text-red-600 flex-shrink-0 mt-1" />
                     <div>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         <strong>Fake Invoice Scam:</strong> Shell companies create fake invoices to claim fraudulent
                         Input Tax Credit (ITC). In 2022-23, the government detected <strong>₹45,000 crore</strong>
                         ($5.4 billion) in fake ITC claims.
@@ -1942,24 +1942,24 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="bg-red-100 rounded-xl p-6 text-center">
                     <p className="text-4xl font-bold text-red-600 mb-2">8,500+</p>
-                    <p className="text-lg text-gray-700">Fake Firms Detected (2023)</p>
+                    <p className="text-base md:text-lg text-gray-700">Fake Firms Detected (2023)</p>
                   </div>
                   <div className="bg-orange-100 rounded-xl p-6 text-center">
                     <p className="text-4xl font-bold text-orange-600 mb-2">₹45,000 Cr</p>
-                    <p className="text-lg text-gray-700">Fraudulent Claims (2023)</p>
+                    <p className="text-base md:text-lg text-gray-700">Fraudulent Claims (2023)</p>
                   </div>
                   <div className="bg-yellow-100 rounded-xl p-6 text-center">
                     <p className="text-4xl font-bold text-yellow-600 mb-2">6 months</p>
-                    <p className="text-lg text-gray-700">Average Detection Time</p>
+                    <p className="text-base md:text-lg text-gray-700">Average Detection Time</p>
                   </div>
                 </div>
               </div>
 
               {/* Blockchain Solution for GST */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-xl p-8 mb-8 border-2 border-green-300">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 mb-4 md:mb-6 lg:mb-8 border-2 border-green-300">
                 <h4 className="text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
                   <ShieldCheck className="w-10 h-10 text-green-600" />
                   Blockchain-Powered GST: The Solution
@@ -1968,7 +1968,7 @@ export default function FinancialCoursePage() {
                 <div className="space-y-6">
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="flex items-center justify-center w-12 h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
                         1
                       </div>
                       <div className="flex-1">
@@ -1978,7 +1978,7 @@ export default function FinancialCoursePage() {
                           tax authorities see same immutable record.
                         </p>
                         <div className="bg-green-50 rounded-lg p-4">
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             <strong>Result:</strong> Impossible to create fake invoices after the fact.
                             Blockchain timestamp proves invoice authenticity.
                           </p>
@@ -1989,7 +1989,7 @@ export default function FinancialCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="flex items-center justify-center w-12 h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
                         2
                       </div>
                       <div className="flex-1">
@@ -1999,7 +1999,7 @@ export default function FinancialCoursePage() {
                           inward supply (GSTR-2). Mismatch? ITC claim rejected instantly.
                         </p>
                         <div className="bg-green-50 rounded-lg p-4">
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             <strong>Current system:</strong> Manual reconciliation takes 6 months.
                             <br />
                             <strong>Blockchain:</strong> Instant verification, 99.9% fraud reduction.
@@ -2011,7 +2011,7 @@ export default function FinancialCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="flex items-center justify-center w-12 h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
                         3
                       </div>
                       <div className="flex-1">
@@ -2021,7 +2021,7 @@ export default function FinancialCoursePage() {
                           on blockchain with geolocation and timestamp.
                         </p>
                         <div className="bg-green-50 rounded-lg p-4">
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             <strong>Use case:</strong> Pharmaceutical supply chain. Ensures medicines aren't
                             diverted to black market or counterfeited.
                           </p>
@@ -2032,7 +2032,7 @@ export default function FinancialCoursePage() {
 
                   <div className="bg-white rounded-xl p-6">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="flex items-center justify-center w-12 h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
+                      <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
                         4
                       </div>
                       <div className="flex-1">
@@ -2042,7 +2042,7 @@ export default function FinancialCoursePage() {
                           (Integrated GST) settlement happens in real-time instead of monthly.
                         </p>
                         <div className="bg-green-50 rounded-lg p-4">
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             <strong>Impact:</strong> Saves ₹12,000 crore annually in reconciliation costs
                             for state governments.
                           </p>
@@ -2054,39 +2054,39 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Pilot Implementation */}
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl shadow-xl p-8 border-2 border-purple-300">
-                <div className="flex items-start gap-6 mb-6">
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
+                <div className="flex items-start gap-4 md:gap-6 mb-6">
                   <Target className="w-16 h-16 text-purple-600 flex-shrink-0" />
                   <div>
                     <h4 className="text-3xl font-bold text-purple-900 mb-4">
                       GSTN Blockchain Pilot: "Project G-Block" (2023-2024)
                     </h4>
-                    <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                    <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                       In partnership with <strong>IIT Madras</strong> and <strong>Infosys</strong>, GSTN launched
                       a blockchain pilot in <strong>Maharashtra and Gujarat</strong> (covering 2 million businesses).
                     </p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6">
                   <div className="bg-white rounded-xl p-6">
                     <h5 className="text-2xl font-bold text-purple-900 mb-3">Technology Stack</h5>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-3">
                         <Check className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                        <span className="text-lg text-gray-700">
+                        <span className="text-base md:text-lg text-gray-700">
                           <strong>Hyperledger Fabric:</strong> Permissioned blockchain for GSTN nodes
                         </span>
                       </li>
                       <li className="flex items-start gap-3">
                         <Check className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                        <span className="text-lg text-gray-700">
+                        <span className="text-base md:text-lg text-gray-700">
                           <strong>IPFS:</strong> Invoice storage (hashes on blockchain, files on IPFS)
                         </span>
                       </li>
                       <li className="flex items-start gap-3">
                         <Check className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                        <span className="text-lg text-gray-700">
+                        <span className="text-base md:text-lg text-gray-700">
                           <strong>Oracles:</strong> Bank APIs verify payment proof before ITC approval
                         </span>
                       </li>
@@ -2098,15 +2098,15 @@ export default function FinancialCoursePage() {
                     <div className="space-y-4">
                       <div className="bg-purple-50 rounded-lg p-4">
                         <p className="text-3xl font-bold text-purple-600">92%</p>
-                        <p className="text-lg text-gray-700">Reduction in fake ITC claims</p>
+                        <p className="text-base md:text-lg text-gray-700">Reduction in fake ITC claims</p>
                       </div>
                       <div className="bg-indigo-50 rounded-lg p-4">
                         <p className="text-3xl font-bold text-indigo-600">48 hours</p>
-                        <p className="text-lg text-gray-700">Fraud detection (was 6 months)</p>
+                        <p className="text-base md:text-lg text-gray-700">Fraud detection (was 6 months)</p>
                       </div>
                       <div className="bg-blue-50 rounded-lg p-4">
                         <p className="text-3xl font-bold text-blue-600">₹8,400 Cr</p>
-                        <p className="text-lg text-gray-700">Projected annual savings</p>
+                        <p className="text-base md:text-lg text-gray-700">Projected annual savings</p>
                       </div>
                     </div>
                   </div>
@@ -2124,7 +2124,7 @@ export default function FinancialCoursePage() {
             {/* Section 3: Other Indian Blockchain Initiatives */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-600 to-cyan-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   3
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -2134,14 +2134,14 @@ export default function FinancialCoursePage() {
 
               <div className="space-y-8">
                 {/* RBI CBDC */}
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-xl p-8 border-2 border-blue-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Landmark className="w-16 h-16 text-blue-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-blue-900 mb-4">
                         RBI Digital Rupee (e₹): India's CBDC
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Reserve Bank of India launched <strong>Digital Rupee (e₹-R for retail, e₹-W for wholesale)</strong>
                         in December 2022. As of 2024, <strong>5 million users</strong> transact daily.
                       </p>
@@ -2151,31 +2151,31 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <div className="bg-white rounded-xl p-4 text-center">
                       <p className="text-3xl font-bold text-blue-600">5M+</p>
-                      <p className="text-lg text-gray-700">Active Users</p>
+                      <p className="text-base md:text-lg text-gray-700">Active Users</p>
                     </div>
                     <div className="bg-white rounded-xl p-4 text-center">
                       <p className="text-3xl font-bold text-blue-600">₹1.3 Cr</p>
-                      <p className="text-lg text-gray-700">Daily Transaction Volume</p>
+                      <p className="text-base md:text-lg text-gray-700">Daily Transaction Volume</p>
                     </div>
                     <div className="bg-white rounded-xl p-4 text-center">
                       <p className="text-3xl font-bold text-blue-600">16 Banks</p>
-                      <p className="text-lg text-gray-700">Participating (SBI, HDFC, ICICI)</p>
+                      <p className="text-base md:text-lg text-gray-700">Participating (SBI, HDFC, ICICI)</p>
                     </div>
                   </div>
                 </div>
 
                 {/* TReDS */}
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-xl p-8 border-2 border-green-300">
+                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
                   <div className="flex items-start gap-6">
                     <Network className="w-16 h-16 text-green-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-green-900 mb-4">
                         TReDS: Blockchain for MSME Invoice Financing
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         <strong>Trade Receivables Discounting System (TReDS)</strong> uses blockchain to help
                         small businesses get paid faster. MSMEs upload invoices → Financiers bid to buy them
                         at discount → Instant cash flow for suppliers.
@@ -2195,14 +2195,14 @@ export default function FinancialCoursePage() {
                 </div>
 
                 {/* National Blockchain Framework */}
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-xl p-8 border-2 border-purple-300">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
                   <div className="flex items-start gap-6">
                     <Globe className="w-16 h-16 text-purple-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-purple-900 mb-4">
                         National Blockchain Framework (NBF) by MeitY
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Ministry of Electronics & IT launched <strong>NBF</strong> in 2024—a shared blockchain
                         infrastructure for all government departments. Think of it as "Blockchain-as-a-Service"
                         for India.
@@ -2210,28 +2210,28 @@ export default function FinancialCoursePage() {
                       <p className="text-xl text-gray-700 mb-4">
                         <strong>Planned Use Cases:</strong>
                       </p>
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="bg-white rounded-xl p-4">
                           <h5 className="text-xl font-bold text-purple-900 mb-2">Land Records</h5>
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             Digitize 12 crore land titles across India. Prevent property fraud via immutable records.
                           </p>
                         </div>
                         <div className="bg-white rounded-xl p-4">
                           <h5 className="text-xl font-bold text-purple-900 mb-2">Educational Certificates</h5>
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             Blockchain-verified degrees. Maharashtra already issues 1 million blockchain diplomas annually.
                           </p>
                         </div>
                         <div className="bg-white rounded-xl p-4">
                           <h5 className="text-xl font-bold text-purple-900 mb-2">Healthcare Records</h5>
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             Unified health ID with blockchain. Patients control who accesses medical history.
                           </p>
                         </div>
                         <div className="bg-white rounded-xl p-4">
                           <h5 className="text-xl font-bold text-purple-900 mb-2">Subsidy Delivery</h5>
-                          <p className="text-lg text-gray-700">
+                          <p className="text-base md:text-lg text-gray-700">
                             Direct Benefit Transfer (DBT) on blockchain. Track ₹7 lakh crore annual subsidies end-to-end.
                           </p>
                         </div>
@@ -2262,7 +2262,7 @@ export default function FinancialCoursePage() {
             {/* Section 1: DeFi 2.0 */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   1
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -2270,9 +2270,9 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-purple-200">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-purple-200">
                 <h4 className="text-3xl font-bold text-purple-900 mb-6">Beyond Simple Lending: DeFi Gets Smarter</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   DeFi 1.0 (2020-2022) gave us lending (Compound), DEXs (Uniswap), and yield farming.
                   <strong> DeFi 2.0</strong> (2023 onwards) introduces <strong>protocol-owned liquidity</strong>,
                   <strong> real-world asset (RWA) tokenization</strong>, and <strong>institutional-grade infrastructure</strong>.
@@ -2281,12 +2281,12 @@ export default function FinancialCoursePage() {
 
               {/* Key Innovations */}
               <div className="space-y-6 mb-8">
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Coins className="w-16 h-16 text-purple-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-purple-900 mb-4">Protocol-Owned Liquidity (POL)</h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         <strong>Problem:</strong> DeFi 1.0 protocols rented liquidity from users using token rewards
                         ("mercenary capital"). When rewards dried up, liquidity vanished.
                       </p>
@@ -2306,21 +2306,21 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Building className="w-16 h-16 text-blue-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-blue-900 mb-4">Real-World Asset (RWA) Tokenization</h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         DeFi is no longer just crypto-native. Protocols now tokenize <strong>real-world assets</strong>
                         like real estate, invoices, carbon credits, and government bonds.
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="bg-blue-50 rounded-xl p-6">
                       <h5 className="text-2xl font-bold text-blue-900 mb-3">Centrifuge: Invoice Financing</h5>
-                      <p className="text-lg text-gray-700 mb-3">
+                      <p className="text-base md:text-lg text-gray-700 mb-3">
                         Small businesses tokenize invoices as NFTs → Borrow stablecoins against them →
                         When customer pays invoice, DeFi lenders get principal + interest
                       </p>
@@ -2330,7 +2330,7 @@ export default function FinancialCoursePage() {
                     </div>
                     <div className="bg-green-50 rounded-xl p-6">
                       <h5 className="text-2xl font-bold text-green-900 mb-3">MakerDAO: T-Bills on Blockchain</h5>
-                      <p className="text-lg text-gray-700 mb-3">
+                      <p className="text-base md:text-lg text-gray-700 mb-3">
                         MakerDAO allocates $1.3 billion of DAI reserves into tokenized US Treasury bills.
                         Earns 5% yield from traditional finance, passes savings to DAI holders.
                       </p>
@@ -2341,14 +2341,14 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-teal-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-teal-300">
                   <div className="flex items-start gap-6">
                     <ShieldCheck className="w-16 h-16 text-teal-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-teal-900 mb-4">
                         Institutional DeFi: Compliance Meets Decentralization
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Traditional banks can't use permissionless DeFi due to regulations. Enter
                         <strong> permissioned DeFi</strong>—protocols with KYC/AML built-in.
                       </p>
@@ -2369,7 +2369,7 @@ export default function FinancialCoursePage() {
             {/* Section 2: Central Bank Digital Currencies (CBDCs) - Global Perspective */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   2
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -2377,9 +2377,9 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-blue-200">
                 <h4 className="text-3xl font-bold text-blue-900 mb-6">130+ Countries, 11 Launched, Race On</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   As of 2024, <strong>130 countries</strong> (representing 98% of global GDP) are exploring CBDCs.
                   <strong> 11 have launched</strong> (including China, India, Nigeria), and <strong>65 are in
                   advanced pilot stages</strong>.
@@ -2391,32 +2391,32 @@ export default function FinancialCoursePage() {
 
               {/* Global CBDC Implementations */}
               <div className="space-y-6 mb-8">
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-red-300">
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="text-5xl">🇨🇳</div>
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-red-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇨🇳</div>
                     <div>
                       <h4 className="text-3xl font-bold text-red-900 mb-4">
                         China's e-CNY (Digital Yuan): The Global Leader
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Launched in 2020, e-CNY is the world's most advanced CBDC. As of 2024:
                         <strong> 260 million wallets</strong>, <strong>$250 billion</strong> in transactions,
                         accepted by <strong>5 million merchants</strong>.
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-6">
                     <div className="bg-red-50 rounded-xl p-6 text-center">
                       <p className="text-4xl font-bold text-red-600 mb-2">260M</p>
-                      <p className="text-lg text-gray-700">Digital Wallets</p>
+                      <p className="text-base md:text-lg text-gray-700">Digital Wallets</p>
                     </div>
                     <div className="bg-orange-50 rounded-xl p-6 text-center">
                       <p className="text-4xl font-bold text-orange-600 mb-2">$250B</p>
-                      <p className="text-lg text-gray-700">Transaction Volume</p>
+                      <p className="text-base md:text-lg text-gray-700">Transaction Volume</p>
                     </div>
                     <div className="bg-yellow-50 rounded-xl p-6 text-center">
                       <p className="text-4xl font-bold text-yellow-600 mb-2">5M</p>
-                      <p className="text-lg text-gray-700">Merchants</p>
+                      <p className="text-base md:text-lg text-gray-700">Merchants</p>
                     </div>
                   </div>
                   <div className="bg-red-100 border-l-4 border-red-600 p-6 rounded-lg">
@@ -2428,14 +2428,14 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-green-300">
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="text-5xl">🇳🇬</div>
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇳🇬</div>
                     <div>
                       <h4 className="text-3xl font-bold text-green-900 mb-4">
                         Nigeria's eNaira: Financial Inclusion in Africa
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Launched October 2021 (first in Africa). Goal: Bank the 40% of Nigerians without
                         access to financial services. Uses <strong>Hyperledger Fabric</strong> blockchain.
                       </p>
@@ -2453,14 +2453,14 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-300">
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="text-5xl">🇪🇺</div>
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🇪🇺</div>
                     <div>
                       <h4 className="text-3xl font-bold text-purple-900 mb-4">
                         Digital Euro: Privacy vs Surveillance Debate
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         European Central Bank (ECB) aims to launch Digital Euro by <strong>2026</strong>.
                         Key tension: <strong>privacy</strong> (citizens want cash-like anonymity) vs
                         <strong> AML compliance</strong> (regulators want traceability).
@@ -2471,21 +2471,21 @@ export default function FinancialCoursePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="bg-purple-50 rounded-xl p-6">
                       <h5 className="text-2xl font-bold text-purple-900 mb-3">Privacy Protections</h5>
                       <ul className="space-y-2">
                         <li className="flex items-start gap-2">
                           <Check className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700">Offline payments (NFC) without bank tracking</span>
+                          <span className="text-base md:text-lg text-gray-700">Offline payments (NFC) without bank tracking</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700">Merchant can't see your entire transaction history</span>
+                          <span className="text-base md:text-lg text-gray-700">Merchant can't see your entire transaction history</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700">ECB won't have central database of all transactions</span>
+                          <span className="text-base md:text-lg text-gray-700">ECB won't have central database of all transactions</span>
                         </li>
                       </ul>
                     </div>
@@ -2494,15 +2494,15 @@ export default function FinancialCoursePage() {
                       <ul className="space-y-2">
                         <li className="flex items-start gap-2">
                           <ShieldCheck className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700">AML checks on large/suspicious transactions</span>
+                          <span className="text-base md:text-lg text-gray-700">AML checks on large/suspicious transactions</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <ShieldCheck className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700">Cross-border payments fully traceable</span>
+                          <span className="text-base md:text-lg text-gray-700">Cross-border payments fully traceable</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <ShieldCheck className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                          <span className="text-lg text-gray-700">Tax authorities can request data with court order</span>
+                          <span className="text-base md:text-lg text-gray-700">Tax authorities can request data with court order</span>
                         </li>
                       </ul>
                     </div>
@@ -2511,7 +2511,7 @@ export default function FinancialCoursePage() {
               </div>
 
               {/* Cross-Border CBDC Projects */}
-              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl shadow-xl p-8 border-2 border-teal-300">
+              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-teal-300">
                 <h4 className="text-3xl font-bold text-teal-900 mb-6 flex items-center gap-3">
                   <Globe className="w-10 h-10 text-teal-600" />
                   Cross-Border CBDC Platforms: The Future of International Payments
@@ -2524,7 +2524,7 @@ export default function FinancialCoursePage() {
                       Enables instant cross-border payments using CBDCs without USD correspondent banking.
                     </p>
                     <div className="bg-teal-50 rounded-lg p-4">
-                      <p className="text-lg text-gray-700">
+                      <p className="text-base md:text-lg text-gray-700">
                         <strong>2023 Pilot Results:</strong> $22 billion in test transactions between central banks.
                         Settlement time: <strong>seconds</strong> (vs 3-5 days for SWIFT). Cost: <strong>$0.50</strong>
                         per $1M transferred (vs $30-50 for traditional wire).
@@ -2539,7 +2539,7 @@ export default function FinancialCoursePage() {
                       architecture—all central banks write to same blockchain, eliminating reconciliation.
                     </p>
                     <div className="bg-blue-50 rounded-lg p-4">
-                      <p className="text-lg text-gray-700">
+                      <p className="text-base md:text-lg text-gray-700">
                         <strong>Key Innovation:</strong> Atomic swaps between CBDCs. Singapore Dollar instantly
                         swaps to Malaysian Ringgit on-chain. No intermediary banks, no FX spreads.
                       </p>
@@ -2552,7 +2552,7 @@ export default function FinancialCoursePage() {
             {/* Section 3: The Interoperability Challenge */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   3
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -2560,9 +2560,9 @@ export default function FinancialCoursePage() {
                 </h3>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl shadow-2xl p-10 mb-8 border-2 border-indigo-200">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 mb-4 md:mb-6 lg:mb-8 border-2 border-indigo-200">
                 <h4 className="text-3xl font-bold text-indigo-900 mb-6">The $100 Trillion Fragmentation Problem</h4>
-                <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                   Today, we have <strong>1000+ blockchains</strong> (Ethereum, Bitcoin, Solana, Polygon, etc.)
                   that <strong>can't talk to each other</strong>. It's like having email that only works within Gmail
                   but can't reach Yahoo or Outlook.
@@ -2575,14 +2575,14 @@ export default function FinancialCoursePage() {
 
               {/* Interoperability Solutions */}
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <LinkIcon className="w-16 h-16 text-blue-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-blue-900 mb-4">
                         Cross-Chain Bridges: The Current (Risky) Solution
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Bridges like <strong>Wormhole</strong>, <strong>Multichain</strong>, and
                         <strong> Synapse</strong> allow assets to move between blockchains. Lock ETH on Ethereum →
                         Mint wrapped ETH on Solana.
@@ -2594,7 +2594,7 @@ export default function FinancialCoursePage() {
                       <AlertTriangle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-xl text-red-900 font-bold mb-2">Security Risk: $2.5 Billion Stolen</p>
-                        <p className="text-lg text-gray-700">
+                        <p className="text-base md:text-lg text-gray-700">
                           2022: Wormhole hack ($325M), Ronin bridge hack ($625M), Nomad bridge hack ($190M).
                           Bridges are honeypots because they hold massive amounts of locked assets.
                         </p>
@@ -2607,24 +2607,24 @@ export default function FinancialCoursePage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-green-300">
-                  <div className="flex items-start gap-6 mb-6">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-green-300">
+                  <div className="flex items-start gap-4 md:gap-6 mb-6">
                     <Network className="w-16 h-16 text-green-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-green-900 mb-4">
                         Layer 0 Protocols: True Interoperability
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         Instead of bridges <em>between</em> blockchains, Layer 0 protocols provide a
                         <strong> common communication layer</strong> that all chains plug into.
                       </p>
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="bg-green-50 rounded-xl p-6">
                       <h5 className="text-2xl font-bold text-green-900 mb-3">Polkadot (DOT)</h5>
-                      <p className="text-lg text-gray-700 mb-3">
+                      <p className="text-base md:text-lg text-gray-700 mb-3">
                         "Relay Chain" coordinates 100+ independent blockchains (parachains). Shared security model:
                         validators secure all chains simultaneously.
                       </p>
@@ -2634,7 +2634,7 @@ export default function FinancialCoursePage() {
                     </div>
                     <div className="bg-teal-50 rounded-xl p-6">
                       <h5 className="text-2xl font-bold text-teal-900 mb-3">Cosmos (ATOM)</h5>
-                      <p className="text-lg text-gray-700 mb-3">
+                      <p className="text-base md:text-lg text-gray-700 mb-3">
                         "Internet of Blockchains" using IBC (Inter-Blockchain Communication) protocol.
                         350+ chains connected. Cosmos Hub routes messages like internet backbone.
                       </p>
@@ -2645,14 +2645,14 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-300">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
                   <div className="flex items-start gap-6">
                     <Layers className="w-16 h-16 text-purple-600 flex-shrink-0" />
                     <div>
                       <h4 className="text-3xl font-bold text-purple-900 mb-4">
                         The Omnichain Future: Chainlink CCIP & LayerZero
                       </h4>
-                      <p className="text-2xl text-gray-700 leading-relaxed mb-4">
+                      <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
                         <strong>Cross-Chain Interoperability Protocol (CCIP)</strong> by Chainlink: Decentralized
                         oracle network verifies cross-chain messages. If Ethereum says "Alice sent 10 ETH to Polygon,"
                         hundreds of oracles confirm it's true before Polygon releases funds.
@@ -2678,7 +2678,7 @@ export default function FinancialCoursePage() {
             {/* Section 4: The Road Ahead */}
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-600 to-red-600 text-white rounded-2xl text-3xl font-bold shadow-lg">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-600 to-red-600 text-white rounded-xl md:rounded-2xl text-3xl font-bold shadow-lg">
                   4
                 </div>
                 <h3 className="text-4xl font-bold text-gray-900">
@@ -2687,7 +2687,7 @@ export default function FinancialCoursePage() {
               </div>
 
               <div className="space-y-8">
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-xl p-8 border-2 border-blue-300">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-blue-300">
                   <h4 className="text-3xl font-bold text-blue-900 mb-6 flex items-center gap-3">
                     <Rocket className="w-10 h-10 text-blue-600" />
                     5 Predictions for Blockchain in Finance
@@ -2695,7 +2695,7 @@ export default function FinancialCoursePage() {
                   <div className="space-y-6">
                     <div className="bg-white rounded-xl p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-900 rounded-full text-xl font-bold flex-shrink-0">
+                        <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-blue-100 text-blue-900 rounded-full text-xl font-bold flex-shrink-0">
                           1
                         </div>
                         <div>
@@ -2710,7 +2710,7 @@ export default function FinancialCoursePage() {
 
                     <div className="bg-white rounded-xl p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex items-center justify-center w-12 h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
+                        <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-green-100 text-green-900 rounded-full text-xl font-bold flex-shrink-0">
                           2
                         </div>
                         <div>
@@ -2725,7 +2725,7 @@ export default function FinancialCoursePage() {
 
                     <div className="bg-white rounded-xl p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
+                        <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-purple-100 text-purple-900 rounded-full text-xl font-bold flex-shrink-0">
                           3
                         </div>
                         <div>
@@ -2740,7 +2740,7 @@ export default function FinancialCoursePage() {
 
                     <div className="bg-white rounded-xl p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex items-center justify-center w-12 h-12 bg-orange-100 text-orange-900 rounded-full text-xl font-bold flex-shrink-0">
+                        <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-orange-100 text-orange-900 rounded-full text-xl font-bold flex-shrink-0">
                           4
                         </div>
                         <div>
@@ -2755,7 +2755,7 @@ export default function FinancialCoursePage() {
 
                     <div className="bg-white rounded-xl p-6">
                       <div className="flex items-start gap-4">
-                        <div className="flex items-center justify-center w-12 h-12 bg-red-100 text-red-900 rounded-full text-xl font-bold flex-shrink-0">
+                        <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-red-100 text-red-900 rounded-full text-xl font-bold flex-shrink-0">
                           5
                         </div>
                         <div>
@@ -2770,9 +2770,9 @@ export default function FinancialCoursePage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-xl p-8 border-2 border-purple-300">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8 border-2 border-purple-300">
                   <h4 className="text-3xl font-bold text-purple-900 mb-6">The Ultimate Vision: Programmable Money</h4>
-                  <p className="text-2xl text-gray-700 leading-relaxed mb-6">
+                  <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6">
                     Imagine money that executes logic automatically:
                   </p>
                   <div className="space-y-4">
@@ -2800,12 +2800,12 @@ export default function FinancialCoursePage() {
             </div>
 
             {/* Conclusion */}
-            <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl shadow-2xl p-12 text-white">
-              <h3 className="text-5xl font-bold mb-8 text-center">
+            <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 xl:p-12 text-white">
+              <h3 className="text-5xl font-bold mb-4 md:mb-6 lg:mb-8 text-center">
                 🎯 Key Takeaways: Blockchain in Finance
               </h3>
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-white/10 rounded-2xl p-6 backdrop-blur">
+              <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8">
+                <div className="bg-white/10 rounded-xl md:rounded-2xl p-6 backdrop-blur">
                   <h4 className="text-2xl font-bold mb-4">What We've Covered</h4>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
@@ -2834,9 +2834,9 @@ export default function FinancialCoursePage() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-white/10 rounded-2xl p-6 backdrop-blur">
+                <div className="bg-white/10 rounded-xl md:rounded-2xl p-6 backdrop-blur">
                   <h4 className="text-2xl font-bold mb-4">Why It Matters</h4>
-                  <p className="text-lg leading-relaxed mb-4">
+                  <p className="text-base md:text-lg leading-relaxed mb-4">
                     Blockchain isn't just "Bitcoin for payments." It's a fundamental reimagining of how
                     financial systems operate:
                   </p>
@@ -2880,24 +2880,24 @@ export default function FinancialCoursePage() {
             transition={{ delay: 0.5 }}
             className="mb-24"
           >
-            <div className="bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 rounded-3xl shadow-2xl p-12 text-white text-center">
+            <div className="bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 rounded-xl md:rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 xl:p-12 text-white text-center">
               <Award className="w-24 h-24 mx-auto mb-6" />
               <h2 className="text-6xl font-bold mb-6">🎉 Course Complete!</h2>
-              <p className="text-3xl mb-8 leading-relaxed">
+              <p className="text-3xl mb-4 md:mb-6 lg:mb-8 leading-relaxed">
                 Congratulations! You've mastered Blockchain in Financial Use Cases
               </p>
-              <p className="text-2xl mb-8 opacity-90">
+              <p className="text-base sm:text-base md:text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 lg:mb-8 opacity-90">
                 You now understand how blockchain is transforming global finance—from
                 smart contracts and DeFi to CBDCs and India's blockchain ecosystem.
               </p>
               <div className="flex flex-wrap justify-center gap-6">
                 <Link href="/learn">
-                  <button className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-2xl hover:bg-blue-50 transition-colors shadow-xl">
+                  <button className="bg-white text-blue-600 px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 rounded-xl md:rounded-2xl font-bold text-2xl hover:bg-blue-50 transition-colors shadow-xl">
                     ← Back to Courses
                   </button>
                 </Link>
                 <Link href="/learn/smart-contracts">
-                  <button className="bg-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-2xl hover:bg-purple-700 transition-colors shadow-xl">
+                  <button className="bg-purple-600 text-white px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 rounded-xl md:rounded-2xl font-bold text-2xl hover:bg-purple-700 transition-colors shadow-xl">
                     Next: Smart Contracts & Legal →
                   </button>
                 </Link>
