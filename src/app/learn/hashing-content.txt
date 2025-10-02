@@ -1,0 +1,1277 @@
+    return (
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 py-16 border-b-2 border-gray-200">
+          <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+            <Link
+              href="/learn"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors text-xl font-medium"
+            >
+              <ArrowLeft className="mr-2 w-5 h-5" />
+              Back to Courses
+            </Link>
+
+            <div className="flex items-start gap-8">
+              <div className="text-7xl">{course.icon}</div>
+              <div className="flex-1">
+                <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
+                  {course.title}
+                </h1>
+                <p className="text-3xl text-gray-700 leading-relaxed mb-8">
+                  Discover how cryptographic hash functions create digital fingerprints that ensure data integrity across insurance, taxation, and identity verification systems.
+                </p>
+                <div className="flex flex-wrap items-center gap-6 text-xl">
+                  <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <Clock className="w-6 h-6 mr-2 text-teal-600" />
+                    {course.duration}
+                  </div>
+                  <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <BarChart className="w-6 h-6 mr-2 text-cyan-600" />
+                    {course.difficulty}
+                  </div>
+                  <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <BookOpen className="w-6 h-6 mr-2 text-blue-600" />
+                    Module {course.order} of 6
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Article Content */}
+        <article className="max-w-7xl mx-auto px-8 sm:px-12 py-16">
+
+          {/* PART I: UNDERSTANDING CRYPTOGRAPHIC HASH FUNCTIONS */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-teal-600 to-cyan-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part I: Understanding Cryptographic Hash Functions
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-cyan-600 to-teal-600"></div>
+            </div>
+
+            {/* Digital DNA Concept */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-10 mb-12 border-2 border-purple-300">
+              <div className="flex items-start gap-6">
+                <div className="text-6xl">🧬</div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What Is a Hash Function? The Concept of Digital DNA</h3>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                    Imagine you have a machine that can take <strong className="text-purple-600">anything</strong>—a single word,
+                    an entire book, a movie file, or even all of Wikipedia—and produce a <strong className="text-purple-600">unique fingerprint</strong> that's
+                    always exactly the same size. No matter what you put in, the fingerprint comes out as a string of exactly
+                    <strong className="text-purple-600"> 64 characters</strong> (for SHA-256).
+                  </p>
+                  <div className="bg-white rounded-xl p-6 mb-6">
+                    <p className="text-lg text-gray-800 mb-4"><strong>The Remarkable Properties:</strong></p>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-4">
+                        <div className="text-2xl">✓</div>
+                        <div className="flex-1">
+                          <p className="text-gray-700"><strong>Change Detection:</strong> Change even a single comma in a thousand-page
+                          book, and you get a completely different fingerprint.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-4">
+                        <div className="text-2xl">✓</div>
+                        <div className="flex-1">
+                          <p className="text-gray-700"><strong>Consistency:</strong> Put the exact same book through the machine a million
+                          times, you get the identical fingerprint every time.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-4">
+                        <div className="text-2xl">✓</div>
+                        <div className="flex-1">
+                          <p className="text-gray-700"><strong>One-Way Function:</strong> It's like a blender that turns fruits into
+                          smoothies—you can easily blend apples into apple juice, but you can't take apple juice and reconstruct the original apples.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-lg">
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      <strong className="text-teal-900">💡 Key Insight:</strong> Even if someone has the hash of your password or document,
+                      they can't work backward to figure out what the original was. They would have to try <em>every possible input</em> until
+                      they found one that produces the same hash—a process that could take <strong>billions of years</strong> for a strong hash function.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* SHA-256 Mathematics */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Hash className="w-8 h-8 text-cyan-600" />
+                The Mathematics Behind the Magic: How SHA-256 Works
+              </h3>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                SHA-256 (Secure Hash Algorithm 256-bit) is like a sophisticated recipe that takes your input data and scrambles it
+                through a series of precise mathematical operations. Think of it as making bread: you start with ingredients (your input data),
+                and through a series of specific steps—mixing, kneading, rising, baking—you end up with something completely transformed.
+              </p>
+
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">🔧 The SHA-256 Process:</h4>
+
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Padding</h5>
+                        <p className="text-gray-700">
+                          Take your input data and pad it to ensure it's a multiple of 512 bits. This padding follows a specific pattern
+                          that includes the original message length, ensuring different-length messages can't produce the same padded result.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">64 Rounds of Processing</h5>
+                        <p className="text-gray-700">
+                          The core algorithm runs 64 rounds of mathematical operations involving bitwise operations (AND, OR, XOR, NOT),
+                          additions, and rotations. Each round uses the output of the previous round, creating a cascade effect where
+                          early changes propagate and amplify through all subsequent rounds.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Output Generation</h5>
+                        <p className="text-gray-700">
+                          The final output is 256 bits, typically displayed as 64 hexadecimal characters. This is your digital fingerprint.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Avalanche Effect Examples */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border-2 border-amber-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <Zap className="w-7 h-7 text-amber-600" />
+                  The Avalanche Effect: Small Changes, Huge Differences
+                </h4>
+
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="text-sm font-bold text-gray-600 mb-3">Example 1: "Hello" vs "hello"</div>
+                    <div className="space-y-3">
+                      <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded">
+                        <div className="text-sm font-bold text-green-900 mb-2">Input: "Hello"</div>
+                        <div className="font-mono text-sm text-gray-800 break-all">
+                          185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969
+                        </div>
+                      </div>
+                      <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                        <div className="text-sm font-bold text-blue-900 mb-2">Input: "hello" (lowercase h)</div>
+                        <div className="font-mono text-sm text-gray-800 break-all">
+                          2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 mt-4">
+                      Notice how the hashes are <strong>completely different</strong>—not just slightly modified.
+                      This is the avalanche effect in action!
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="text-sm font-bold text-gray-600 mb-3">Example 2: Adding an exclamation mark</div>
+                    <div className="space-y-3">
+                      <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+                        <div className="text-sm font-bold text-purple-900 mb-2">Input: "Hello!"</div>
+                        <div className="font-mono text-sm text-gray-800 break-all">
+                          334d016f755cd6dc58c53a86e183882f8ec14f52fb05345887c8a5edd42c87b7
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 mt-4">
+                      Again, a completely different result. This sensitivity to change is what makes hash functions
+                      perfect for detecting <em>any</em> alteration in data, no matter how small.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Properties of Secure Hash Functions */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <ShieldCheck className="w-8 h-8 text-teal-600" />
+                The Properties That Make Hash Functions Cryptographically Secure
+              </h3>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Determinism */}
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-300">
+                  <div className="text-4xl mb-4">🎯</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">1. Determinism</h4>
+                  <p className="text-gray-700 mb-4">
+                    The same input must <strong>always</strong> produce the same output. If hashing "Bitcoin"
+                    sometimes gave you one hash and sometimes another, the function would be useless for verification.
+                  </p>
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm text-gray-600">
+                      <strong>Why it matters:</strong> This property allows you to verify data integrity across time and space.
+                      A document hashed today will produce the same hash in ten years.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Avalanche Effect */}
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-300">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">2. Avalanche Effect</h4>
+                  <p className="text-gray-700 mb-4">
+                    Small changes in input create <strong>large changes</strong> in output. This prevents attackers from
+                    making controlled modifications to forge documents.
+                  </p>
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm text-gray-600">
+                      <strong>Protection:</strong> You can't change "pay $100" to "pay $1000" and adjust other parts
+                      of the document to maintain the same hash.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Pre-image Resistance */}
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
+                  <div className="text-4xl mb-4">🔒</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">3. Pre-image Resistance (One-Way)</h4>
+                  <p className="text-gray-700 mb-4">
+                    Given a hash output, it should be computationally <strong>infeasible</strong> to find any input
+                    that produces that hash.
+                  </p>
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm text-gray-600">
+                      <strong>Security benefit:</strong> Websites store the hash of your password, not the password itself.
+                      Even if hackers steal the database, they can't reverse the hashes to get passwords.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Collision Resistance */}
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300">
+                  <div className="text-4xl mb-4">🛡️</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">4. Collision Resistance</h4>
+                  <p className="text-gray-700 mb-4">
+                    It should be practically <strong>impossible</strong> to find two different inputs that produce
+                    the same hash.
+                  </p>
+                  <div className="bg-white rounded-lg p-4">
+                    <p className="text-sm text-gray-600">
+                      <strong>Why it matters:</strong> While collisions must theoretically exist (infinite possible inputs
+                      mapping to finite outputs), finding them should take so long that it's practically impossible.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Lifecycle of Hash Functions */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Activity className="w-8 h-8 text-cyan-600" />
+                The Lifecycle of Popular Hash Functions
+              </h3>
+
+              <div className="space-y-6">
+                {/* MD5 */}
+                <div className="relative pl-10 pb-8 border-l-4 border-red-300">
+                  <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-red-600 border-4 border-white"></div>
+                  <div className="bg-red-50 rounded-xl p-6 border-2 border-red-200">
+                    <div className="text-sm font-bold text-red-900 mb-2">1991-2004: MD5 (BROKEN)</div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Message Digest 5</h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Once the standard for data integrity, producing a 128-bit hash. Fast and widely adopted.
+                      By 2004, researchers found practical collision attacks. By 2008, researchers could create rogue
+                      Certificate Authority certificates using MD5 collisions.
+                    </p>
+                    <div className="bg-white rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Ban className="w-5 h-5 text-red-600" />
+                        <div className="text-sm font-bold text-red-900">Current Status:</div>
+                      </div>
+                      <p className="text-gray-700 text-sm">
+                        Considered <strong>broken for security purposes</strong>, though still used for non-security
+                        applications like checksums for data corruption detection.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* SHA-1 */}
+                <div className="relative pl-10 pb-8 border-l-4 border-orange-300">
+                  <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-orange-600 border-4 border-white"></div>
+                  <div className="bg-orange-50 rounded-xl p-6 border-2 border-orange-200">
+                    <div className="text-sm font-bold text-orange-900 mb-2">1995-2017: SHA-1 (DEPRECATED)</div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Secure Hash Algorithm 1</h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Developed by the NSA, produced a 160-bit hash. Became the backbone of many security systems, from
+                      SSL certificates to Git commits. Theoretical weaknesses discovered in 2005. Google demonstrated the
+                      first practical collision in 2017 ("SHAttered" attack).
+                    </p>
+                    <div className="bg-white rounded-lg p-4">
+                      <p className="text-gray-700 text-sm mb-2">
+                        <strong>Attack Cost:</strong> 6,500 CPU years + 110 GPU years ≈ $110,000 in cloud computing
+                      </p>
+                      <p className="text-gray-700 text-sm">
+                        While expensive, it proved SHA-1 was broken. Systems still relying on SHA-1 are vulnerable
+                        to sophisticated attackers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* SHA-256 */}
+                <div className="relative pl-10 pb-8 border-l-4 border-green-300">
+                  <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-green-600 border-4 border-white"></div>
+                  <div className="bg-green-50 rounded-xl p-6 border-2 border-green-200">
+                    <div className="text-sm font-bold text-green-900 mb-2">2001-PRESENT: SHA-256 (CURRENT STANDARD)</div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">SHA-2 Family (256-bit)</h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Part of the SHA-2 family designed by the NSA. The current gold standard used in Bitcoin, SSL certificates,
+                      and countless security applications. Design improvements include larger state size, more rounds of processing,
+                      and better diffusion of changes.
+                    </p>
+                    <div className="bg-white rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <CheckCircle className="w-5 h-5 text-green-600" />
+                        <div className="text-sm font-bold text-green-900">Current Status:</div>
+                      </div>
+                      <p className="text-gray-700 text-sm">
+                        Despite intensive scrutiny by the world's best cryptographers and massive financial incentives
+                        to break it, <strong>no practical attacks have been found</strong>. Considered secure for the foreseeable future.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* SHA-3 */}
+                <div className="relative pl-10 border-l-4 border-blue-300">
+                  <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-blue-600 border-4 border-white"></div>
+                  <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+                    <div className="text-sm font-bold text-blue-900 mb-2">2012-PRESENT: SHA-3 (FUTURE INSURANCE)</div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Keccak Algorithm</h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Selected through a public competition, based on completely different mathematical principles than SHA-2.
+                      Provides an alternative that remains secure even if weaknesses are discovered in SHA-2.
+                    </p>
+                    <div className="bg-white rounded-lg p-4">
+                      <p className="text-gray-700 text-sm">
+                        <strong>Purpose:</strong> It's not that SHA-2 is broken—SHA-3 exists as insurance, ensuring we have
+                        a ready alternative built on fundamentally different mathematics.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </motion.section>
+
+          {/* PART II: DOCUMENT INTEGRITY USING HASH VALUES */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part II: Document Integrity Using Hash Values
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-indigo-600 to-blue-600"></div>
+            </div>
+
+            {/* The Problem of Digital Documents */}
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-10 mb-12 border-2 border-red-300">
+              <div className="flex items-start gap-6">
+                <div className="text-6xl">📄</div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">The Fundamental Problem of Digital Document Integrity</h3>
+
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+                      <h4 className="text-lg font-bold text-gray-900 mb-3">📝 Physical World</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>Original signatures are hard to forge</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>Official seals indicate authenticity</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>Watermarks prevent counterfeiting</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>Physical possession matters</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+                      <h4 className="text-lg font-bold text-gray-900 mb-3">💻 Digital World</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li className="flex items-start gap-2">
+                          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                          <span>Perfect copies are instant and free</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                          <span>No "original" in traditional sense</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                          <span>Files modified without visible traces</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                          <span>Metadata and timestamps can be forged</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border-l-4 border-teal-600 p-6 rounded-lg">
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      <strong className="text-teal-900">💡 The Hash Solution:</strong> By creating a unique fingerprint of a
+                      document at a specific point in time, you can prove its integrity <strong>without relying on any third party</strong>.
+                      The hash serves as mathematical proof of the document's exact content. If even one character changes, the hash changes completely.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Practical Guide to Creating and Verifying Hashes */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <FileCheck className="w-8 h-8 text-blue-600" />
+                Creating and Verifying Document Hashes: A Practical Guide
+              </h3>
+
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">📋 Real-World Scenario: Signing an Important Contract</h4>
+
+                <div className="space-y-6">
+                  {/* Step 1 */}
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-3">Calculate the Hash</h5>
+                        <p className="text-gray-700 mb-4">
+                          After both parties agree to the final version of your business partnership agreement, you calculate its SHA-256 hash:
+                        </p>
+                        <div className="bg-gray-100 rounded-lg p-4 font-mono text-sm break-all text-gray-800">
+                          7d865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730
+                        </div>
+                        <p className="text-gray-600 text-sm mt-3">
+                          This hash uniquely represents your exact contract—every word, every comma, every space.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-3">Publish the Hash</h5>
+                        <p className="text-gray-700 mb-3">
+                          You can safely publish this hash in multiple locations:
+                        </p>
+                        <ul className="space-y-2 text-gray-700">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                            <span>On your website</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                            <span>Include it in emails to stakeholders</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                            <span>Store it in multiple backup locations</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                            <span>Even publish it in a newspaper classified ad!</span>
+                          </li>
+                        </ul>
+                        <div className="mt-4 bg-teal-50 border-l-4 border-teal-600 p-4 rounded">
+                          <p className="text-sm text-gray-700">
+                            <strong>Privacy maintained:</strong> The hash reveals nothing about the contract's contents,
+                            maintaining confidentiality while enabling verification.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-3">Verification When Disputes Arise</h5>
+                        <p className="text-gray-700 mb-4">
+                          Two years later, a dispute arises. The other party claims the contract says something different.
+                          They present a document with subtle changes:
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-4 mb-4">
+                          <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded">
+                            <div className="text-sm font-bold text-red-900 mb-2">⚠️ Their Version:</div>
+                            <p className="text-gray-700 text-sm">Pay <span className="font-bold">$100.00</span> (decimal point moved)</p>
+                          </div>
+                          <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded">
+                            <div className="text-sm font-bold text-green-900 mb-2">✓ Original Version:</div>
+                            <p className="text-gray-700 text-sm">Pay <span className="font-bold">$10,000</span> (correct amount)</p>
+                          </div>
+                        </div>
+                        <p className="text-gray-700 mb-4">
+                          <strong>Resolution is simple and mathematical:</strong>
+                        </p>
+                        <ol className="space-y-2 text-gray-700 ml-4">
+                          <li>1. Hash the document they're presenting → Doesn't match original hash ❌</li>
+                          <li>2. Hash your version → Matches the recorded hash ✅</li>
+                          <li>3. Mathematical proof of authenticity established</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Universal Verification Tools */}
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <Code2 className="w-7 h-7 text-purple-600" />
+                  Universal Verification: Anyone, Anywhere, Anytime
+                </h4>
+
+                <p className="text-gray-700 mb-6">
+                  The beauty of this system is its simplicity and accessibility. Anyone can verify document integrity
+                  without special tools or expertise.
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="text-3xl mb-3">🍎</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Mac / Linux</h5>
+                    <div className="bg-gray-100 rounded p-3 font-mono text-sm text-gray-800">
+                      sha256sum document.pdf
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="text-3xl mb-3">🪟</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Windows</h5>
+                    <div className="bg-gray-100 rounded p-3 font-mono text-xs text-gray-800 break-all">
+                      certUtil -hashfile document.pdf SHA256
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="text-3xl mb-3">💻</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Programming</h5>
+                    <p className="text-sm text-gray-700">Python's hashlib, JavaScript's crypto module, Java's MessageDigest</p>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-teal-50 border-l-4 border-teal-600 p-6 rounded-lg">
+                  <p className="text-gray-700">
+                    <strong className="text-teal-900">🌍 Universal Standard:</strong> A hash calculated on a Mac in New York today
+                    will match one calculated on a Linux server in Tokyo ten years from now, provided the document remains unchanged.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Blockchain and Timestamping */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <LinkIcon className="w-8 h-8 text-indigo-600" />
+                Blockchain and Timestamping: Proving When Documents Existed
+              </h3>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                While hashes prove document <strong>integrity</strong>, they don't inherently prove <strong>when</strong> a
+                document existed. This is where blockchain technology and trusted timestamping services come in.
+              </p>
+
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-8 mb-8 border-2 border-indigo-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">🔗 How Blockchain Timestamping Works</h4>
+
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Hash Your Document Locally</h5>
+                        <p className="text-gray-700">
+                          The document <strong>never leaves your computer</strong>. You calculate its hash locally,
+                          maintaining complete privacy and confidentiality.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Submit Only the Hash</h5>
+                        <p className="text-gray-700">
+                          You submit <em>only the hash</em> to a timestamping service, which aggregates multiple hashes
+                          and embeds them in a Bitcoin transaction.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Blockchain Confirmation</h5>
+                        <p className="text-gray-700">
+                          Once the transaction is confirmed in a Bitcoin block, your document's existence at that time
+                          is <strong>cryptographically proven</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Anyone Can Verify</h5>
+                        <p className="text-gray-700">
+                          Anyone can verify this proof by checking that your document's hash links to a transaction in a specific block.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+                  <p className="text-gray-700">
+                    <strong className="text-blue-900">🔐 Stronger Than Traditional Notarization:</strong> Since Bitcoin blocks are
+                    computationally expensive to create and practically impossible to forge historically, this creates stronger proof
+                    than traditional notarization. It's like having <strong>millions of witnesses</strong> around the world simultaneously
+                    confirming "yes, this document existed at this time."
+                  </p>
+                </div>
+              </div>
+
+              {/* Real-World Applications */}
+              <div className="bg-white rounded-2xl p-8 border-2 border-gray-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">🌍 Real-World Applications of Blockchain Timestamping</h4>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-200">
+                    <div className="text-3xl mb-3">📰</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Journalism</h5>
+                    <p className="text-gray-700">
+                      Journalists use it to prove when they received leaked documents, protecting sources while establishing timelines.
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200">
+                    <div className="text-3xl mb-3">🔬</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Research</h5>
+                    <p className="text-gray-700">
+                      Researchers timestamp findings to establish priority for discoveries and protect intellectual property.
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border-2 border-emerald-200">
+                    <div className="text-3xl mb-3">🎨</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Creative Works</h5>
+                    <p className="text-gray-700">
+                      Artists and writers timestamp their creative works to prove authorship before publication.
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-200">
+                    <div className="text-3xl mb-3">🏢</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Corporate IP</h5>
+                    <p className="text-gray-700">
+                      Companies timestamp trade secrets and internal documents to establish intellectual property rights.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Studies */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Target className="w-8 h-8 text-red-600" />
+                Case Studies: Real Document Integrity Breaches and Solutions
+              </h3>
+
+              <div className="space-y-6">
+                {/* Panama Papers */}
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-300">
+                  <div className="flex items-start gap-6">
+                    <div className="text-5xl">📰</div>
+                    <div className="flex-1">
+                      <div className="text-sm font-bold text-blue-900 mb-2">2016 INVESTIGATION</div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-4">The Panama Papers</h4>
+                      <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="bg-white rounded-xl p-5">
+                          <h5 className="font-bold text-gray-900 mb-2">📊 The Challenge</h5>
+                          <ul className="space-y-2 text-gray-700 text-sm">
+                            <li>• 11.5 million documents</li>
+                            <li>• 2.6 terabytes of data</li>
+                            <li>• Anonymous source</li>
+                            <li>• Need to verify authenticity</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white rounded-xl p-5">
+                          <h5 className="font-bold text-gray-900 mb-2">✅ The Hash Solution</h5>
+                          <ul className="space-y-2 text-gray-700 text-sm">
+                            <li>• Each document was hashed</li>
+                            <li>• Created searchable index</li>
+                            <li>• Ensured no alterations in transit</li>
+                            <li>• Enabled 400+ journalists collaboration</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p className="text-gray-700">
+                        The ICIJ used hash functions extensively to manage and verify documents. When sharing documents
+                        between journalists worldwide, hashes ensured nothing was altered, allowing secure collaboration
+                        while maintaining document integrity.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Pharmaceutical Trial Data */}
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
+                  <div className="flex items-start gap-6">
+                    <div className="text-5xl">💊</div>
+                    <div className="flex-1">
+                      <div className="text-sm font-bold text-emerald-900 mb-2">2020 LITIGATION CASE</div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-4">Pharmaceutical Company Drug Trial Data</h4>
+                      <div className="bg-white rounded-xl p-6 mb-4">
+                        <h5 className="font-bold text-gray-900 mb-3">The Accusation:</h5>
+                        <p className="text-gray-700 mb-4">
+                          Plaintiff claimed the company had <strong>altered trial results</strong> after adverse events occurred,
+                          potentially facing billions in damages.
+                        </p>
+                        <h5 className="font-bold text-gray-900 mb-3">The Defense:</h5>
+                        <p className="text-gray-700 mb-4">
+                          The company had implemented a <strong>hash-based integrity system</strong> years earlier, calculating
+                          SHA-256 hashes of all trial data files and storing them in an immutable audit log.
+                        </p>
+                        <h5 className="font-bold text-gray-900 mb-3">The Outcome:</h5>
+                        <p className="text-gray-700">
+                          When challenged, they proved that data presented to regulators <strong>matched exactly</strong> what was
+                          recorded during trials. The hashes showed <strong>no alterations</strong> had occurred.
+                        </p>
+                      </div>
+                      <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-lg">
+                        <p className="text-gray-700">
+                          <strong className="text-emerald-900">💰 Result:</strong> Saved from potentially billions in damages.
+                          This case became a textbook example of why companies should implement hash-based integrity systems
+                          <em>before</em> they need them.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* SolarWinds Hack */}
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 border-2 border-red-300">
+                  <div className="flex items-start gap-6">
+                    <div className="text-5xl">⚠️</div>
+                    <div className="flex-1">
+                      <div className="text-sm font-bold text-red-900 mb-2">2020 SECURITY BREACH</div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-4">The SolarWinds Supply Chain Attack</h4>
+                      <p className="text-gray-700 mb-4">
+                        Attackers infiltrated SolarWinds' software development process and inserted <strong>malware</strong> into
+                        legitimate software updates. These compromised updates were properly signed with SolarWinds' digital certificate,
+                        making them appear legitimate.
+                      </p>
+                      <div className="bg-white rounded-xl p-6 mb-4">
+                        <h5 className="font-bold text-gray-900 mb-3">🔍 The Discovery:</h5>
+                        <p className="text-gray-700">
+                          Security researchers found that the <strong>hashes of the compromised files</strong> didn't match those of
+                          the original, clean versions. Organizations that had saved and verified hashes of their software could
+                          identify compromised versions.
+                        </p>
+                      </div>
+                      <div className="bg-red-50 border-l-4 border-red-600 p-6 rounded-lg">
+                        <p className="text-gray-700">
+                          <strong className="text-red-900">⚡ Critical Lesson:</strong> This incident led to increased emphasis on
+                          software bills of materials (SBOMs) and hash verification in supply chain security. It proved that
+                          <strong> even signed software needs independent hash verification</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </motion.section>
+
+          {/* PART III: APPLICATIONS IN INSURANCE */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-green-600 to-emerald-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part III: Applications in Insurance
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-emerald-600 to-green-600"></div>
+            </div>
+
+            {/* Revolutionizing Claims Processing */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Shield className="w-8 h-8 text-green-600" />
+                Revolutionizing Insurance Claims Processing
+              </h3>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                The insurance industry processes <strong>millions of claims annually</strong>, each requiring extensive
+                documentation—photos of damage, medical records, police reports, repair estimates. Hash functions are transforming
+                this landscape by creating <strong>immutable digital fingerprints</strong> of all claim documents at the moment of submission.
+              </p>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">📱 Modern Insurance Claims Flow with Hash Verification</h4>
+
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Photo Submission</h5>
+                        <p className="text-gray-700">
+                          When a policyholder submits a claim through a mobile app, each photo is <strong>immediately hashed</strong>,
+                          and the hash is stored with a timestamp.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Metadata Verification</h5>
+                        <p className="text-gray-700">
+                          EXIF data (metadata containing time, location, camera information) is preserved and <strong>separately hashed</strong>.
+                          This creates a chain of evidence.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Multi-Layer Protection</h5>
+                        <p className="text-gray-700">
+                          Advanced systems hash photos at <strong>multiple resolutions</strong>, preventing claims that processing
+                          or compression altered critical details.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Investigation & Verification</h5>
+                        <p className="text-gray-700">
+                          If questions arise during investigation, adjusters can <strong>verify photos haven't been doctored</strong> by
+                          comparing current hashes with those recorded at submission.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Real Results */}
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <BarChart3 className="w-7 h-7 text-emerald-600" />
+                  Real-World Implementation Results
+                </h4>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="text-4xl mb-3">📊</div>
+                    <h5 className="font-bold text-gray-900 mb-2">30% Fraud Reduction</h5>
+                    <p className="text-gray-700 text-sm">
+                      A major auto insurance company reported implementing hash-based verification reduced fraudulent claims
+                      by 30% in the first year.
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="text-4xl mb-3">🛡️</div>
+                    <h5 className="font-bold text-gray-900 mb-2">Psychological Deterrent</h5>
+                    <p className="text-gray-700 text-sm">
+                      When claimants know all submissions are cryptographically fingerprinted and can be verified,
+                      they're significantly less likely to attempt fraud.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl p-6">
+                  <h5 className="font-bold text-gray-900 mb-4">🔍 Caught Fraud Examples:</h5>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-gray-700 text-sm">
+                        <strong>Water Damage Photos:</strong> Hash analysis revealed photos were identical to ones submitted
+                        in a claim two years earlier, just with modified EXIF data.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-gray-700 text-sm">
+                        <strong>Altered Invoices:</strong> Medical clinic submitted altered invoices—the hash of the "original"
+                        PDF didn't match the hash recorded when the invoice was supposedly generated.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Smart Contracts and Automated Settlement */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Zap className="w-8 h-8 text-blue-600" />
+                Smart Contracts and Automated Settlement
+              </h3>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                The combination of <strong>hash functions and smart contracts</strong> is creating a new paradigm in insurance:
+                <em>parametric insurance with automated settlement</em>. No claims adjustment needed—payouts trigger automatically
+                based on predefined parameters.
+              </p>
+
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 mb-8 border-2 border-purple-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">✈️ Flight Delay Insurance Example</h4>
+
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="text-3xl">🎫</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 1: Policy Purchase</h5>
+                        <p className="text-gray-700">
+                          When you purchase the policy, the smart contract records the <strong>hash of your booking confirmation</strong>,
+                          proving you have a ticket for a specific flight.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="text-3xl">📡</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 2: Oracle Connection</h5>
+                        <p className="text-gray-700">
+                          The contract connects to flight data oracles (trusted data sources) that provide
+                          <strong> cryptographically signed flight status updates</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="text-3xl">⏱️</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 3: Delay Detection</h5>
+                        <p className="text-gray-700">
+                          When oracles report a delay exceeding the policy threshold, they provide the data along with
+                          its <strong>hash and digital signature</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="text-3xl">💰</div>
+                      <div className="flex-1">
+                        <h5 className="text-lg font-bold text-gray-900 mb-2">Step 4: Automatic Payout</h5>
+                        <p className="text-gray-700">
+                          The smart contract verifies the hash matches the signed data, confirms the signature is from a
+                          trusted oracle, and <strong>automatically triggers payment</strong> to your account.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-teal-50 border-l-4 border-teal-600 p-6 rounded-lg">
+                  <p className="text-gray-700">
+                    <strong className="text-teal-900">🎯 Result:</strong> No claims forms, no waiting, no possibility of denial
+                    for valid claims. The entire process is <strong>transparent, verifiable, and automatic</strong>.
+                  </p>
+                </div>
+              </div>
+
+              {/* Real-World Examples */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-2xl p-6 border-2 border-gray-300">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h5 className="text-lg font-bold text-gray-900 mb-3">Etherisc Platform</h5>
+                  <p className="text-gray-700 mb-4">
+                    Decentralized insurance platform using Ethereum smart contracts. Their flight delay insurance product has
+                    processed <strong>thousands of automatic payouts</strong>.
+                  </p>
+                  <div className="bg-blue-50 rounded-lg p-4">
+                    <p className="text-sm text-gray-700">
+                      Each policy and payout is recorded on blockchain with associated hashes, creating an immutable audit trail
+                      for regulatory review.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-2xl p-6 border-2 border-gray-300">
+                  <div className="text-4xl mb-4">🏢</div>
+                  <h5 className="text-lg font-bold text-gray-900 mb-3">AXA Fizzy (Case Study)</h5>
+                  <p className="text-gray-700 mb-4">
+                    Major insurer's flight delay product (now discontinued but instructive) demonstrated hash verification
+                    could process claims in <strong>seconds rather than weeks</strong>.
+                  </p>
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <p className="text-sm text-gray-700">
+                      Proved that major insurers see value in hash-based automated settlement for improving customer experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Regulatory Compliance and Audit Trails */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Scale className="w-8 h-8 text-purple-600" />
+                Regulatory Compliance and Audit Trails
+              </h3>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                Insurance is one of the most <strong>heavily regulated industries</strong>, with requirements for data retention,
+                audit trails, and regulatory reporting. Hash functions are streamlining this process by creating
+                <strong> cryptographic proof of compliance</strong>.
+              </p>
+
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-8 mb-8 border-2 border-indigo-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">📋 Solvency II Reporting (Europe)</h4>
+
+                <p className="text-gray-700 mb-6">
+                  Requires insurers to regularly report their financial position to regulators. These reports contain
+                  <strong> sensitive competitive information</strong>, so insurers are reluctant to share them broadly.
+                </p>
+
+                <div className="bg-white rounded-xl p-6 mb-6">
+                  <h5 className="font-bold text-gray-900 mb-4">🔐 Hash-Based Solution:</h5>
+                  <ol className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xs">1</div>
+                      <span>Insurers submit <strong>report hashes</strong> to regulators immediately upon internal completion</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xs">2</div>
+                      <span>This proves <strong>when reports were finalized</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xs">3</div>
+                      <span>Actual reports are provided later</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xs">4</div>
+                      <span>Regulators verify reports <strong>haven't been altered</strong> by checking hashes</span>
+                    </li>
+                  </ol>
+                </div>
+
+                <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-lg">
+                  <p className="text-gray-700">
+                    <strong className="text-indigo-900">🛡️ Prevents "Window Dressing":</strong> The practice of temporarily
+                    improving financial positions just for reporting dates. Some European insurers now continuously hash their
+                    financial records, creating an immutable audit trail.
+                  </p>
+                </div>
+              </div>
+
+              {/* Internal Compliance */}
+              <div className="bg-white rounded-2xl p-8 border-2 border-gray-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">🏥 Internal Compliance: Health Insurer Example</h4>
+
+                <p className="text-gray-700 mb-6">
+                  A major health insurer implemented a hash-based audit system where <strong>every database change</strong> generates a hash of:
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200">
+                    <h5 className="font-bold text-gray-900 mb-3">🔍 What Gets Hashed:</h5>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>✓ The modified record</li>
+                      <li>✓ The change itself</li>
+                      <li>✓ The user making the change</li>
+                      <li>✓ Timestamp</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border-2 border-emerald-200">
+                    <h5 className="font-bold text-gray-900 mb-3">🛡️ Protection Provided:</h5>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>✓ Append-only audit log</li>
+                      <li>✓ Can't be modified without detection</li>
+                      <li>✓ Proves decision timeline</li>
+                      <li>✓ Shows proper procedures followed</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-lg">
+                  <p className="text-gray-700">
+                    <strong className="text-green-900">✅ Regulatory Investigation Outcome:</strong> When regulators investigated
+                    claims of improper claim denials, the insurer could prove exactly what decisions were made when, by whom, and
+                    based on what data. The hash trail showed claim denials followed proper procedures,
+                    <strong> avoiding millions in potential fines</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Reinsurance */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Building className="w-8 h-8 text-blue-600" />
+                Reinsurance and Risk Transfer
+              </h3>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                Reinsurance—insurance for insurance companies—involves <strong>complex contracts and enormous financial stakes</strong>.
+                A single catastrophic event might trigger claims across hundreds of primary insurers, who then claim from dozens of reinsurers.
+              </p>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 mb-8 border-2 border-blue-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">🏛️ London Market Implementation</h4>
+
+                <p className="text-gray-700 mb-6">
+                  Lloyd's of London and associated companies are pioneering hash-based systems for reinsurance contracts:
+                </p>
+
+                <div className="bg-white rounded-xl p-6 mb-6">
+                  <h5 className="font-bold text-gray-900 mb-4">📝 Contract Hash Recording:</h5>
+                  <ol className="space-y-3 text-gray-700">
+                    <li>1. When a reinsurance treaty is agreed, <strong>every party calculates its hash</strong></li>
+                    <li>2. Hashes are recorded in a <strong>shared ledger</strong></li>
+                    <li>3. This prevents disputes over contract terms—there's cryptographic proof</li>
+                    <li>4. No party can later claim different terms were agreed</li>
+                  </ol>
+                </div>
+
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+                  <p className="text-gray-700">
+                    <strong className="text-blue-900">🌀 Hurricane Maria Example (2017):</strong> Caused over $90 billion in damages.
+                    Companies with hash-based contract management could <strong>quickly verify coverage terms</strong>, while others
+                    spent months in disputes over contract interpretations and versions.
+                  </p>
+                </div>
+              </div>
+
+              {/* B3i Consortium */}
+              <div className="bg-white rounded-2xl p-8 border-2 border-gray-300">
+                <div className="flex items-start gap-6">
+                  <div className="text-5xl">⛓️</div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">B3i (Blockchain Insurance Industry Initiative)</h4>
+                    <p className="text-gray-700 mb-6">
+                      Consortium of major insurers and reinsurers developed a blockchain-based platform using hash functions
+                      to manage reinsurance contracts.
+                    </p>
+
+                    <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 mb-6 border-2 border-purple-200">
+                      <h5 className="font-bold text-gray-900 mb-3">🎯 Property Catastrophe Excess of Loss Product:</h5>
+                      <ul className="space-y-2 text-gray-700">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>Uses smart contracts where terms are <strong>hashed and stored on blockchain</strong></span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>When catastrophic event occurs, claims automatically flow through the reinsurance chain</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>Each layer's coverage verified through <strong>hash comparison</strong></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-green-50 rounded-xl p-5 border-2 border-green-200">
+                        <div className="text-3xl mb-2">⚡</div>
+                        <h6 className="font-bold text-gray-900 mb-2">Settlement Speed</h6>
+                        <p className="text-gray-700 text-sm">Reduces settlement time from <strong>months to days</strong></p>
+                      </div>
+
+                      <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-200">
+                        <div className="text-3xl mb-2">🤝</div>
+                        <h6 className="font-bold text-gray-900 mb-2">Dispute Elimination</h6>
+                        <p className="text-gray-700 text-sm">Eliminates disputes over contract terms through hash immutability</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </motion.section>
+
+          {/* Continue in next part due to length... */}
+
+        </article>
+      </div>

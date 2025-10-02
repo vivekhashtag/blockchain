@@ -1,0 +1,2046 @@
+"use client";
+
+import Link from "next/link";
+import { getCourseById } from "@/data/courses";
+import {
+  ArrowLeft, Clock, BarChart, BookOpen, Lightbulb, TrendingUp, Award,
+  Shield, Globe, Lock, Users, Zap, CheckCircle, AlertCircle, Info,
+  ArrowRight, Database, Network, Cpu, DollarSign, Building, Scale,
+  Eye, FileText, Server, Layers, Target, Rocket, GitBranch, FileCheck,
+  ShieldCheck, AlertTriangle, Coins, Activity, CreditCard, BarChart3,
+  Wallet, Landmark, Code2, Link as LinkIcon
+} from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function IntroductionCoursePage() {
+  const course = getCourseById("introduction");
+
+  if (!course) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Course Not Found</h1>
+          <p className="text-gray-600 mb-8">The Introduction to Blockchain course could not be found.</p>
+          <Link
+            href="/learn"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <ArrowLeft className="mr-2 w-5 h-5" />
+            Back to Courses
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-16 border-b-2 border-gray-200">
+          <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
+            <Link
+              href="/learn"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors text-lg font-medium"
+            >
+              <ArrowLeft className="mr-2 w-5 h-5" />
+              Back to Courses
+            </Link>
+
+            <div className="flex items-start gap-8">
+              <div className="text-6xl">{course.icon}</div>
+              <div className="flex-1">
+                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                  {course.title}
+                </h1>
+                <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                  A comprehensive journey through blockchain's history, technology, and transformative impact on global finance.
+                </p>
+                <div className="flex flex-wrap items-center gap-6 text-lg">
+                  <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <Clock className="w-6 h-6 mr-2 text-blue-600" />
+                    {course.duration}
+                  </div>
+                  <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <BarChart className="w-6 h-6 mr-2 text-purple-600" />
+                    {course.difficulty}
+                  </div>
+                  <div className="flex items-center text-gray-600 bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <BookOpen className="w-6 h-6 mr-2 text-green-600" />
+                    Module {course.order} of 6
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content Container */}
+        <div>
+          {/* Article Content */}
+          <article className="max-w-6xl mx-auto px-8 sm:px-12 py-16">
+
+          {/* PART I: GENESIS OF BLOCKCHAIN */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-blue-600 to-purple-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part I: The Genesis of Blockchain
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-purple-600 to-blue-600"></div>
+            </div>
+
+            {/* Pre-Bitcoin Era */}
+            <div className="mb-16">
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+                  1
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-4xl font-bold text-gray-900 mb-4">
+                    The Pre-Bitcoin Era: Setting the Stage
+                  </h3>
+                  <p className="text-lg text-gray-600">
+                    Decades of research laid the groundwork for blockchain's revolutionary arrival
+                  </p>
+                </div>
+              </div>
+
+              <div className="prose prose-xl max-w-none">
+                <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                  The story of blockchain begins long before Bitcoin's emergence in 2008. The conceptual foundations
+                  were laid through decades of cryptographic research and attempts to create digital currencies. In the
+                  <strong> 1980s and 1990s</strong>, cryptographers and computer scientists were grappling with fundamental questions
+                  about creating secure digital transactions without central authorities.
+                </p>
+
+                {/* Timeline Visualization */}
+                <div className="my-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-10 border-2 border-blue-200">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                    🕐 Historical Timeline: Path to Bitcoin
+                  </h4>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-6">
+                      <div className="w-32 flex-shrink-0 text-right">
+                        <span className="text-xl font-bold text-blue-600">1980s</span>
+                      </div>
+                      <div className="flex-1 bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-600">
+                        <h5 className="text-xl font-bold text-gray-900 mb-2">David Chaum's DigiCash</h5>
+                        <p className="text-gray-700 leading-relaxed">
+                          Introduced <strong>blind signatures</strong> and <strong>anonymous digital cash</strong> concepts.
+                          Though it failed commercially, DigiCash established crucial precedents for privacy-preserving digital transactions.
+                        </p>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Cryptographic Protocols</span>
+                          <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Digital Cash</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-6">
+                      <div className="w-32 flex-shrink-0 text-right">
+                        <span className="text-2xl font-bold text-purple-600">1990s</span>
+                      </div>
+                      <div className="flex-1 bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-600">
+                        <h5 className="text-xl font-bold text-gray-900 mb-2">The Cypherpunk Movement</h5>
+                        <p className="text-gray-700 leading-relaxed mb-3">
+                          Privacy advocates and cryptographers who believed in using strong cryptography for social change.
+                          Key contributors included:
+                        </p>
+                        <ul className="space-y-2 text-gray-700">
+                          <li className="flex items-start">
+                            <span className="text-purple-600 mr-2 font-bold">•</span>
+                            <span><strong>Wei Dai</strong> - Proposed "b-money" concept</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-purple-600 mr-2 font-bold">•</span>
+                            <span><strong>Nick Szabo</strong> - Conceptualized "bit gold"</span>
+                          </li>
+                        </ul>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Privacy Advocacy</span>
+                          <span className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Theoretical Frameworks</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-6">
+                      <div className="w-32 flex-shrink-0 text-right">
+                        <span className="text-2xl font-bold text-indigo-600">1980s</span>
+                      </div>
+                      <div className="flex-1 bg-white rounded-xl p-6 shadow-md border-l-4 border-indigo-600">
+                        <h5 className="text-xl font-bold text-gray-900 mb-2">Byzantine Generals Problem</h5>
+                        <p className="text-gray-700 leading-relaxed">
+                          <em>"How can distributed systems reach consensus when some participants might be unreliable or malicious?"</em>
+                        </p>
+                        <p className="text-gray-600 mt-2 text-base">
+                          Various solutions were proposed, but none achieved the elegant simplicity that would later characterize Bitcoin's approach.
+                        </p>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Distributed Systems</span>
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Consensus</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Key Concept Box */}
+                <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 my-10 border-l-4 border-amber-500">
+                  <div className="flex items-start gap-4">
+                    <Lightbulb className="w-10 h-10 text-amber-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">💡 Key Concept: Digital Scarcity</h4>
+                      <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                        Early attempts addressed crucial challenges:
+                      </p>
+                      <ul className="space-y-2 text-lg text-gray-700">
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                          <span><strong>Preventing double-spending</strong> - Ensuring digital tokens can't be copied</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                          <span><strong>Achieving consensus</strong> - Agreement without central authority</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                          <span><strong>Creating digital scarcity</strong> - Making digital items provably rare</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Birth of Bitcoin */}
+            <div className="mb-16">
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+                  2
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-4xl font-bold text-gray-900 mb-4">
+                    The Birth of Bitcoin: Satoshi Nakamoto's Revolution
+                  </h3>
+                  <p className="text-xl text-gray-600">
+                    How one whitepaper changed the course of financial technology forever
+                  </p>
+                </div>
+              </div>
+
+              {/* The Pivotal Moment */}
+              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white mb-10 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-32 -mt-32"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full -ml-24 -mb-24"></div>
+
+                <div className="relative z-10">
+                  <div className="flex items-start gap-8 mb-6">
+                    <div className="text-7xl">📅</div>
+                    <div className="flex-1">
+                      <div className="text-sm uppercase tracking-wider text-blue-200 mb-2">The Pivotal Moment</div>
+                      <h4 className="text-4xl font-bold mb-4">October 31, 2008</h4>
+                      <p className="text-2xl leading-relaxed mb-6">
+                        An individual or group using the pseudonym <strong>Satoshi Nakamoto</strong> published a whitepaper titled
+                        <em> "Bitcoin: A Peer-to-Peer Electronic Cash System"</em> to a cryptography mailing list.
+                      </p>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                        <p className="text-lg leading-relaxed">
+                          This nine-page document proposed a solution to the double-spending problem. The timing was significant—
+                          the world was in the midst of the <strong>2008 financial crisis</strong>, with trust in traditional financial
+                          institutions at historic lows.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* What Made Bitcoin Revolutionary */}
+              <div className="grid md:grid-cols-2 gap-8 my-12">
+                <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <Zap className="w-7 h-7 text-blue-600" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900">Revolutionary Innovation</h4>
+                  </div>
+                  <p className="text-gray-600 mb-4 text-lg">
+                    Nakamoto's genius wasn't creating new techniques, but <strong>combining existing technologies</strong> in a novel way:
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Proof-of-Work</div>
+                        <div className="text-gray-600">Adapted from Hashcash (email spam prevention)</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Cryptographic Hashing</div>
+                        <div className="text-gray-600">Secure, one-way mathematical functions</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Digital Signatures</div>
+                        <div className="text-gray-600">Proving ownership without revealing keys</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">P2P Network</div>
+                        <div className="text-gray-600">Direct communication without intermediaries</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300 shadow-xl">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
+                      <Database className="w-7 h-7 text-amber-600" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900">The Genesis Block</h4>
+                  </div>
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-sm text-gray-600 mb-1">Date</div>
+                      <div className="text-2xl font-bold text-gray-900">January 3, 2009</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 border-2 border-amber-200">
+                      <div className="text-sm text-gray-600 mb-2">Embedded Message</div>
+                      <div className="text-lg italic text-gray-900 leading-relaxed">
+                        "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."
+                      </div>
+                    </div>
+                    <div className="bg-amber-100 rounded-xl p-4">
+                      <div className="flex items-start gap-2">
+                        <Info className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
+                        <p className="text-gray-700 leading-relaxed">
+                          This message served dual purposes: <strong>proof the block wasn't pre-mined</strong> and
+                          a <strong>political statement</strong> about Bitcoin's purpose as an alternative to traditional banking.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* First Transaction */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 my-8 border-l-4 border-green-600">
+                <div className="flex items-start gap-4">
+                  <div className="text-5xl">🎉</div>
+                  <div className="flex-1">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-3">The First Bitcoin Transaction</h4>
+                    <div className="text-lg text-gray-700 leading-relaxed space-y-2">
+                      <p>
+                        <strong>January 12, 2009</strong> - Nakamoto sent <strong>10 bitcoins</strong> to developer <strong>Hal Finney</strong>.
+                      </p>
+                      <p>
+                        This marked the beginning of a functioning cryptocurrency network that would grow from a curiosity among
+                        cryptography enthusiasts to a <strong>global phenomenon worth hundreds of billions of dollars</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Why Bitcoin Needed Blockchain */}
+            <div className="mb-16">
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+                  3
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-4xl font-bold text-gray-900 mb-4">
+                    Why Bitcoin Needed Blockchain
+                  </h3>
+                  <p className="text-xl text-gray-600">
+                    Understanding the problem blockchain was designed to solve
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-10 text-white mb-10 shadow-2xl">
+                <h4 className="text-2xl font-bold mb-4">🔑 Core Insight</h4>
+                <p className="text-2xl leading-relaxed">
+                  The blockchain was <strong>not the goal</strong> of Bitcoin—it was the <strong>means to achieve</strong> the goal
+                  of decentralized digital currency.
+                </p>
+              </div>
+
+              {/* Problem Explanation */}
+              <div className="prose prose-xl max-w-none mb-10">
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  To understand why blockchain was necessary, we must examine the specific problems Bitcoin aimed to solve.
+                  Traditional digital payment systems rely on <strong>trusted intermediaries</strong> like banks or payment processors
+                  to prevent double-spending and maintain account balances.
+                </p>
+              </div>
+
+              {/* Comparison Table */}
+              <div className="grid md:grid-cols-2 gap-8 my-12">
+                <div className="space-y-6">
+                  <div className="bg-red-50 rounded-2xl p-8 border-2 border-red-300 shadow-lg">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center">
+                        <AlertCircle className="w-7 h-7 text-red-700" />
+                      </div>
+                      <h5 className="text-2xl font-bold text-red-900">❌ Traditional Systems</h5>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-red-900 mb-2">Single Points of Failure</div>
+                        <div className="text-gray-700">If the central server goes down, the entire system stops</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-red-900 mb-2">Censorship Capabilities</div>
+                        <div className="text-gray-700">Central authorities can freeze accounts or block transactions</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-red-900 mb-2">High Transaction Costs</div>
+                        <div className="text-gray-700">Intermediaries charge fees at every step</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-red-900 mb-2">No True Irreversibility</div>
+                        <div className="text-gray-700">Transactions can be reversed or disputed</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-red-900 mb-2">Requires Institutional Trust</div>
+                        <div className="text-gray-700">Must trust banks to maintain accurate records</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-green-50 rounded-2xl p-8 border-2 border-green-300 shadow-lg">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-12 h-12 bg-green-200 rounded-xl flex items-center justify-center">
+                        <CheckCircle className="w-7 h-7 text-green-700" />
+                      </div>
+                      <h5 className="text-2xl font-bold text-green-900">✓ Blockchain Solution</h5>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-green-900 mb-2">Distributed Network</div>
+                        <div className="text-gray-700">Thousands of nodes, no single point of failure</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-green-900 mb-2">Censorship Resistant</div>
+                        <div className="text-gray-700">No central authority can block transactions</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-green-900 mb-2">Lower Costs</div>
+                        <div className="text-gray-700">Peer-to-peer transfers without intermediaries</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-green-900 mb-2">Irreversible Finality</div>
+                        <div className="text-gray-700">Once confirmed, transactions are permanent</div>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <div className="font-bold text-green-900 mb-2">Trustless Operation</div>
+                        <div className="text-gray-700">Cryptographic proof replaces institutional trust</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* How Blockchain Works */}
+              <div className="bg-blue-50 rounded-3xl p-10 my-10 border-2 border-blue-200">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <Network className="w-10 h-10 text-blue-600" />
+                  How the Blockchain Functions
+                </h4>
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600 font-bold">
+                        1
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Public Ledger</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          Records all Bitcoin transactions in sequential, immutable manner. Every participant maintains a copy of this ledger.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600 font-bold">
+                        2
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Transaction Broadcasting</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          New transactions are broadcast to all nodes in the network for validation.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600 font-bold">
+                        3
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Mining Process</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          Miners compete to bundle transactions into blocks and add them to the chain through proof-of-work.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600 font-bold">
+                        4
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Security Through Time</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          Altering historical transactions becomes exponentially more difficult over time, requiring redoing computational work for all subsequent blocks.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
+                  <div className="flex items-start gap-3">
+                    <TrendingUp className="w-8 h-8 flex-shrink-0" />
+                    <div>
+                      <div className="font-bold text-xl mb-2">Economic Security</div>
+                      <div className="text-lg leading-relaxed">
+                        The economic incentives align participants' interests with network security—miners invest resources to earn rewards,
+                        and their investment secures the network against attacks.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* PART II: EVOLUTION OF BLOCKCHAIN */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-purple-600 to-pink-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part II: Evolution of Blockchain
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-pink-600 to-purple-600"></div>
+            </div>
+
+            {/* From Bitcoin to Blockchain Paradigm */}
+            <div className="mb-16">
+              <h3 className="text-4xl font-bold text-gray-900 mb-8">
+                From Bitcoin's Technology to Blockchain as a Paradigm
+              </h3>
+
+              <div className="prose prose-xl max-w-none mb-10">
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Initially, blockchain was simply the underlying technology powering Bitcoin, not discussed as a
+                  separate concept. The term "blockchain" itself wasn't widely used—Satoshi's white
+                  paper referred to it as a <strong>"chain of blocks"</strong> or <strong>"proof-of-work chain."</strong>
+                </p>
+              </div>
+
+              <div className="my-12 p-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl text-white shadow-2xl">
+                <div className="flex items-start gap-8">
+                  <div className="text-7xl">🔗</div>
+                  <div className="flex-1">
+                    <div className="text-sm uppercase tracking-wider text-purple-200 mb-2">The Paradigm Shift</div>
+                    <h4 className="text-4xl font-bold mb-4">2014: The Separation</h4>
+                    <p className="text-2xl leading-relaxed mb-6">
+                      The technology industry began to separate blockchain from Bitcoin conceptually.
+                    </p>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <p className="text-lg leading-relaxed">
+                        Financial institutions and corporations were intrigued by blockchain's potential but wary of Bitcoin's
+                        association with illicit activities. They asked: <em>"Could blockchain's benefits—immutability, transparency,
+                        distributed consensus—be applied to other use cases?"</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Core Components Diagram */}
+              <div className="my-12">
+                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                  Core Blockchain Components
+                </h4>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <span className="text-4xl">🔗</span>
+                    </div>
+                    <h5 className="text-2xl font-bold text-gray-900 mb-3">Cryptographic Linking</h5>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Blocks are cryptographically linked together, forming an immutable chain where each block contains the hash of the previous block.
+                    </p>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="text-sm font-medium text-blue-900 mb-1">Key Technology</div>
+                      <div className="text-blue-700">SHA-256 Hash Functions</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <span className="text-4xl">🤝</span>
+                    </div>
+                    <h5 className="text-2xl font-bold text-gray-900 mb-3">Consensus Mechanisms</h5>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Enables agreement without central authority, allowing distributed participants to validate transactions and maintain shared state.
+                    </p>
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <div className="text-sm font-medium text-purple-900 mb-1">Examples</div>
+                      <div className="text-purple-700">PoW, PoS, PBFT, DPoS</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <span className="text-4xl">🔒</span>
+                    </div>
+                    <h5 className="text-2xl font-bold text-gray-900 mb-3">Immutability</h5>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Once data is recorded, it becomes computationally impractical to alter, providing a permanent and trustworthy record.
+                    </p>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <div className="text-sm font-medium text-green-900 mb-1">Benefit</div>
+                      <div className="text-green-700">Tamper-Evident Records</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Ethereum Revolution */}
+            <div className="mb-16">
+              <h3 className="text-4xl font-bold text-gray-900 mb-8">
+                The Ethereum Revolution: Smart Contracts
+              </h3>
+
+              <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white mb-10 shadow-2xl">
+                <div className="flex items-center justify-between mb-8">
+                  <div>
+                    <div className="text-sm uppercase tracking-wider text-indigo-200 mb-2">The Next Evolution</div>
+                    <h4 className="text-5xl font-bold mb-3">Ethereum</h4>
+                    <p className="text-2xl">Proposed 2013 • Launched 2015</p>
+                  </div>
+                  <div className="text-8xl">⚡</div>
+                </div>
+                <p className="text-3xl leading-relaxed mb-6">
+                  Transformed blockchain from a transaction ledger into a <strong>"world computer"</strong>
+                </p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <p className="text-xl leading-relaxed">
+                    Capable of executing <strong>smart contracts</strong>—self-executing programs that automatically
+                    enforce agreement terms without intermediaries.
+                  </p>
+                </div>
+              </div>
+
+              {/* Ethereum's Innovation */}
+              <div className="prose prose-xl max-w-none mb-10">
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Ethereum's key innovation was recognizing that blockchain's distributed consensus mechanism could
+                  validate not just <em>transactions</em> but <strong>arbitrary state transitions defined by code</strong>.
+                  This opened entirely new possibilities.
+                </p>
+              </div>
+
+              {/* What Ethereum Enabled */}
+              <div className="grid md:grid-cols-2 gap-8 my-12">
+                <div className="bg-blue-50 rounded-2xl p-8 border-l-4 border-blue-600">
+                  <div className="flex items-center gap-3 mb-6">
+                    <Lightbulb className="w-8 h-8 text-blue-600" />
+                    <h5 className="text-2xl font-bold text-blue-900">💡 New Capabilities</h5>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-700" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Decentralized Applications (dApps)</div>
+                        <div className="text-gray-600">Applications that run on blockchain without central servers</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-700" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Asset Tokenization</div>
+                        <div className="text-gray-600">Representing real-world assets as digital tokens</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-700" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">DAOs</div>
+                        <div className="text-gray-600">Decentralized Autonomous Organizations</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-blue-200 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-5 h-5 text-blue-700" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Complex Financial Instruments</div>
+                        <div className="text-gray-600">Derivatives, lending protocols, automated market makers</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-purple-50 rounded-2xl p-8 border-l-4 border-purple-600">
+                  <div className="flex items-center gap-3 mb-6">
+                    <Rocket className="w-8 h-8 text-purple-600" />
+                    <h5 className="text-2xl font-bold text-purple-900">🚀 Evolution Path</h5>
+                  </div>
+                  <div className="space-y-6">
+                    <div className="bg-white rounded-xl p-6 shadow-md">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="font-bold text-gray-900 text-lg">Programmable Money</div>
+                        <div className="text-3xl">💰</div>
+                      </div>
+                      <div className="text-gray-600">Bitcoin enabled peer-to-peer value transfer</div>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <ArrowRight className="w-8 h-8 text-purple-600" />
+                    </div>
+
+                    <div className="bg-white rounded-xl p-6 shadow-md">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="font-bold text-gray-900 text-lg">Programmable Assets</div>
+                        <div className="text-3xl">🎨</div>
+                      </div>
+                      <div className="text-gray-600">Ethereum enabled any asset to be tokenized</div>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <ArrowRight className="w-8 h-8 text-purple-600" />
+                    </div>
+
+                    <div className="bg-white rounded-xl p-6 shadow-md">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="font-bold text-gray-900 text-lg">Programmable Organizations</div>
+                        <div className="text-3xl">🏛️</div>
+                      </div>
+                      <div className="text-gray-600">DAOs enable autonomous governance structures</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Real-World Analogy */}
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 my-10 border-l-4 border-amber-500">
+                <div className="flex items-start gap-4">
+                  <div className="text-5xl">💭</div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-3">Real-World Analogy</h4>
+                    <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                      Think of Bitcoin as a <strong>calculator</strong> that can only do one thing well—transfer value.
+                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      Ethereum is like a <strong>smartphone</strong>—it can run any application you program for it.
+                      Smart contracts are like apps that automatically execute when conditions are met, without needing
+                      any human intervention or trust in a middleman.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* PART III: UNDERSTANDING DISTRIBUTED LEDGER TECHNOLOGY (DLT) */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-green-600 to-teal-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part III: Understanding Distributed Ledger Technology
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-teal-600 to-green-600"></div>
+            </div>
+
+            {/* Conceptual Foundations */}
+            <div className="mb-16">
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+                  1
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-4xl font-bold text-gray-900 mb-4">
+                    Conceptual Foundations of Distributed Ledgers
+                  </h3>
+                  <p className="text-xl text-gray-600">
+                    A paradigm shift in how we conceive of record-keeping and data management
+                  </p>
+                </div>
+              </div>
+
+              <div className="prose prose-xl max-w-none mb-10">
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Distributed Ledger Technology represents a fundamental reimagining of record-keeping. Traditional ledgers,
+                  whether physical books or centralized databases, rely on a <strong>single authoritative copy</strong> maintained
+                  by a trusted entity. DLT distributes the ledger across multiple participants, with mechanisms to ensure all
+                  copies remain synchronized and consistent.
+                </p>
+              </div>
+
+              {/* Comparison: Traditional vs DLT */}
+              <div className="grid md:grid-cols-2 gap-8 my-12">
+                <div className="bg-red-50 rounded-2xl p-8 border-2 border-red-300 shadow-lg">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center">
+                      <Server className="w-7 h-7 text-red-700" />
+                    </div>
+                    <h5 className="text-2xl font-bold text-red-900">Traditional Ledgers</h5>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-red-900 mb-2">Single Point of Failure</div>
+                      <div className="text-gray-700">Central entity controls everything</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-red-900 mb-2">Target for Attacks</div>
+                      <div className="text-gray-700">Compromise one location = compromise all data</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-red-900 mb-2">Trust Required</div>
+                      <div className="text-gray-700">Must trust the controlling institution</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-red-900 mb-2">Potential for Manipulation</div>
+                      <div className="text-gray-700">Central authority can alter records</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 rounded-2xl p-8 border-2 border-green-300 shadow-lg">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-green-200 rounded-xl flex items-center justify-center">
+                      <Network className="w-7 h-7 text-green-700" />
+                    </div>
+                    <h5 className="text-2xl font-bold text-green-900">Distributed Ledgers</h5>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-green-900 mb-2">No Single Point of Failure</div>
+                      <div className="text-gray-700">Distributed across many participants</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-green-900 mb-2">Attack Resistant</div>
+                      <div className="text-gray-700">Must compromise majority of network</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-green-900 mb-2">Trustless Operation</div>
+                      <div className="text-gray-700">Consensus through cryptographic proof</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-4">
+                      <div className="font-bold text-green-900 mb-2">Tamper-Evident</div>
+                      <div className="text-gray-700">All participants can verify integrity</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Key Insight Box */}
+              <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-2xl p-8 my-10 border-l-4 border-teal-600">
+                <div className="flex items-start gap-4">
+                  <Target className="w-10 h-10 text-teal-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-3">🎯 Core Innovation</h4>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      DLT enables <strong>"trustless" systems</strong> where trust emerges from <em>transparency</em>,
+                      <em> cryptographic proof</em>, and <em>economic incentives</em> rather than institutional authority.
+                      The ledger becomes a <strong>shared source of truth</strong> that all participants can verify independently.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* How Blockchain Implements DLT */}
+            <div className="mb-16">
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+                  2
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-4xl font-bold text-gray-900 mb-4">
+                    How Blockchain Implements DLT Principles
+                  </h3>
+                  <p className="text-xl text-gray-600">
+                    A specific implementation with unique properties and mechanisms
+                  </p>
+                </div>
+              </div>
+
+              {/* Blockchain Structure Visualization */}
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-10 my-10 border-2 border-blue-200">
+                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+                  <Layers className="w-10 h-10 text-blue-600" />
+                  Blockchain's Key Properties
+                </h4>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <div className="text-4xl mb-4 text-center">🔗</div>
+                    <h5 className="text-xl font-bold text-gray-900 mb-3 text-center">Cryptographic Linking</h5>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Each block contains a hash of the previous block, creating an immutable chain where altering one block requires changing all subsequent blocks.
+                    </p>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="text-sm font-medium text-blue-900">Security Benefit</div>
+                      <div className="text-blue-700">Tamper-evidence through cryptography</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <div className="text-4xl mb-4 text-center">⏰</div>
+                    <h5 className="text-xl font-bold text-gray-900 mb-3 text-center">Temporal Ordering</h5>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Transactions are organized chronologically, providing a clear historical record of all events in sequence.
+                    </p>
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <div className="text-sm font-medium text-purple-900">Audit Benefit</div>
+                      <div className="text-purple-700">Complete transaction history</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <div className="text-4xl mb-4 text-center">🔒</div>
+                    <h5 className="text-xl font-bold text-gray-900 mb-3 text-center">Increasing Security</h5>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Security grows over time as more blocks are added, making historical alterations exponentially more difficult.
+                    </p>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <div className="text-sm font-medium text-green-900">Time Benefit</div>
+                      <div className="text-green-700">Stronger with each new block</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Process Flow */}
+              <div className="my-12">
+                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                  🔄 Maintaining Consistency: The Process
+                </h4>
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-600">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600 font-bold text-lg">
+                        1
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Transaction Initiation</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          A participant initiates a transaction and broadcasts it to all nodes in the network.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-600">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 text-purple-600 font-bold text-lg">
+                        2
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Validation</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          Nodes validate the transaction according to predefined rules (sufficient balance, valid signatures, etc.).
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-green-600">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 text-green-600 font-bold text-lg">
+                        3
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Block Creation</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          Miners or validators compete/collaborate to include the transaction in a new block using the consensus mechanism.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-orange-600">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 text-orange-600 font-bold text-lg">
+                        4
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg text-gray-900 mb-2">Ledger Update</div>
+                        <div className="text-gray-700 leading-relaxed">
+                          Once added to the chain, all nodes update their local copy of the ledger. Everyone now has the same view of transaction history.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Comparing with Other DLT Approaches */}
+            <div className="mb-16">
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg flex-shrink-0">
+                  3
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-4xl font-bold text-gray-900 mb-4">
+                    Blockchain vs Other DLT Approaches
+                  </h3>
+                  <p className="text-xl text-gray-600">
+                    Understanding the broader landscape of distributed ledger technologies
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 my-12">
+                <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <Layers className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-2xl font-bold text-gray-900 mb-3">Blockchain</h5>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Transactions grouped into blocks, linked cryptographically. Linear chain structure with strong immutability.
+                  </p>
+                  <div className="bg-blue-50 rounded-lg p-4 mb-3">
+                    <div className="text-sm font-medium text-blue-900 mb-1">Best For</div>
+                    <div className="text-blue-700">High auditability, transparency</div>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <strong>Examples:</strong> Bitcoin, Ethereum
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <GitBranch className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-2xl font-bold text-gray-900 mb-3">DAG (Directed Acyclic Graph)</h5>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Transactions linked directly to each other, allowing parallel processing without blocks or miners.
+                  </p>
+                  <div className="bg-purple-50 rounded-lg p-4 mb-3">
+                    <div className="text-sm font-medium text-purple-900 mb-1">Best For</div>
+                    <div className="text-purple-700">High scalability, low fees</div>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <strong>Examples:</strong> IOTA, Hedera Hashgraph
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-2xl font-bold text-gray-900 mb-3">BFT Consensus</h5>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Byzantine Fault Tolerance among known participants. Faster consensus with controlled membership.
+                  </p>
+                  <div className="bg-green-50 rounded-lg p-4 mb-3">
+                    <div className="text-sm font-medium text-green-900 mb-1">Best For</div>
+                    <div className="text-green-700">Performance, enterprise use</div>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <strong>Examples:</strong> Tendermint, PBFT
+                  </div>
+                </div>
+              </div>
+
+              {/* Real-World Analogy */}
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 my-10 border-l-4 border-amber-500">
+                <div className="flex items-start gap-4">
+                  <div className="text-5xl">💭</div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-3">Real-World Analogy: Different Record-Keeping Systems</h4>
+                    <div className="space-y-3 text-lg text-gray-700 leading-relaxed">
+                      <p>
+                        <strong>Blockchain</strong> is like a <em>notarized ledger book</em> where each page is stamped and
+                        references the previous page—very secure but sequential.
+                      </p>
+                      <p>
+                        <strong>DAG</strong> is like a <em>bulletin board</em> where people can pin notes that reference
+                        previous notes—more flexible and parallel.
+                      </p>
+                      <p>
+                        <strong>BFT</strong> is like a <em>committee meeting</em> where known members vote on decisions—
+                        faster consensus but requires trust in membership.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* PART IV: KEY BLOCKCHAIN FEATURES */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-orange-600 to-red-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part IV: Key Blockchain Features
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-red-600 to-orange-600"></div>
+            </div>
+
+            {/* The Four Pillars */}
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {/* Immutability */}
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-10 border-2 border-red-200 shadow-xl">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Lock className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">1. Immutability</h3>
+                </div>
+                <p className="text-xl font-semibold text-gray-800 mb-4">The Foundation of Trust</p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  The extreme difficulty of altering data once recorded. Each block contains a hash of the previous block—
+                  changing any historical transaction requires recalculating all subsequent blocks.
+                </p>
+                <div className="bg-white rounded-xl p-6 mb-4">
+                  <div className="font-bold text-red-900 mb-3 flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5" />
+                    Why It Matters
+                  </div>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span>Records become permanent history that cannot be secretly altered</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span>Creates unprecedented levels of accountability</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span>Older transactions become exponentially more secure</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-red-100 rounded-xl p-4">
+                  <div className="flex items-start gap-2">
+                    <AlertCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <div className="text-sm text-red-900">
+                      <strong>Challenge:</strong> Inability to easily correct errors or remove sensitive information. Balance needed with practical requirements.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Transparency */}
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border-2 border-blue-200 shadow-xl">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Eye className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">2. Transparency</h3>
+                </div>
+                <p className="text-xl font-semibold text-gray-800 mb-4">Radical Openness</p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  In public blockchains, the entire transaction history is visible to anyone. Every transaction from the
+                  genesis block to the present can be independently verified.
+                </p>
+                <div className="bg-white rounded-xl p-6 mb-4">
+                  <div className="font-bold text-blue-900 mb-3 flex items-center gap-2">
+                    <FileCheck className="w-5 h-5" />
+                    Revolutionary Implications
+                  </div>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Continuous auditing</strong> by anyone with technical capability</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Organizations can prove solvency</strong> without traditional auditors</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Supply chains can verify</strong> product authenticity and origin</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-blue-100 rounded-xl p-4">
+                  <div className="flex items-start gap-2">
+                    <Info className="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" />
+                    <div className="text-sm text-blue-900">
+                      <strong>Privacy Consideration:</strong> While addresses are pseudonymous, transaction patterns can reveal identities. Privacy-enhancing technologies like zero-knowledge proofs help balance transparency with confidentiality.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decentralization */}
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-10 border-2 border-purple-200 shadow-xl">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Network className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">3. Decentralization</h3>
+                </div>
+                <p className="text-xl font-semibold text-gray-800 mb-4">Eliminating Single Points of Failure</p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Responsibility is distributed across potentially thousands of independent participants. Decentralization
+                  occurs at multiple levels: data storage, validation, and governance.
+                </p>
+                <div className="bg-white rounded-xl p-6 mb-4">
+                  <div className="font-bold text-purple-900 mb-3 flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5" />
+                    Security & Social Benefits
+                  </div>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Attack requires 51% of resources</strong>—exponentially expensive</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Resilience to failures</strong>—network continues if some nodes go offline</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Reduces gatekeepers' power</strong>—enabling new economic activity</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-purple-100 rounded-xl p-4">
+                  <div className="flex items-start gap-2">
+                    <AlertTriangle className="w-5 h-5 text-purple-700 flex-shrink-0 mt-0.5" />
+                    <div className="text-sm text-purple-900">
+                      <strong>Trade-offs:</strong> Slower decision-making, difficulty upgrading protocols, potential for fragmentation. Crucial to understand when decentralization provides genuine value.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Consensus Mechanisms */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-10 border-2 border-green-200 shadow-xl">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Users className="w-9 h-9 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">4. Consensus</h3>
+                </div>
+                <p className="text-xl font-semibold text-gray-800 mb-4">Agreement Without Authority</p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  How can multiple parties agree on truth without a central authority? Consensus mechanisms solve the
+                  Byzantine Fault Tolerance problem through algorithmic solutions.
+                </p>
+                <div className="bg-white rounded-xl p-6 mb-4">
+                  <div className="font-bold text-green-900 mb-4">Main Approaches:</div>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Proof of Work (PoW)</div>
+                        <div className="text-gray-600 text-sm">Computational competition—secure but energy-intensive</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Coins className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Proof of Stake (PoS)</div>
+                        <div className="text-gray-600 text-sm">Economic stake-based selection—energy-efficient</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Activity className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Other Mechanisms</div>
+                        <div className="text-gray-600 text-sm">DPoS, PBFT, Proof of History—different trade-offs</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-green-100 rounded-xl p-4">
+                  <div className="flex items-start gap-2">
+                    <Lightbulb className="w-5 h-5 text-green-700 flex-shrink-0 mt-0.5" />
+                    <div className="text-sm text-green-900">
+                      <strong>Key Insight:</strong> Each mechanism makes different trade-offs between decentralization, scalability, and security—the "blockchain trilemma."
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* PART V: BLOCKCHAIN'S RELEVANCE TO FINANCIAL SYSTEMS */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-emerald-600 to-teal-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part V: Blockchain's Relevance to Financial Systems
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-teal-600 to-emerald-600"></div>
+            </div>
+
+            <div className="prose prose-xl max-w-none mb-12">
+              <p className="text-xl text-gray-700 leading-relaxed">
+                The financial sector stands at the forefront of blockchain adoption. From revolutionizing payments to
+                enabling entirely new paradigms like DeFi, blockchain offers solutions to long-standing inefficiencies
+                while creating unprecedented opportunities for innovation.
+              </p>
+            </div>
+
+            {/* Financial Use Cases Grid */}
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {/* Payments & Remittances */}
+              <div className="bg-white rounded-3xl p-8 border-2 border-emerald-200 shadow-xl hover:shadow-2xl transition-all">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                  <CreditCard className="w-9 h-9 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Payments & Remittances</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Direct peer-to-peer transfers settling in minutes instead of days, with dramatically lower fees.
+                </p>
+                <div className="bg-emerald-50 rounded-xl p-4 mb-4">
+                  <div className="font-bold text-emerald-900 mb-2">Traditional Problems:</div>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Multiple intermediaries add time & cost</li>
+                    <li>• Days to settle international transfers</li>
+                    <li>• Fees often exceed 7% for remittances</li>
+                  </ul>
+                </div>
+                <div className="bg-green-100 rounded-xl p-4">
+                  <div className="font-bold text-green-900 mb-2 flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4" />
+                    Blockchain Solution:
+                  </div>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Settles in minutes or hours</li>
+                    <li>• Dramatically lower transaction costs</li>
+                    <li>• Programmable payment conditions</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Securities Trading */}
+              <div className="bg-white rounded-3xl p-8 border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                  <BarChart3 className="w-9 h-9 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Securities & Settlement</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Near-instantaneous settlement, reducing counterparty risk and freeing up locked capital.
+                </p>
+                <div className="bg-blue-50 rounded-xl p-4 mb-4">
+                  <div className="font-bold text-blue-900 mb-2">Current T+2 Settlement:</div>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Two-day settlement period</li>
+                    <li>• Counterparty risk during delay</li>
+                    <li>• Multiple reconciliation steps</li>
+                  </ul>
+                </div>
+                <div className="bg-cyan-100 rounded-xl p-4">
+                  <div className="font-bold text-cyan-900 mb-2 flex items-center gap-2">
+                    <Zap className="w-4 h-4" />
+                    With Tokenization:
+                  </div>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Real-time settlement</li>
+                    <li>• Fractional ownership possible</li>
+                    <li>• 24/7 global trading</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* DeFi */}
+              <div className="bg-white rounded-3xl p-8 border-2 border-purple-200 shadow-xl hover:shadow-2xl transition-all">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                  <Wallet className="w-9 h-9 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Decentralized Finance</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Reconstructing the entire financial system without traditional intermediaries.
+                </p>
+                <div className="bg-purple-50 rounded-xl p-4 mb-4">
+                  <div className="font-bold text-purple-900 mb-2">DeFi Services:</div>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Lending & borrowing protocols</li>
+                    <li>• Decentralized exchanges (DEXs)</li>
+                    <li>• Derivatives & complex instruments</li>
+                    <li>• Yield farming & liquidity provision</li>
+                  </ul>
+                </div>
+                <div className="bg-pink-100 rounded-xl p-4">
+                  <div className="text-sm text-gray-700">
+                    <strong>Composability</strong> enables "money legos"—combining protocols to create novel financial products at unprecedented speed.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Financial Inclusion Impact */}
+            <div className="bg-gradient-to-br from-teal-600 to-emerald-600 rounded-3xl p-12 text-white mb-12 shadow-2xl">
+              <h3 className="text-4xl font-bold mb-6 flex items-center gap-4">
+                <Globe className="w-12 h-12" />
+                Transforming Financial Inclusion
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-2xl font-bold mb-4">The Problem</h4>
+                  <p className="text-lg leading-relaxed mb-4">
+                    Traditional banking requires extensive infrastructure, documentation, and minimum balances that
+                    <strong> exclude billions of people globally</strong>.
+                  </p>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <p className="text-base">
+                      The unbanked and underbanked populations lack access to basic financial services, limiting
+                      their participation in the global digital economy.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold mb-4">Blockchain Solution</h4>
+                  <p className="text-lg leading-relaxed mb-4">
+                    Blockchain-based payment systems require <strong>only internet access</strong>, serving anyone
+                    regardless of location, wealth, or documentation status.
+                  </p>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="space-y-2 text-base">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                        <span>No minimum balance requirements</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                        <span>Accessible from mobile devices</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                        <span>Cross-border without restrictions</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CBDCs & Banking Infrastructure */}
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl p-10 border-2 border-indigo-200 mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <Landmark className="w-10 h-10 text-indigo-600" />
+                Central Bank Digital Currencies (CBDCs)
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Perhaps the most significant potential transformation of banking infrastructure. Many central banks
+                are exploring or piloting CBDCs—digital versions of national currencies built on blockchain or DLT infrastructure.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <CheckCircle className="w-6 h-6 text-green-600" />
+                    Potential Benefits
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-600 mt-1 font-bold">•</span>
+                      <span>Efficiency of cryptocurrencies with traditional currency stability</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-600 mt-1 font-bold">•</span>
+                      <span>More effective monetary policy transmission</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-600 mt-1 font-bold">•</span>
+                      <span>Reduced cost of cash handling</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-600 mt-1 font-bold">•</span>
+                      <span>Better financial inclusion</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <AlertCircle className="w-6 h-6 text-orange-600" />
+                    Important Concerns
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1 font-bold">•</span>
+                      <span>Privacy implications of government-tracked transactions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1 font-bold">•</span>
+                      <span>Impact on commercial banking business models</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1 font-bold">•</span>
+                      <span>Potential for increased surveillance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1 font-bold">•</span>
+                      <span>Design choices will shape future financial systems</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* PART VI: THE HOW OF BLOCKCHAIN IMPLEMENTATION */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-cyan-600 to-blue-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part VI: The How of Blockchain Implementation
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-blue-600 to-cyan-600"></div>
+            </div>
+
+            {/* Technical Architecture */}
+            <div className="mb-16">
+              <h3 className="text-4xl font-bold text-gray-900 mb-8">Technical Architecture and Components</h3>
+
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-10 mb-10 border-2 border-blue-200">
+                <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                  🏗️ The Layered Architecture
+                </h4>
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-600">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Network className="w-7 h-7 text-blue-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h5 className="text-xl font-bold text-gray-900 mb-2">Networking Layer</h5>
+                        <p className="text-gray-700 leading-relaxed mb-3">
+                          Peer-to-peer network where nodes communicate directly without central servers. Handles peer
+                          discovery, message propagation, and synchronization.
+                        </p>
+                        <div className="bg-blue-50 rounded-lg p-3 text-sm text-gray-700">
+                          <strong>Process:</strong> When you initiate a transaction, it's broadcast to neighboring nodes,
+                          which validate and propagate it further—ensuring all nodes eventually receive all transactions.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-600">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Lock className="w-7 h-7 text-purple-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h5 className="text-xl font-bold text-gray-900 mb-2">Cryptographic Layer</h5>
+                        <p className="text-gray-700 leading-relaxed mb-3">
+                          Provides security foundations through public key cryptography, hash functions, Merkle trees,
+                          and digital signatures.
+                        </p>
+                        <div className="bg-purple-50 rounded-lg p-3 text-sm text-gray-700">
+                          <strong>Security Emerges From:</strong> Mathematical proofs rather than trusted authorities.
+                          The strength depends on underlying cryptographic assumptions (e.g., difficulty of factoring large primes).
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-green-600">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Users className="w-7 h-7 text-green-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h5 className="text-xl font-bold text-gray-900 mb-2">Consensus Layer</h5>
+                        <p className="text-gray-700 leading-relaxed mb-3">
+                          Coordinates agreement among distributed nodes through transaction validation rules, block creation
+                          mechanisms, and fork resolution rules.
+                        </p>
+                        <div className="bg-green-50 rounded-lg p-3 text-sm text-gray-700">
+                          <strong>Balances:</strong> Security against attacks, fairness in participation, efficiency in
+                          resource usage, and finality in transaction confirmation.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mining & Validation */}
+            <div className="mb-16">
+              <h3 className="text-4xl font-bold text-gray-900 mb-8">The Mining and Validation Process</h3>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-2xl p-8 border-2 border-orange-200 shadow-xl">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
+                      <Cpu className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900">Proof of Work</h4>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Miners collect transactions, verify validity, and engage in computational race to find a nonce that
+                    produces a hash meeting difficulty requirements.
+                  </p>
+                  <div className="bg-orange-50 rounded-xl p-4 mb-4">
+                    <h5 className="font-bold text-orange-900 mb-2">Economic Dynamics:</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• More miners join → difficulty increases</li>
+                      <li>• Protocol auto-adjusts for consistent block times</li>
+                      <li>• Miners balance operational costs vs rewards</li>
+                      <li>• Creates market-driven security budget</li>
+                    </ul>
+                  </div>
+                  <div className="bg-red-100 rounded-lg p-3 text-sm">
+                    <strong>Energy Consumption:</strong> High computational requirements lead to significant
+                    electricity use, driving development of alternative mechanisms.
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
+                      <Coins className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900">Proof of Stake</h4>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Validators are selected based on their stake in the network. Selection might be random (weighted by stake)
+                    or involve delegation where token holders vote for validators.
+                  </p>
+                  <div className="bg-green-50 rounded-xl p-4 mb-4">
+                    <h5 className="font-bold text-green-900 mb-2">Key Advantages:</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Dramatically reduced energy consumption</li>
+                      <li>• Economic security through stake at risk</li>
+                      <li>• Validators lose stake if malicious</li>
+                      <li>• More about verification than computation</li>
+                    </ul>
+                  </div>
+                  <div className="bg-blue-100 rounded-lg p-3 text-sm">
+                    <strong>Considerations:</strong> "Nothing at stake" problem and potential stake centralization
+                    require careful protocol design.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Smart Contracts */}
+            <div className="mb-16">
+              <h3 className="text-4xl font-bold text-gray-900 mb-8">Smart Contracts and Programmability</h3>
+
+              <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white mb-10 shadow-2xl">
+                <div className="flex items-center justify-between mb-8">
+                  <div>
+                    <h4 className="text-4xl font-bold mb-3">Evolution to Programmable Platform</h4>
+                    <p className="text-2xl">From transaction ledger to autonomous execution</p>
+                  </div>
+                  <div className="text-8xl">💻</div>
+                </div>
+                <p className="text-xl leading-relaxed mb-6">
+                  Smart contracts are essentially programs that run on the blockchain, automatically executing predefined
+                  logic when conditions are met. The code and its execution are <strong>transparent and verifiable</strong> by
+                  all network participants.
+                </p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <p className="text-lg leading-relaxed">
+                    Once deployed, smart contracts operate <strong>autonomously without possibility of downtime, censorship,
+                    or third-party interference</strong>—enabling trustless automation of complex multi-party agreements.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-2xl p-8 border-2 border-red-200 shadow-xl">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <AlertTriangle className="w-7 h-7 text-red-600" />
+                    Unique Challenges
+                  </h4>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Lock className="w-5 h-5 text-red-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Immutability</div>
+                        <div className="text-gray-600 text-sm">Bugs can't be easily patched—mistakes can be costly. Requires extensive testing and audits.</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Activity className="w-5 h-5 text-red-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Deterministic Execution</div>
+                        <div className="text-gray-600 text-sm">Must produce identical results on all nodes. No randomness or external data without oracles.</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Zap className="w-5 h-5 text-red-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Gas Mechanisms</div>
+                        <div className="text-gray-600 text-sm">Computation costs money to prevent infinite loops. Must optimize for efficiency.</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-xl">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <Code2 className="w-7 h-7 text-green-600" />
+                    Evolving Ecosystem
+                  </h4>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <FileCheck className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Audited Libraries</div>
+                        <div className="text-gray-600 text-sm">Reusable contracts reduce vulnerability risks through battle-tested code.</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <ShieldCheck className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Formal Verification</div>
+                        <div className="text-gray-600 text-sm">Mathematical proofs of contract properties increase confidence in security.</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Layers className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">Layer-2 Solutions</div>
+                        <div className="text-gray-600 text-sm">Complex computation off-chain while maintaining on-chain security guarantees.</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* PART VII: CHALLENGES AND FUTURE DIRECTIONS */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+            className="mb-24"
+          >
+            <div className="flex items-center mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-red-600 to-orange-600"></div>
+              <h2 className="text-5xl font-bold text-gray-900 mx-6">
+                Part VII: Challenges and Future Directions
+              </h2>
+              <div className="flex-1 h-1 bg-gradient-to-r from-orange-600 to-red-600"></div>
+            </div>
+
+            {/* The Blockchain Trilemma */}
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-10 mb-12 border-2 border-red-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">⚖️ The Blockchain Trilemma</h3>
+              <p className="text-xl text-gray-700 leading-relaxed text-center mb-8 max-w-4xl mx-auto">
+                The most fundamental technical challenge: simultaneously achieving <strong>decentralization</strong>,
+                <strong> security</strong>, and <strong>scalability</strong>.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="text-5xl mb-4 text-center">🌐</div>
+                  <h4 className="text-xl font-bold text-center text-gray-900 mb-3">Decentralization</h4>
+                  <p className="text-gray-700 text-center">
+                    Thousands of nodes can participate without permission
+                  </p>
+                </div>
+                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="text-5xl mb-4 text-center">🔒</div>
+                  <h4 className="text-xl font-bold text-center text-gray-900 mb-3">Security</h4>
+                  <p className="text-gray-700 text-center">
+                    Resistant to attacks and Byzantine failures
+                  </p>
+                </div>
+                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="text-5xl mb-4 text-center">⚡</div>
+                  <h4 className="text-xl font-bold text-center text-gray-900 mb-3">Scalability</h4>
+                  <p className="text-gray-700 text-center">
+                    Thousands of transactions per second
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6">
+                <h5 className="font-bold text-gray-900 mb-3">Current Reality:</h5>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Bitcoin processes ~7 TPS, Ethereum ~15 TPS, while Visa handles thousands. This limitation stems from
+                  every node processing every transaction and maintaining entire state.
+                </p>
+                <div className="bg-orange-50 rounded-lg p-4">
+                  <p className="text-gray-700">
+                    <strong>The Challenge:</strong> As transaction volume increases, so do computational, storage, and
+                    bandwidth requirements. If too high, only well-resourced entities can run nodes, leading to centralization.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Scalability Solutions */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Scalability Solutions</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                    <Layers className="w-7 h-7 text-blue-600" />
+                    Layer-2 Solutions
+                  </h4>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Process transactions off the main blockchain while inheriting its security guarantees.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="font-bold text-blue-900 mb-1">Lightning Network (Bitcoin)</div>
+                      <div className="text-sm text-gray-700">Payment channels for unlimited off-chain transactions, settling on-chain only when closing.</div>
+                    </div>
+                    <div className="bg-cyan-50 rounded-lg p-4">
+                      <div className="font-bold text-cyan-900 mb-1">Rollups (Ethereum)</div>
+                      <div className="text-sm text-gray-700">Bundle many transactions into single on-chain settlements. Thousands of TPS possible.</div>
+                    </div>
+                    <div className="bg-indigo-50 rounded-lg p-4">
+                      <div className="font-bold text-indigo-900 mb-1">State Channels</div>
+                      <div className="text-sm text-gray-700">Participants conduct unlimited transactions, settling on-chain only at conclusion.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-xl">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                    <GitBranch className="w-7 h-7 text-purple-600" />
+                    Alternative Architectures
+                  </h4>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Different structural approaches to achieve higher throughput.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <div className="font-bold text-purple-900 mb-1">Sharding</div>
+                      <div className="text-sm text-gray-700">Divide network into smaller groups processing transactions in parallel.</div>
+                    </div>
+                    <div className="bg-pink-50 rounded-lg p-4">
+                      <div className="font-bold text-pink-900 mb-1">DAG Structures</div>
+                      <div className="text-sm text-gray-700">Allow parallel transaction processing without blocks. Different security trade-offs.</div>
+                    </div>
+                    <div className="bg-fuchsia-50 rounded-lg p-4">
+                      <div className="font-bold text-fuchsia-900 mb-1">High-Performance Chains</div>
+                      <div className="text-sm text-gray-700">Optimized consensus with powerful hardware requirements. Thousands of TPS but higher centralization.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Regulatory & Interoperability */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-300">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                  <Scale className="w-7 h-7 text-amber-600" />
+                  Regulatory Challenges
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Complex and evolving landscape with jurisdictions taking varied approaches.
+                </p>
+                <div className="space-y-3">
+                  <div className="bg-white rounded-lg p-4">
+                    <h5 className="font-bold text-gray-900 mb-2">Key Questions:</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Are crypto assets currencies, commodities, or securities?</li>
+                      <li>• How to apply AML/KYC to pseudonymous systems?</li>
+                      <li>• What's the legal status of smart contracts and DAOs?</li>
+                      <li>• How to handle borderless, decentralized networks?</li>
+                    </ul>
+                  </div>
+                  <div className="bg-amber-100 rounded-lg p-3 text-sm text-gray-700">
+                    Regulatory clarity will significantly influence blockchain's development and institutional adoption trajectory.
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 border-2 border-teal-300">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                  <LinkIcon className="w-7 h-7 text-teal-600" />
+                  Interoperability
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Fragmented ecosystem where assets and data are siloed within individual chains.
+                </p>
+                <div className="space-y-3">
+                  <div className="bg-white rounded-lg p-4">
+                    <h5 className="font-bold text-gray-900 mb-2">Solutions Emerging:</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• <strong>Bridge Protocols</strong> - Lock assets on one chain, mint on another</li>
+                      <li>• <strong>Cross-chain Communication</strong> - Polkadot, Cosmos ecosystems</li>
+                      <li>• <strong>Standardization Efforts</strong> - Common frameworks (ERC-20, ERC-721)</li>
+                      <li>• <strong>Atomic Swaps</strong> - Trustless exchange between chains</li>
+                    </ul>
+                  </div>
+                  <div className="bg-teal-100 rounded-lg p-3 text-sm text-gray-700">
+                    Vision: "Internet of blockchains" where specialized chains collaborate seamlessly.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Conclusion */}
+            <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white shadow-2xl">
+              <h3 className="text-4xl font-bold mb-6">🌟 The Ongoing Evolution</h3>
+              <div className="space-y-4 text-lg leading-relaxed">
+                <p>
+                  Blockchain technology has traveled a remarkable journey from Bitcoin's underlying infrastructure to
+                  becoming a foundational technology with potential applications across industries.
+                </p>
+                <p>
+                  The <strong>core innovation—achieving consensus without central authority</strong>—has proven robust
+                  and valuable. The financial sector stands at the forefront of adoption, but realizing blockchain's full
+                  potential requires overcoming significant technical, regulatory, and usability challenges.
+                </p>
+                <p className="text-xl font-semibold">
+                  Looking forward, blockchain's evolution will likely involve:
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="w-5 h-5" />
+                      <span className="font-bold">Continued experimentation</span>
+                    </div>
+                    <p className="text-sm">Exploring new consensus mechanisms and architectures</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="w-5 h-5" />
+                      <span className="font-bold">Gradual maturation</span>
+                    </div>
+                    <p className="text-sm">Better tools, security practices, and user experiences</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="w-5 h-5" />
+                      <span className="font-bold">Selective adoption</span>
+                    </div>
+                    <p className="text-sm">Where the technology provides clear, demonstrable value</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="w-5 h-5" />
+                      <span className="font-bold">Thoughtful integration</span>
+                    </div>
+                    <p className="text-sm">Leveraging strengths while addressing limitations</p>
+                  </div>
+                </div>
+                <p className="text-xl font-bold">
+                  The story of blockchain is still being written. From Satoshi Nakamoto's whitepaper to today's diverse
+                  ecosystem, the technology has shown remarkable resilience and evolution.
+                </p>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Course Completion */}
+          <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-12 text-center text-white shadow-2xl mb-16">
+            <Award className="w-24 h-24 mx-auto mb-6" />
+            <h3 className="text-4xl font-bold mb-4">
+              🎉 Course Complete!
+            </h3>
+            <p className="text-2xl mb-6 max-w-3xl mx-auto leading-relaxed">
+              You've completed all seven parts covering the complete journey of blockchain—from its genesis to future challenges!
+            </p>
+            <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
+              Explored: <strong>History</strong>, <strong>Evolution</strong>, <strong>DLT Principles</strong>,
+              <strong> Key Features</strong>, <strong>Financial Applications</strong>, <strong>Implementation</strong>, and <strong>Future Directions</strong>.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/learn"
+                className="px-10 py-5 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all text-xl shadow-xl"
+              >
+                Explore More Courses
+              </Link>
+              <Link
+                href="/playground"
+                className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all text-xl"
+              >
+                Try Interactive Tools
+              </Link>
+            </div>
+          </div>
+          </article>
+        </div>
+      </div>
+    );
+  }
