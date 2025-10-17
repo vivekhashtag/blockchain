@@ -29,11 +29,14 @@ export function Footer() {
                 <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
               </a>
               <a
-                href="mailto:contact@blockchainacademy.com"
-                className="w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all hover:scale-110"
+                href="mailto:reachvivekd@gmail.com"
+                className="w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all hover:scale-110 group relative"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5 md:w-6 md:h-6" />
+                <span className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-900 text-white text-xs px-3 py-1 rounded whitespace-nowrap">
+                  reachvivekd@gmail.com
+                </span>
               </a>
             </div>
           </div>
@@ -125,6 +128,13 @@ export function Footer() {
               >
                 Vivek Dhandapani
               </a>
+            </p>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="mt-4 md:mt-6">
+            <p className="text-gray-500 text-xs text-center leading-relaxed opacity-60">
+              This course is for educational purposes only. All company names, trademarks, and systems mentioned are used for educational illustration and do not imply endorsement or affiliation. This content does not constitute financial, investment, or legal advice.
             </p>
           </div>
         </div>
